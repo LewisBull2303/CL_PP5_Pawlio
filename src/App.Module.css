@@ -1,11 +1,15 @@
 .App {
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   background-color: #f8f8f8;
   min-height: 100vh;
 }
 
 * {
   box-sizing: border-box;
+}
+
+.Main {
+  padding-top: 150px;
 }
 
 a {
