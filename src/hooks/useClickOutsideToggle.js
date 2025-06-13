@@ -1,5 +1,4 @@
-import { set } from 'msw/lib/types/context';
-import { useState, useRef, useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const useClickOutsideToggle = () => {
   const [expanded, setExpanded] = useState(false);
@@ -16,6 +15,7 @@ const useClickOutsideToggle = () => {
       document.removeEventListener('mouseup', handleClickOutside);
     };
   }, [ref]);
+
   return { expanded, setExpanded, ref };
 };
 
