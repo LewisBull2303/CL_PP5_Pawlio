@@ -1,4 +1,4 @@
-import styles from '../src/App.module.css';
+import styles from './App.module.css';
 import NavBar from './components/NavBar';
 import Container from 'react-bootstrap/Container';
 import { Route, Switch } from 'react-router-dom';
@@ -72,6 +72,7 @@ function App() {
             path="/profiles/:id/edit"
             render={() => <ProfileEditForm />}
           />
+
           <Route render={() => <p>Page not found!</p>} />
         </Switch>
       </Container>
