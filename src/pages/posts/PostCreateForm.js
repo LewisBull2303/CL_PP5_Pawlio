@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 
 import Upload from '../../assets/upload.webp';
-
+import { axiosReq } from '../../api/axiosDefaults';
 import styles from '../../styles/PostCreateEditForm.module.css';
 import appStyles from '../../App.module.css';
 import btnStyles from '../../styles/Button.module.css';
