@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useMemo, useState } from 'react';
 import axios from 'axios';
-import { axiosRes, axiosReq } from '../api/axiosDefaults';
-import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import { axiosReq, axiosRes } from '../api/axiosDefaults';
+import { useHistory } from 'react-router';
 
 export const CurrentUserContext = createContext();
 export const SetCurrentUserContext = createContext();
@@ -61,11 +61,11 @@ export const CurrentUserProvider = ({ children }) => {
               return null;
             });
           }
+          return axios(err.config);
         }
-        return axios(err.config);
+        return Promise.reject(err);
       }
     );
-    return Promise.reject(err);
   }, [history]);
 
   return (
