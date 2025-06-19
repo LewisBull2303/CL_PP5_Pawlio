@@ -129,7 +129,10 @@ const SignUpForm = () => {
         md={6}
         className={`my-auto d-none d-md-block p-2 ${styles.SignUpCol}`}
       >
-        <Image className={`${appStyles.FillerImage}`} src={''} />
+        <Image
+          className={`${appStyles.FillerImage}`}
+          src={'https://codeinstitute.s3.amazonaws.com/AdvancedReact/hero2.jpg'}
+        />
       </Col>
     </Row>
   );
