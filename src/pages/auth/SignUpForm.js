@@ -129,7 +129,12 @@ const SignUpForm = () => {
         md={6}
         className={`my-auto d-none d-md-block p-2 ${styles.SignUpCol}`}
       >
-        <Image className={`${appStyles.FillerImage}`} src={''} />
+        <Image
+          className={`${appStyles.FillerImage}`}
+          src={
+            'https://res.cloudinary.com/dxr11nwrz/image/upload/v1750424740/black_lab_puppy_d7mo4o.jpg'
+          }
+        />
       </Col>
     </Row>
   );
