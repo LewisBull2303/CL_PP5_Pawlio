@@ -58,7 +58,16 @@ const NavBar = () => {
         className={styles.NavLink}
         to={`/profiles/${currentUser?.profile_id}`}
       >
-        <Avatar src={currentUser?.profile_image} text="Profile" height={40} />
+        <img
+          src={currentUser?.profile_image || '/default-avatar.png'}
+          alt="Profile"
+          height={40}
+          style={{ borderRadius: '50%' }}
+          onError={(e) => {
+            e.target.onerror = null; // prevent infinite loop
+            e.target.src = '/default-avatar.png';
+          }}
+        />
       </NavLink>
     </>
   );
