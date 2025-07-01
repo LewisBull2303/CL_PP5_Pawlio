@@ -3,7 +3,6 @@ import styles from '../../styles/Profile.module.css';
 import btnStyles from '../../styles/Button.module.css';
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import { Link } from 'react-router-dom';
-import Avatar from '../../components/Avatar';
 import { Button } from 'react-bootstrap';
 import { useSetProfileData } from '../../contexts/ProfileDataContext';
 
@@ -22,7 +21,12 @@ const Profile = (props) => {
     >
       <div>
         <Link className="align-self-center" to={`/profiles/${id}`}>
-          <Avatar src={image} height={imageSize} />
+          <img
+            src={image}
+            height={imageSize}
+            alt="avatar"
+            style={{ borderRadius: '50%' }}
+          />
         </Link>
       </div>
       <div className={`mx-2 ${styles.WordBreak}`}>
