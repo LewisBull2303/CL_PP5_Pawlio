@@ -134,9 +134,9 @@ function PostCreateForm() {
         <Form.Control
           as="textarea"
           rows={6}
-          name="description"
+          name="content"
           className={appStyles.Input}
-          value={description}
+          value={content}
           onChange={handleChange}
           aria-label="post description"
         />
