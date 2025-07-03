@@ -77,41 +77,39 @@ function PostCreateForm() {
     <div className="text-center">
       <Form.Group>
         <Form.Label>Title</Form.Label>
+
+        {errors.title?.map((message, idx) => (
+          <Alert variant="warning" className={appStyles.Alert} key={idx}>
+            {message}
+          </Alert>
+        ))}
+
         <Form.Control
           type="text"
           name="title"
+          className={appStyles.Input}
           value={title}
           onChange={handleChange}
+          aria-label="title"
         />
       </Form.Group>
-      {errors?.title?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-          {message}
-        </Alert>
-      ))}
 
       <Form.Group>
-        <Form.Label>Content</Form.Label>
-        <Form.Control
-          as="textarea"
-          rows={6}
-          name="content"
-          value={content}
-          onChange={handleChange}
-        />
-      </Form.Group>
-      {errors?.content?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-          {message}
-        </Alert>
-      ))}
-      <Form.Group>
         <Form.Label>Category</Form.Label>
+
+        {errors.category?.map((message, idx) => (
+          <Alert variant="warning" className={appStyles.Alert} key={idx}>
+            {message}
+          </Alert>
+        ))}
+
         <Form.Control
           as="select"
           name="category"
+          className={appStyles.Input}
           value={category}
           onChange={handleChange}
+          aria-label="category"
         >
           <option value="">Select a category</option>
           <option value="Puppy">Puppy</option>
@@ -130,11 +128,19 @@ function PostCreateForm() {
           <option value="Silly">Silly</option>
         </Form.Control>
       </Form.Group>
-      {errors?.category?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-          {message}
-        </Alert>
-      ))}
+
+      <Form.Group>
+        <Form.Label>Description</Form.Label>
+        <Form.Control
+          as="textarea"
+          rows={6}
+          name="description"
+          className={appStyles.Input}
+          value={description}
+          onChange={handleChange}
+          aria-label="post description"
+        />
+      </Form.Group>
 
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue}`}
