@@ -28,6 +28,7 @@ function PostCreateForm() {
     title: '',
     content: '',
     image: '',
+    category: '',
   });
   const { title, content, image } = postData;
 
@@ -58,6 +59,8 @@ function PostCreateForm() {
     formData.append('title', title);
     formData.append('content', content);
     formData.append('image', imageInput.current.files[0]);
+    formData.append('category', category);
+    console.log(imageInput.current.files[0]);
 
     try {
       const { data } = await axiosReq.post('/posts/', formData);
@@ -98,6 +101,36 @@ function PostCreateForm() {
         />
       </Form.Group>
       {errors?.content?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
+      <Form.Group>
+        <Form.Label>Category</Form.Label>
+        <Form.Control
+          as="select"
+          name="category"
+          value={category}
+          onChange={handleChange}
+        >
+          <option value="">Select a category</option>
+          <option value="Puppy">Puppy</option>
+          <option value="Senior Dog">Senior Dog</option>
+          <option value="Nature">Nature</option>
+          <option value="Family">Family</option>
+          <option value="Big Dog">Big Dog</option>
+          <option value="Small Dog">Small Dog</option>
+          <option value="Funny">Funny</option>
+          <option value="Sleeping">Sleeping</option>
+          <option value="Playing">Playing</option>
+          <option value="Zoomies">Zoomies</option>
+          <option value="Camping">Camping</option>
+          <option value="Kids & Dogs">Kids & Dogs</option>
+          <option value="Cute">Cute</option>
+          <option value="Silly">Silly</option>
+        </Form.Control>
+      </Form.Group>
+      {errors?.category?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
           {message}
         </Alert>
