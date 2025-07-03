@@ -21,11 +21,11 @@ function PostCreateForm() {
   const [postData, setPostData] = useState({
     title: '',
     category: '',
-    description: '',
+    content: '',
     image: '',
   });
 
-  const { title, category, description, image } = postData;
+  const { title, category, content, image } = postData;
   const imageInput = useRef(null);
   const history = useHistory();
 
