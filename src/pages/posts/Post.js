@@ -79,7 +79,8 @@ const Post = (props) => {
         <Media className="align-items-center justify-content-between">
           <Link to={`/profiles/${profile_id}`}>
             <img
-              src={image}
+              src={profile_image}
+              width={55}
               height={55}
               alt="avatar"
               style={{ borderRadius: '50%' }}
