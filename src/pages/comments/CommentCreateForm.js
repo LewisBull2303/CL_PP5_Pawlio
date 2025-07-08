@@ -46,7 +46,13 @@ function CommentCreateForm(props) {
       <Form.Group>
         <InputGroup>
           <Link to={`/profiles/${profile_id}`}>
-            <Avatar src={profileImage} />
+            <img
+              src={profileImage}
+              width={55}
+              height={55}
+              alt="avatar"
+              style={{ borderRadius: '50%' }}
+            />
           </Link>
           <Form.Control
             className={styles.Form}
