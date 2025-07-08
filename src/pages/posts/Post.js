@@ -80,7 +80,7 @@ const Post = (props) => {
           <Link to={`/profiles/${profile_id}`}>
             <img
               src={image}
-              height={imageSize}
+              height={55}
               alt="avatar"
               style={{ borderRadius: '50%' }}
             />
