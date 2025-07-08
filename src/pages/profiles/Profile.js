@@ -24,6 +24,7 @@ const Profile = (props) => {
           <img
             src={image}
             height={imageSize}
+            width={55}
             alt="avatar"
             style={{ borderRadius: '50%' }}
           />

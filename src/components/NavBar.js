@@ -61,6 +61,7 @@ const NavBar = () => {
           src={currentUser?.profile_image || '/default-avatar.png'}
           alt="Profile"
           height={40}
+          width={40}
           style={{ borderRadius: '50%' }}
           onError={(e) => {
             e.target.onerror = null; // prevent infinite loop
