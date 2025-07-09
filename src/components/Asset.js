@@ -1,13 +1,19 @@
 import React from 'react';
-import { Spinner } from 'react-bootstrap';
 import styles from '../styles/Asset.module.css';
+import loading from '../assets/pawlio-loading.gif';
 
+/*
+  Multipurpose utility component with different props
+  Display depends on the props passed
+*/
 const Asset = ({ spinner, src, message }) => {
   return (
     <div className={`${styles.Asset} p-4`}>
-      {spinner && <Spinner animation="border" />}
+      {spinner && (
+        <img src={loading} className={styles.spinner} alt="Loading..." />
+      )}
       {src && <img src={src} alt={message} />}
-      {message && <p className="mt-4">{message}</p>}
+      {message && <p className="mt-3">{message}</p>}
     </div>
   );
 };
