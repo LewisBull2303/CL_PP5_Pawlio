@@ -67,9 +67,20 @@ function PostsPage({ message, filter = '' }) {
         {hasLoaded ? (
           <>
             {posts.results.length ? (
+              // InfiniteScroll component handles loading more pages of posts as the user scrolls
               <InfiniteScroll
                 children={posts.results.map((post) => (
-                  <Post key={post.id} {...post} setPosts={setPosts} />
+                  <Post
+                    key={post.id}
+                    {...post}
+                    setPosts={setPosts}
+                    // truncate post description on the main page to 500 characters
+                    description={
+                      post.description.length > 500
+                        ? post.description.slice(0, 500) + ' .....'
+                        : post.description
+                    }
+                  />
                 ))}
                 dataLength={posts.results.length}
                 loader={<Asset spinner />}
@@ -77,19 +88,23 @@ function PostsPage({ message, filter = '' }) {
                 next={() => fetchMoreData(posts, setPosts)}
               />
             ) : (
+              // if no results found, show no results asset with a relevant message
               <Container className={appStyles.Content}>
-                <Asset src={NoResults} message={message} />
+                <Asset
+                  src={NoResultsImage}
+                  width={20}
+                  height={20}
+                  message={message}
+                />
               </Container>
             )}
           </>
         ) : (
+          // display a loading spinner if the posts haven't been loaded yet
           <Container className={appStyles.Content}>
             <Asset spinner />
           </Container>
         )}
-      </Col>
-      <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
-        <PopularProfiles />
       </Col>
     </Row>
   );
