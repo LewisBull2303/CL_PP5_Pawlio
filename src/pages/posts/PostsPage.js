@@ -77,19 +77,23 @@ function PostsPage({ message, filter = '' }) {
                 next={() => fetchMoreData(posts, setPosts)}
               />
             ) : (
+              // if no results found, show no results asset with a relevant message
               <Container className={appStyles.Content}>
-                <Asset src={NoResults} message={message} />
+                <Asset
+                  src={NoResults}
+                  width={20}
+                  height={20}
+                  message={message}
+                />
               </Container>
             )}
           </>
         ) : (
+          // display a loading spinner if the posts haven't been loaded yet
           <Container className={appStyles.Content}>
             <Asset spinner />
           </Container>
         )}
-      </Col>
-      <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
-        <PopularProfiles />
       </Col>
     </Row>
   );
