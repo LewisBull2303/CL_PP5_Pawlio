@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import PasswordCriteria from '../../components/PasswordCriteria';
 
 import styles from '../../styles/SignInUpForm.module.css';
 import btnStyles from '../../styles/Button.module.css';
@@ -48,25 +49,34 @@ const SignUpForm = () => {
   };
 
   return (
-    <Row className={styles.Row}>
-      <Col className="my-auto py-2 p-md-2" md={6}>
+    <Row className="text-center">
+      <Col className="my-auto offset-md-2" md={8}>
         <Container className={`${appStyles.Content} p-4 `}>
-          <h1 className={styles.Header}>sign up</h1>
+          <h1 className="mb-4">Sign up</h1>
 
+          {/* Sign up form with alert messages for any errors in input fields */}
           <Form onSubmit={handleSubmit}>
+            {errors.username?.map((message, idx) => (
+              <Alert variant="warning" className={appStyles.Alert} key={idx}>
+                {message}
+              </Alert>
+            ))}
+
             <Form.Group controlId="username">
-              <Form.Label className="d-none">username</Form.Label>
+              <Form.Label className="d-none">Username</Form.Label>
               <Form.Control
-                className={styles.Input}
+                className={`${appStyles.Input} text-center`}
                 type="text"
-                placeholder="Username"
+                placeholder="Your username"
                 name="username"
+                maxLength={10}
                 value={username}
                 onChange={handleChange}
               />
             </Form.Group>
-            {errors.username?.map((message, idx) => (
-              <Alert variant="warning" key={idx}>
+
+            {errors.password1?.map((message, idx) => (
+              <Alert variant="warning" className={appStyles.Alert} key={idx}>
                 {message}
               </Alert>
             ))}
@@ -74,7 +84,7 @@ const SignUpForm = () => {
             <Form.Group controlId="password1">
               <Form.Label className="d-none">Password</Form.Label>
               <Form.Control
-                className={styles.Input}
+                className={`${appStyles.Input} text-center`}
                 type="password"
                 placeholder="Password"
                 name="password1"
@@ -82,8 +92,9 @@ const SignUpForm = () => {
                 onChange={handleChange}
               />
             </Form.Group>
-            {errors.password1?.map((message, idx) => (
-              <Alert key={idx} variant="warning">
+
+            {errors.password2?.map((message, idx) => (
+              <Alert variant="warning" className={appStyles.Alert} key={idx}>
                 {message}
               </Alert>
             ))}
@@ -91,7 +102,7 @@ const SignUpForm = () => {
             <Form.Group controlId="password2">
               <Form.Label className="d-none">Confirm password</Form.Label>
               <Form.Control
-                className={styles.Input}
+                className={`${appStyles.Input} text-center`}
                 type="password"
                 placeholder="Confirm password"
                 name="password2"
@@ -99,42 +110,28 @@ const SignUpForm = () => {
                 onChange={handleChange}
               />
             </Form.Group>
-            {errors.password2?.map((message, idx) => (
-              <Alert key={idx} variant="warning">
+
+            {errors.non_field_errors?.map((message, idx) => (
+              <Alert variant="warning" className={appStyles.Alert} key={idx}>
                 {message}
               </Alert>
             ))}
+
+            <PasswordCriteria />
 
             <Button
-              className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Bright}`}
+              className={`my-3 ${appStyles.button}`}
               type="submit"
+              onMouseDown={(e) => e.preventDefault()}
             >
-              Sign up
+              Sign up!
             </Button>
-            {errors.non_field_errors?.map((message, idx) => (
-              <Alert key={idx} variant="warning" className="mt-3">
-                {message}
-              </Alert>
-            ))}
+
+            <Link className={styles.Link} to="/login">
+              Already a member? Click <span>here </span>to log in.
+            </Link>
           </Form>
         </Container>
-
-        <Container className={`mt-3 ${appStyles.Content}`}>
-          <Link className={styles.Link} to="/signin">
-            Already have an account? <span>Sign in</span>
-          </Link>
-        </Container>
-      </Col>
-      <Col
-        md={6}
-        className={`my-auto d-none d-md-block p-2 ${styles.SignUpCol}`}
-      >
-        <Image
-          className={`${appStyles.FillerImage}`}
-          src={
-            'https://res.cloudinary.com/dxr11nwrz/image/upload/v1750425114/puppy_1_ckb09d.jpg'
-          }
-        />
       </Col>
     </Row>
   );
