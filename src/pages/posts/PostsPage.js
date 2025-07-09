@@ -91,7 +91,7 @@ function PostsPage({ message, filter = '' }) {
               // if no results found, show no results asset with a relevant message
               <Container className={appStyles.Content}>
                 <Asset
-                  src={NoResultsImage}
+                  src={NoResults}
                   width={20}
                   height={20}
                   message={message}
