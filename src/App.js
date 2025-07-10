@@ -2,6 +2,7 @@ import styles from './App.module.css';
 import NavBar from './components/NavBar';
 import Container from 'react-bootstrap/Container';
 import { Route, Switch } from 'react-router-dom';
+import Landing from './components/Landing';
 import './api/axiosDefaults';
 import SignUpForm from './pages/auth/SignUpForm';
 import SignInForm from './pages/auth/SignInForm';
@@ -11,9 +12,8 @@ import PostsPage from './pages/posts/PostsPage';
 import { useCurrentUser } from './contexts/CurrentUserContext';
 import PostEditForm from './pages/posts/PostEditForm';
 import ProfilePage from './pages/profiles/ProfilePage';
-import UserPasswordForm from './pages/profiles/UserPasswordForm';
 import ProfileEditForm from './pages/profiles/ProfileEditForm';
-import Landing from './components/Landing';
+import UserPasswordForm from './pages/profiles/UserPasswordForm';
 import PageNotFound from './components/PageNotFound';
 
 function App() {
