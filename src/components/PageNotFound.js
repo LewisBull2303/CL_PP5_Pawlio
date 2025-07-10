@@ -15,7 +15,7 @@ const PageNotFound = () => {
             alt="Page not found image"
             rounded
           />
-          <h3 className="my-3">Aw snap! This page has not been found</h3>
+          <h3 className="my-3">This page could not been found!</h3>
 
           <Link to="/">
             <Button className={`${appStyles.button} my-3`}>

@@ -35,14 +35,14 @@ function App() {
             <Route
               exact
               path="/"
-              render={() => <MainPostsPage message="No results found" />}
+              render={() => <PostsPage message="No results found" />}
             />
             {/* Feed route */}
             <Route
               exact
               path="/feed"
               render={() => (
-                <MainPostsPage
+                <PostsPage
                   message="No results found. Adjust the search keyword or follow a user."
                   filter={`owner__followed__owner__profile=${profile_id}&`}
                 />
@@ -53,7 +53,7 @@ function App() {
               exact
               path="/liked"
               render={() => (
-                <MainPostsPage
+                <PostsPage
                   message="No results found. Adjust the search keyword or like a post."
                   filter={`likes__owner__profile=${profile_id}&ordering=-likes__created_at&`}
                 />
