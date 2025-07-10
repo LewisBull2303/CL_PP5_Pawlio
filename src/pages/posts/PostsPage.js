@@ -94,6 +94,9 @@ function PostsPage({ message, filter = '' }) {
             <Asset spinner />
           </Container>
         )}
+        <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
+          <PopularProfiles />
+        </Col>
       </Col>
     </Row>
   );
