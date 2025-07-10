@@ -1,12 +1,31 @@
 .NavBar {
-  background-color: #ffffff;
-  border: 1px solid #dadadf;
+  box-shadow: 1px 1px 5px var(--dark-slate-grey);
+  background-color: var(--light);
 }
 
 .NavLink {
-  padding: 5px;
+  padding: 8px;
 }
 
 .Active i {
-  color: #2142b2;
+  transform: rotate(-15deg) scale(1.1);
+  color: var(--dark-slate-grey);
+}
+
+.NavbarToggle {
+  border: none !important;
+}
+
+.Dropdown:active {
+  background-color: var(--light) !important;
+}
+
+a:hover i {
+  color: var(--dark-slate-grey);
+  transition: color ease-in-out 0.3s;
+  transform: rotate(-15deg) scale(1.1);
+}
+
+a::after {
+  display: none !important;
 }
