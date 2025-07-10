@@ -28,7 +28,6 @@ const NavBar = () => {
       await axios.post('dj-rest-auth/logout/');
       setCurrentUser(null);
       setExpanded(false);
-      removeTokenTimestamp();
     } catch (err) {
       //console.log(err)
     }
