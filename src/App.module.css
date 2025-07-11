@@ -1,7 +1,7 @@
 .App {
   font-family: 'Inter', sans-serif;
-  color: darkgray;
-  background-color: gray;
+  color: black;
+  background-color: #faf9f9;
   min-height: 100vh;
 }
 
@@ -48,8 +48,8 @@ i {
 
 /* Buttons */
 .button {
-  background-color: #4cc9f0;
-  box-shadow: 1px 1px 5px #4cc9f0;
+  background-color: #4895ef;
+  box-shadow: 1px 1px 5px #4895ef;
   border-color: black;
   font-weight: bold;
   color: black;
