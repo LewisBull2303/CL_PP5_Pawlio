@@ -48,19 +48,19 @@ i {
 
 /* Buttons */
 .button {
-  background-color: yellowgreen;
-  box-shadow: 1px 1px 5px limegreen;
-  border-color: red;
+  background-color: #4cc9f0;
+  box-shadow: 1px 1px 5px #4cc9f0;
+  border-color: black;
   font-weight: bold;
-  color: darkgray;
+  color: black;
 }
 
 .button:hover,
 .button:focus {
-  background-color: grey !important;
-  color: darkgray !important;
-  box-shadow: 1px 1px 5px grey !important;
-  border-color: darkgray !important;
+  background-color: #4361ee !important;
+  color: white !important;
+  box-shadow: 1px 1px 5px #4361ee !important;
+  border-color: white !important;
 }
 
 /* Add style to bootstrap alerts */
