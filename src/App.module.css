@@ -48,8 +48,8 @@ i {
 
 /* Buttons */
 .button {
-  background-color: #4895ef;
-  box-shadow: 1px 1px 5px #4895ef;
+  background-color: #2e6deb;
+  box-shadow: 1px 1px 5px #2e6deb;
   border-color: black;
   font-weight: bold;
   color: black;
@@ -57,9 +57,9 @@ i {
 
 .button:hover,
 .button:focus {
-  background-color: #4361ee !important;
-  color: white !important;
-  box-shadow: 1px 1px 5px #4361ee !important;
+  background-color: #faf9f9 !important;
+  color: #2e6deb !important;
+  box-shadow: 1px 1px 5px #faf9f9 !important;
   border-color: white !important;
 }
 
