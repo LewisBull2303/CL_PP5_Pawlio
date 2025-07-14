@@ -18,7 +18,7 @@ const Landing = () => {
                 </Card.Title>
                 <Card.Text className="font-weight-bold">
                   Pawlio is a Pet photo sharing portal. If you’re looking for
-                  come adorable animals, you've come to the right place!
+                  adorable animals, you've come to the right place!
                   <br />
                   <br />
                   Join our community!
