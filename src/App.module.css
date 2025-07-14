@@ -62,11 +62,6 @@ i {
   border-color: white !important;
 }
 
-.Wide {
-  padding: 10px 50px;
-  width: 100%;
-}
-
 /* Add style to bootstrap alerts */
 .Alert {
   margin-bottom: 0;
@@ -77,15 +72,15 @@ i {
 /* Forms input field */
 .Input {
   background: white;
-  border: 1px solid red;
+  border: 1px solid black;
   box-sizing: border-box;
   border-radius: 3px;
-  color: limegreen;
+  color: black;
 }
 
 .Input:focus {
   box-shadow: none;
-  border: 1px solid red;
+  border: 1px solid #2e6deb;
 }
 
 .Input::placeholder {
