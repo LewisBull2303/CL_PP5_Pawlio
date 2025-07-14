@@ -88,7 +88,10 @@ function SignInForm() {
                 {message}
               </Alert>
             ))}
-            <Button className={`${appStyles.button}`} type="submit">
+            <Button
+              className={`${appStyles.button}${btnStyles.wide}`}
+              type="submit"
+            >
               Sign in
             </Button>
             {errors.non_field_errors?.map((message, idx) => (
