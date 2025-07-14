@@ -72,14 +72,15 @@ i {
 /* Forms input field */
 .Input {
   background: white;
-  border: 1px solid black;
+  border: 1px solid #9a9a9a;
   box-sizing: border-box;
   border-radius: 3px;
-  color: black;
+  color: #cccccc;
 }
 
 .Input:focus {
   box-shadow: none;
+  color: black;
   border: 1px solid #2e6deb;
 }
 
