@@ -32,16 +32,12 @@ const Landing = () => {
               />
               <Card.Body>
                 <Link to="/signup">
-                  <Button
-                    className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Bright}`}
-                  >
+                  <Button className={`${btnStyles.Button} ${btnStyles.Bright}`}>
                     Happy to join!
                   </Button>
                 </Link>
                 <Link to="/login">
-                  <Button
-                    className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Bright}`}
-                  >
+                  <Button className={`${btnStyles.Button} ${btnStyles.Bright}`}>
                     I’m already a member, log me in!
                   </Button>
                 </Link>
