@@ -120,7 +120,7 @@ const SignUpForm = () => {
             <PasswordCriteria />
 
             <Button
-              className={`my-3 ${appStyles.button}`}
+              className={`my-3 ${btnStyles.Button} ${btnStyles.Bright}`}
               type="submit"
               onMouseDown={(e) => e.preventDefault()}
             >
