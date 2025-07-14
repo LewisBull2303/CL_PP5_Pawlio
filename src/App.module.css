@@ -50,9 +50,8 @@ i {
 .button {
   background-color: #faf9f9;
   border: 1px #2e6deb solid;
-  border-color: black;
   font-weight: bold;
-  color: black;
+  color: #2e6deb;
 }
 
 .button:hover,
