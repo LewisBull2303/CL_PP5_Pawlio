@@ -3,7 +3,6 @@ import { Card, Button, Row, Col, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import landingImage from '../assets/landing-page-image.png';
 import styles from '../styles/Landing.module.css';
-import btnStyles from '../styles/Button.module.css';
 import appStyles from '../App.module.css';
 
 const Landing = () => {
@@ -32,12 +31,14 @@ const Landing = () => {
               />
               <Card.Body>
                 <Link to="/signup">
-                  <Button className={`${btnStyles.Button} ${btnStyles.Bright}`}>
+                  <Button
+                    className={`${appStyles.button} ${styles.LandingButtonMargin} mb-3`}
+                  >
                     Happy to join!
                   </Button>
                 </Link>
                 <Link to="/login">
-                  <Button className={`${btnStyles.Button} ${btnStyles.Bright}`}>
+                  <Button className={`${appStyles.button} mb-3`}>
                     I’m already a member, log me in!
                   </Button>
                 </Link>
