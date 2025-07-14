@@ -89,7 +89,7 @@ function SignInForm() {
               </Alert>
             ))}
             <Button
-              className={`${appStyles.button}${btnStyles.wide}`}
+              className={`${appStyles.button}${appStyles.Wide}`}
               type="submit"
             >
               Sign in

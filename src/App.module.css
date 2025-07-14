@@ -62,6 +62,11 @@ i {
   border-color: white !important;
 }
 
+.Wide {
+  padding: 10px 50px;
+  width: 100%;
+}
+
 /* Add style to bootstrap alerts */
 .Alert {
   margin-bottom: 0;
