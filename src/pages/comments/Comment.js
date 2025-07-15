@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Media } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import Avatar from '../../components/Avatar';
 import { MoreDropdown } from '../../components/MoreDropdown';
 import CommentEditForm from './CommentEditForm';
 
@@ -48,13 +47,13 @@ const Comment = (props) => {
     <>
       <hr />
       <Media>
-        <Link to={`/profiles/${profile_id}`}>
+        <Link to={`/profiles/${profile_id}`} className={styles.Owner}>
           <img
             src={profile_image}
             width={55}
             height={55}
             alt="avatar"
-            style={{ borderRadius: '50%' }}
+            style={{ borderRadius: '50%', marginRight: '8px' }}
           />
         </Link>
         <Media.Body className="align-self-center ml-2">
