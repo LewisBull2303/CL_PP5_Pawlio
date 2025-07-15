@@ -22,3 +22,11 @@ h5 {
 .HeartOutline:hover {
   color: var(--red);
 }
+
+.Username {
+  padding-left: 8px;
+}
+
+.Username:hover {
+  color: var(--dark-blue);
+}
