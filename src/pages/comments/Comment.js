@@ -48,7 +48,7 @@ const Comment = (props) => {
     <>
       <hr />
       <Media>
-        <Link className={styles.Owner} to={`/profiles/${profile_id}`}>
+        <Link to={`/profiles/${profile_id}`}>
           <img
             src={profile_image}
             width={55}
