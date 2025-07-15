@@ -1,6 +1,6 @@
 .NavBar {
-  box-shadow: 1px 1px 5px var(--dark-slate-grey);
-  background-color: var(--light);
+  box-shadow: 1px 1px 5px var(--dark-grey);
+  background-color: var(--off-white);
 }
 
 .NavLink {
@@ -9,7 +9,7 @@
 
 .Active i {
   transform: rotate(-15deg) scale(1.1);
-  color: var(--dark-slate-grey);
+  color: var(--dark-grey);
 }
 
 .NavbarToggle {
@@ -17,11 +17,11 @@
 }
 
 .Dropdown:active {
-  background-color: var(--light) !important;
+  background-color: var(--off-white) !important;
 }
 
 a:hover i {
-  color: var(--dark-slate-grey);
+  color: var(--dark-blue);
   transition: color ease-in-out 0.3s;
   transform: rotate(-15deg) scale(1.1);
 }

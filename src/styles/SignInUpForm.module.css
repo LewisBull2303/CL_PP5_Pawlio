@@ -33,6 +33,10 @@
   color: #ff9254;
 }
 
+.Link span:hover {
+  color: #2e6deb;
+}
+
 .Container {
   padding: 30px 10px;
 }
