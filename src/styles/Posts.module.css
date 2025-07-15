@@ -23,10 +23,11 @@ h5 {
   color: var(--red);
 }
 
-.Username {
+.Owner {
+  font-weight: bold;
   padding-left: 8px;
 }
 
-.Username:hover {
+.Owner:hover {
   color: var(--dark-blue);
 }
