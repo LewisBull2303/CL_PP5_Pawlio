@@ -76,7 +76,7 @@ const Post = (props) => {
     <Card className={styles.Post}>
       <Card.Body>
         <Media className="align-items-center justify-content-between">
-          <Link to={`/profiles/${profile_id}`} className={styles.Username}>
+          <Link to={`/profiles/${profile_id}`}>
             <img
               src={profile_image}
               width={35}
@@ -84,7 +84,7 @@ const Post = (props) => {
               alt="avatar"
               style={{ borderRadius: '50%' }}
             />
-            {owner}
+            <span className={styles.Owner}>{owner}</span>
           </Link>
           <div className="d-flex align-items-center">
             <span>{updated_at}</span>
