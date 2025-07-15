@@ -53,7 +53,7 @@ const Comment = (props) => {
             width={55}
             height={55}
             alt="avatar"
-            style={{ borderRadius: '50%', marginRight: '8px' }}
+            style={{ borderRadius: '50%', paddingRight: '8000px' }}
           />
         </Link>
         <Media.Body className="align-self-center ml-2">
