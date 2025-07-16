@@ -87,12 +87,6 @@ const ProfileEditForm = () => {
     <>
       <Form.Group>
         <Form.Label>Bio</Form.Label>
-
-        {errors.content?.map((message, idx) => (
-          <Alert variant="warning" className={appStyles.Alert} key={idx}>
-            {message}
-          </Alert>
-        ))}
         <Form.Control
           as="textarea"
           value={content}
