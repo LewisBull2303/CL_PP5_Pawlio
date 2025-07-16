@@ -65,12 +65,12 @@ function CommentCreateForm(props) {
             onChange={handleChange}
             rows={2}
           />
-          {errors.content?.map((message, idx) => (
-            <Alert variant="warning" className={appStyles.Alert} key={idx}>
-              {message}
-            </Alert>
-          ))}
         </InputGroup>
+        {errors.content?.map((message, idx) => (
+          <Alert variant="warning" className={appStyles.Alert} key={idx}>
+            {message}
+          </Alert>
+        ))}
       </Form.Group>
       <button
         className={`${styles.Button} btn d-block ml-auto`}
