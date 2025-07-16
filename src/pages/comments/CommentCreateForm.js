@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Alert } from 'react-router-dom';
 
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
@@ -7,10 +7,12 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import styles from '../../styles/CommentCreateEditForm.module.css';
 import Avatar from '../../components/Avatar';
 import { axiosRes } from '../../api/axiosDefaults';
+import appStyles from '../../App.module.css';
 
 function CommentCreateForm(props) {
   const { post, setPost, setComments, profileImage, profile_id } = props;
   const [content, setContent] = useState('');
+  const [errors, setErrors] = useState({});
 
   const handleChange = (event) => {
     setContent(event.target.value);
