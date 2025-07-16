@@ -69,7 +69,7 @@ const SignUpForm = () => {
                 type="text"
                 placeholder="Your username"
                 name="username"
-                maxLength={10}
+                maxLength={20}
                 value={username}
                 onChange={handleChange}
               />
