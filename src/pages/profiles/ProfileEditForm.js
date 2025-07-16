@@ -137,6 +137,19 @@ const ProfileEditForm = () => {
                   Change the image
                 </Form.Label>
               </div>
+              <Form.File
+                id="image-upload"
+                ref={imageFile}
+                accept="image/*"
+                onChange={(e) => {
+                  if (e.target.files.length) {
+                    setProfileData({
+                      ...profileData,
+                      image: URL.createObjectURL(e.target.files[0]),
+                    });
+                  }
+                }}
+              />
             </Form.Group>
             <div className="d-md-none">{textFields}</div>
           </Container>
