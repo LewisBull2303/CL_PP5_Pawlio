@@ -88,7 +88,7 @@ const ProfileEditForm = () => {
       <Form.Group>
         <Form.Label>Bio</Form.Label>
 
-        {errors.category?.map((message, idx) => (
+        {errors.content?.map((message, idx) => (
           <Alert variant="warning" className={appStyles.Alert} key={idx}>
             {message}
           </Alert>

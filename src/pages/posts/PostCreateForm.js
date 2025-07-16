@@ -137,7 +137,7 @@ function PostCreateForm() {
       <Form.Group>
         <Form.Label>Description</Form.Label>
 
-        {errors.category?.map((message, idx) => (
+        {errors.content?.map((message, idx) => (
           <Alert variant="warning" className={appStyles.Alert} key={idx}>
             {message}
           </Alert>
