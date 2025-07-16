@@ -62,6 +62,11 @@ function CommentCreateForm(props) {
             onChange={handleChange}
             rows={2}
           />
+          {errors.category?.map((message, idx) => (
+            <Alert variant="warning" className={appStyles.Alert} key={idx}>
+              {message}
+            </Alert>
+          ))}
         </InputGroup>
       </Form.Group>
       <button
