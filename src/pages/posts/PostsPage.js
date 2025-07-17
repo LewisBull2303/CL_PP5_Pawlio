@@ -234,9 +234,9 @@ function PostsPage({ message, filter = '' }) {
                       setPosts={setPosts}
                       // truncate post description on the main page to 500 characters
                       content={
-                        post.description.length > 500
-                          ? post.description.slice(0, 500) + ' .....'
-                          : post.description
+                        post.content.length > 500
+                          ? post.content.slice(0, 500) + ' .....'
+                          : post.content
                       }
                     />
                   ))}
