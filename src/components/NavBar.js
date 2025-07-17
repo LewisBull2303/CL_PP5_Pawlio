@@ -7,7 +7,6 @@ import {
   useCurrentUser,
   useSetCurrentUser,
 } from '../contexts/CurrentUserContext';
-import Avatar from './Avatar';
 import axios from 'axios';
 import useClickOutsideToggle from '../hooks/useClickOutsideToggle';
 
@@ -49,11 +48,7 @@ const NavBar = () => {
       <NavDropdown
         title={
           <div className="exp">
-            <Avatar
-              src={currentUser?.profile_image}
-              height={40}
-              className="exp"
-            />
+            <img src={currentUser?.profile_image} height={40} className="exp" />
             {currentUser?.username}
           </div>
         }
