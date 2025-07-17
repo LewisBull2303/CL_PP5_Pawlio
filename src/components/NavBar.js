@@ -64,7 +64,12 @@ const NavBar = () => {
           }}
         />
       </NavLink>
-      {currentUser?.profile_id}
+      <NavLink
+        className={styles.NavLink}
+        to={`/profiles/${currentUser?.profile_id}`}
+      >
+        {currentUser}
+      </NavLink>
     </>
   );
   /* 
