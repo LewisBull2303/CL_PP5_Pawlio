@@ -11,7 +11,7 @@ import {
 import axios from 'axios';
 import useClickOutsideToggle from '../hooks/useClickOutsideToggle';
 
-const NavBar = () => {
+const NavBar = (props) => {
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
   const { owner } = props;
