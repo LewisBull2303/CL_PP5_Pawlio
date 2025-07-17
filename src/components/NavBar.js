@@ -16,7 +16,6 @@ const NavBar = () => {
   const setCurrentUser = useSetCurrentUser();
 
   const { expanded, setExpanded, ref } = useClickOutsideToggle();
-  const owner = currentUser?.username;
 
   /*
     Handles user logout
@@ -80,7 +79,7 @@ const NavBar = () => {
           }}
         />
       </NavLink>
-      <span className={postStyles.Owner}>{owner}</span>
+      <span className={postStyles.Owner}>{currentUser?.username}</span>
     </>
   );
   /* 
