@@ -15,6 +15,7 @@ import NoResults from '../../assets/no-results.png';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { fetchMoreData } from '../../utils/utils';
 import PopularProfiles from '../profiles/PopularProfiles';
+import LikeFeedAddPost from '../../components/LikeFeedAddPost';
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
 
 function PostsPage({ message, filter = '' }) {
