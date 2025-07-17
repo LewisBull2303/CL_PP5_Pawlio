@@ -3,6 +3,7 @@ import { Navbar, Container, Nav } from 'react-bootstrap';
 import logo from '../assets/logo.png';
 import styles from '../styles/NavBar.module.css';
 import { NavLink } from 'react-router-dom';
+import postStyles from '../styles/Posts.module.css';
 import {
   useCurrentUser,
   useSetCurrentUser,
@@ -11,6 +12,7 @@ import axios from 'axios';
 import useClickOutsideToggle from '../hooks/useClickOutsideToggle';
 
 const NavBar = () => {
+  const owner = currentUser?.username;
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
 
@@ -78,6 +80,7 @@ const NavBar = () => {
           }}
         />
       </NavLink>
+      <span className={postStyles.Owner}>{owner}</span>
     </>
   );
   /* 
