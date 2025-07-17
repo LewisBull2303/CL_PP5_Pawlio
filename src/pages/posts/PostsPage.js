@@ -77,6 +77,7 @@ function PostsPage({ message, filter = '' }) {
           <Container
             className={`${appStyles.Content} ${columnStyles.CollapsedColumn} ${columnStyles.CategoriesColumn}`}
           >
+            <p className=" font-weight-bold ml-2">Post categories</p>
             <Badge
               variant="secondary"
               pill
@@ -93,7 +94,6 @@ function PostsPage({ message, filter = '' }) {
             >
               Dog
             </Badge>
-            <p className=" font-weight-bold ml-2">Post categories</p>
             <Badge
               variant="secondary"
               pill
