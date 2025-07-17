@@ -82,8 +82,8 @@ const NavBar = (props) => {
             e.target.src = '/default-avatar.png';
           }}
         />
+        <span className={postStyles.Owner}>{owner}</span>
       </NavLink>
-      <span className={postStyles.Owner}>{owner}</span>
     </>
   );
   /* 
