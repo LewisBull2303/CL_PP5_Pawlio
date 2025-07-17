@@ -15,6 +15,8 @@ const NavBar = () => {
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
 
+  console.log(currentUser);
+
   const { expanded, setExpanded, ref } = useClickOutsideToggle();
 
   /*
@@ -79,7 +81,7 @@ const NavBar = () => {
           }}
         />
       </NavLink>
-      <span className={postStyles.Owner}>TEST{currentUser?.username}</span>
+      <span className={postStyles.Owner}>{currentUser?.username}</span>
     </>
   );
   /* 
