@@ -50,20 +50,6 @@ const NavBar = (props) => {
 
   const loggedInIcons = (
     <>
-      <NavLink
-        className={styles.NavLink}
-        activeClassName={styles.Active}
-        to="/feed"
-      >
-        <i className="fas fa-stream"></i>Feed
-      </NavLink>
-      <NavLink
-        className={styles.NavLink}
-        activeClassName={styles.Active}
-        to="/liked"
-      >
-        <i className="fas fa-heart"></i>Liked
-      </NavLink>
       <NavLink className={styles.NavLink} to="/" onClick={handleSignOut}>
         <i className="fas fa-sign-out-alt"></i>Sign out
       </NavLink>
@@ -82,7 +68,6 @@ const NavBar = (props) => {
             e.target.src = '/default-avatar.png';
           }}
         />
-        <span className={postStyles.Owner}>{owner}</span>
       </NavLink>
     </>
   );
