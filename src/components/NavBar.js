@@ -12,11 +12,11 @@ import axios from 'axios';
 import useClickOutsideToggle from '../hooks/useClickOutsideToggle';
 
 const NavBar = () => {
-  const owner = currentUser?.username;
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
 
   const { expanded, setExpanded, ref } = useClickOutsideToggle();
+  const owner = currentUser?.username;
 
   /*
     Handles user logout
