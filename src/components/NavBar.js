@@ -14,6 +14,8 @@ import useClickOutsideToggle from '../hooks/useClickOutsideToggle';
 const NavBar = () => {
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
+  const { owner } = props;
+  const is_owner = currentUser?.username === owner;
 
   console.log(currentUser);
 
@@ -81,7 +83,7 @@ const NavBar = () => {
           }}
         />
       </NavLink>
-      <span className={postStyles.Owner}>{currentUser?.username}</span>
+      <span className={postStyles.Owner}>{owner}</span>
     </>
   );
   /* 
