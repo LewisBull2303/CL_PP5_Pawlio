@@ -77,20 +77,28 @@ function PostsPage({ message, filter = '' }) {
           <Container
             className={`${appStyles.Content} ${columnStyles.CollapsedColumn} ${columnStyles.CategoriesColumn}`}
           >
-            <p className=" font-weight-bold ml-2">Post categories</p>
             <Badge
               variant="secondary"
               pill
               className={`${styles.Badge}`}
               onClick={() => setCategory(null)}
             >
-              Dog
+              None
             </Badge>
             <Badge
               variant="secondary"
               pill
               className={`${styles.Badge}`}
-              onClick={() => setCategory('Spanish')}
+              onClick={() => setCategory('Dog')}
+            >
+              Dog
+            </Badge>
+            <p className=" font-weight-bold ml-2">Post categories</p>
+            <Badge
+              variant="secondary"
+              pill
+              className={`${styles.Badge}`}
+              onClick={() => setCategory('Puppy')}
             >
               Puppy
             </Badge>
@@ -98,7 +106,7 @@ function PostsPage({ message, filter = '' }) {
               variant="secondary"
               pill
               className={`${styles.Badge}`}
-              onClick={() => setCategory('Polish')}
+              onClick={() => setCategory('Old Pet')}
             >
               Old Pet
             </Badge>
@@ -106,7 +114,7 @@ function PostsPage({ message, filter = '' }) {
               variant="secondary"
               pill
               className={`${styles.Badge}`}
-              onClick={() => setCategory('Portuguese')}
+              onClick={() => setCategory('Nature')}
             >
               Nature
             </Badge>
@@ -114,7 +122,7 @@ function PostsPage({ message, filter = '' }) {
               variant="secondary"
               pill
               className={`${styles.Badge}`}
-              onClick={() => setCategory('Italian')}
+              onClick={() => setCategory('Family')}
             >
               Family
             </Badge>
@@ -122,7 +130,7 @@ function PostsPage({ message, filter = '' }) {
               variant="secondary"
               pill
               className={`${styles.Badge}`}
-              onClick={() => setCategory('Greek')}
+              onClick={() => setCategory('Big Pet')}
             >
               Big Pet
             </Badge>
@@ -130,7 +138,7 @@ function PostsPage({ message, filter = '' }) {
               variant="secondary"
               pill
               className={`${styles.Badge}`}
-              onClick={() => setCategory('Turkish')}
+              onClick={() => setCategory('Small Pet')}
             >
               Small Pet
             </Badge>
@@ -138,7 +146,7 @@ function PostsPage({ message, filter = '' }) {
               variant="secondary"
               pill
               className={`${styles.Badge}`}
-              onClick={() => setCategory('French')}
+              onClick={() => setCategory('Funny')}
             >
               Funny
             </Badge>
@@ -146,7 +154,7 @@ function PostsPage({ message, filter = '' }) {
               variant="secondary"
               pill
               className={`${styles.Badge}`}
-              onClick={() => setCategory('British')}
+              onClick={() => setCategory('Sleeping')}
             >
               Sleeping
             </Badge>
@@ -154,7 +162,7 @@ function PostsPage({ message, filter = '' }) {
               variant="secondary"
               pill
               className={`${styles.Badge}`}
-              onClick={() => setCategory('German')}
+              onClick={() => setCategory('Playing')}
             >
               Playing
             </Badge>
@@ -162,7 +170,7 @@ function PostsPage({ message, filter = '' }) {
               variant="secondary"
               pill
               className={`${styles.Badge}`}
-              onClick={() => setCategory('Austrian')}
+              onClick={() => setCategory('Zoomies')}
             >
               Zoomies
             </Badge>
@@ -170,7 +178,7 @@ function PostsPage({ message, filter = '' }) {
               variant="secondary"
               pill
               className={`${styles.Badge}`}
-              onClick={() => setCategory('Lebanese')}
+              onClick={() => setCategory('Camping')}
             >
               Camping
             </Badge>
@@ -178,7 +186,7 @@ function PostsPage({ message, filter = '' }) {
               variant="secondary"
               pill
               className={`${styles.Badge}`}
-              onClick={() => setCategory('Moroccan')}
+              onClick={() => setCategory('Kids & Pets')}
             >
               Kids & Pets
             </Badge>
@@ -186,7 +194,7 @@ function PostsPage({ message, filter = '' }) {
               variant="secondary"
               pill
               className={`${styles.Badge}`}
-              onClick={() => setCategory('Caribbean')}
+              onClick={() => setCategory('Cute')}
             >
               Cute
             </Badge>
@@ -194,7 +202,7 @@ function PostsPage({ message, filter = '' }) {
               variant="secondary"
               pill
               className={`${styles.Badge}`}
-              onClick={() => setCategory('Indian')}
+              onClick={() => setCategory('Silly')}
             >
               Silly
             </Badge>
