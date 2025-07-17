@@ -45,24 +45,22 @@ const NavBar = () => {
 
   const loggedInIcons = (
     <>
-      <NavDropdown
-        title={
-          <div className="exp">
-            <img src={currentUser?.profile_image} height={40} className="exp" />
-            {currentUser?.username}
-          </div>
-        }
-        id="basic-nav-dropdown"
+      <NavLink
+        className={styles.NavLink}
+        to={`/profiles/${currentUser?.profile_id}`}
       >
-        <NavDropdown.Item className={`${styles.Dropdown} text-right`}>
-          <NavLink to={`/profiles/${currentUser?.profile_id}`}>Profile</NavLink>
-        </NavDropdown.Item>
-        <NavDropdown.Item className={`${styles.Dropdown} text-right`}>
-          <NavLink to="/" onClick={handleLogOut}>
-            Log out
-          </NavLink>
-        </NavDropdown.Item>
-      </NavDropdown>
+        <img
+          src={currentUser?.profile_image || '/default-avatar.png'}
+          alt="Profile"
+          height={40}
+          width={40}
+          style={{ borderRadius: '50%' }}
+          onError={(e) => {
+            e.target.onerror = null; // prevent infinite loop
+            e.target.src = '/default-avatar.png';
+          }}
+        />
+      </NavLink>
     </>
   );
   /* 
