@@ -21,7 +21,7 @@ const NavBar = () => {
     Removes saved current user
     Redirects to the landing page in <NavLink>
   */
-  const handleSignOut = async () => {
+  const handleLogOut = async () => {
     try {
       await axios.post('dj-rest-auth/logout/');
       setCurrentUser(null);
@@ -45,39 +45,28 @@ const NavBar = () => {
 
   const loggedInIcons = (
     <>
-      <NavLink
-        className={styles.NavLink}
-        activeClassName={styles.Active}
-        to="/feed"
+      <NavDropdown
+        title={
+          <div className="exp">
+            <Avatar
+              src={currentUser?.profile_image}
+              height={40}
+              className="exp"
+            />
+            {currentUser?.username}
+          </div>
+        }
+        id="basic-nav-dropdown"
       >
-        <i className="fas fa-stream"></i>Feed
-      </NavLink>
-      <NavLink
-        className={styles.NavLink}
-        activeClassName={styles.Active}
-        to="/liked"
-      >
-        <i className="fas fa-heart"></i>Liked
-      </NavLink>
-      <NavLink className={styles.NavLink} to="/" onClick={handleSignOut}>
-        <i className="fas fa-sign-out-alt"></i>Sign out
-      </NavLink>
-      <NavLink
-        className={styles.NavLink}
-        to={`/profiles/${currentUser?.profile_id}`}
-      >
-        <img
-          src={currentUser?.profile_image || '/default-avatar.png'}
-          alt="Profile"
-          height={40}
-          width={40}
-          style={{ borderRadius: '50%' }}
-          onError={(e) => {
-            e.target.onerror = null; // prevent infinite loop
-            e.target.src = '/default-avatar.png';
-          }}
-        />
-      </NavLink>
+        <NavDropdown.Item className={`${styles.Dropdown} text-right`}>
+          <NavLink to={`/profiles/${currentUser?.profile_id}`}>Profile</NavLink>
+        </NavDropdown.Item>
+        <NavDropdown.Item className={`${styles.Dropdown} text-right`}>
+          <NavLink to="/" onClick={handleLogOut}>
+            Log out
+          </NavLink>
+        </NavDropdown.Item>
+      </NavDropdown>
     </>
   );
   /* 
@@ -89,16 +78,16 @@ const NavBar = () => {
       <NavLink
         className={styles.NavLink}
         activeClassName={styles.Active}
-        to="/login"
+        to="/signup"
       >
-        <i className="fas fa-sign-in-alt"></i>Sign in
+        <i className="fa-solid fa-user-plus"></i>Sign up
       </NavLink>
       <NavLink
-        to="/signup"
         className={styles.NavLink}
         activeClassName={styles.Active}
+        to="/login"
       >
-        <i className="fas fa-user-plus"></i>Sign up
+        <i className="fa-solid fa-right-to-bracket"></i>Log in
       </NavLink>
     </>
   );
