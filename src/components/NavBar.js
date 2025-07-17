@@ -79,7 +79,7 @@ const NavBar = () => {
           }}
         />
       </NavLink>
-      <span className={postStyles.Owner}>{currentUser?.username}</span>
+      <span className={postStyles.Owner}>TEST{currentUser?.username}</span>
     </>
   );
   /* 
