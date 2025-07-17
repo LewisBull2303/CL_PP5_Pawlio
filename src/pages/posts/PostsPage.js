@@ -20,23 +20,39 @@ import PopularProfiles from '../profiles/PopularProfiles';
 
 function PostsPage({ message, filter = '' }) {
   const [posts, setPosts] = useState({ results: [] });
+  const [category, setCategory] = useState(null);
   const [hasLoaded, setHasLoaded] = useState(false);
+  // detect the url change between home, feed & liked pages
   const { pathname } = useLocation();
-
+  const currentUser = useCurrentUser();
   const [query, setQuery] = useState('');
 
+  /*
+    Handles API request using the filters for each of pages
+    to fetch relevant posts to the filter
+    Displays all the posts, just posts by the profiles followed, 
+    just the liked posts or posts in a specific category
+    Shows a loading spinner when required
+  */
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const { data } = await axiosReq.get(`/posts/?${filter}search=${query}`);
+        const { data } = await axiosReq.get(
+          `/posts/?${filter}search=${query}${
+            category !== null ? `&category=${category}` : ''
+          }`
+        );
         setPosts(data);
         setHasLoaded(true);
       } catch (err) {
-        console.log(err);
+        // console.log(err)
       }
     };
-
     setHasLoaded(false);
+    /*
+      Delays making an API request and fetching posts of 1 second
+      instead of on each key stroke
+    */
     const timer = setTimeout(() => {
       fetchPosts();
     }, 1000);
@@ -44,62 +60,213 @@ function PostsPage({ message, filter = '' }) {
     return () => {
       clearTimeout(timer);
     };
-  }, [filter, query, pathname]);
+  }, [filter, query, pathname, currentUser, category]);
 
   return (
-    <Row className="h-100">
-      <Col className="py-2 p-0 p-lg-2 bg-white" lg={8}>
-        <PopularProfiles mobile />
-        <i className={`fas fa-search ${styles.SearchIcon}`} />
-        <Form
-          className={styles.SearchBar}
-          onSubmit={(event) => event.preventDefault()}
-        >
-          <Form.Control
-            value={query}
-            onChange={(event) => setQuery(event.target.value)}
-            type="text"
-            className="mr-sm-2"
-            placeholder="Search posts"
-          />
-        </Form>
+    <Container>
+      <Row>
+        <Col className={`${columnStyles.SplitColumns} pt-2 p-0 p-lg-2`} lg={4}>
+          <LikeFeedAddPost />
 
-        {hasLoaded ? (
-          <>
-            {posts.results.length ? (
-              <InfiniteScroll
-                children={posts.results.map((post) => (
-                  <Post key={post.id} {...post} setPosts={setPosts} />
-                ))}
-                dataLength={posts.results.length}
-                loader={<Asset spinner />}
-                hasMore={!!posts.next}
-                next={() => fetchMoreData(posts, setPosts)}
-              />
-            ) : (
-              // if no results found, show no results asset with a relevant message
-              <Container className={appStyles.Content}>
-                <Asset
-                  src={NoResults}
-                  width={20}
-                  height={20}
-                  message={message}
-                />
-              </Container>
-            )}
-          </>
-        ) : (
-          // display a loading spinner if the posts haven't been loaded yet
-          <Container className={appStyles.Content}>
-            <Asset spinner />
+          <Container
+            className={`${appStyles.Content} ${columnStyles.CollapsedColumn} mb-2`}
+          >
+            <PopularProfiles />
           </Container>
-        )}
-      </Col>
-      <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
-        <PopularProfiles />
-      </Col>
-    </Row>
+
+          <Container
+            className={`${appStyles.Content} ${columnStyles.CollapsedColumn} ${columnStyles.CategoriesColumn}`}
+          >
+            <p className=" font-weight-bold ml-2">Post categories</p>
+            <Badge
+              variant="secondary"
+              pill
+              className={`${styles.Badge}`}
+              onClick={() => setCategory(null)}
+            >
+              Dog
+            </Badge>
+            <Badge
+              variant="secondary"
+              pill
+              className={`${styles.Badge}`}
+              onClick={() => setCategory('Spanish')}
+            >
+              Puppy
+            </Badge>
+            <Badge
+              variant="secondary"
+              pill
+              className={`${styles.Badge}`}
+              onClick={() => setCategory('Polish')}
+            >
+              Old Pet
+            </Badge>
+            <Badge
+              variant="secondary"
+              pill
+              className={`${styles.Badge}`}
+              onClick={() => setCategory('Portuguese')}
+            >
+              Nature
+            </Badge>
+            <Badge
+              variant="secondary"
+              pill
+              className={`${styles.Badge}`}
+              onClick={() => setCategory('Italian')}
+            >
+              Family
+            </Badge>
+            <Badge
+              variant="secondary"
+              pill
+              className={`${styles.Badge}`}
+              onClick={() => setCategory('Greek')}
+            >
+              Big Pet
+            </Badge>
+            <Badge
+              variant="secondary"
+              pill
+              className={`${styles.Badge}`}
+              onClick={() => setCategory('Turkish')}
+            >
+              Small Pet
+            </Badge>
+            <Badge
+              variant="secondary"
+              pill
+              className={`${styles.Badge}`}
+              onClick={() => setCategory('French')}
+            >
+              Funny
+            </Badge>
+            <Badge
+              variant="secondary"
+              pill
+              className={`${styles.Badge}`}
+              onClick={() => setCategory('British')}
+            >
+              Sleeping
+            </Badge>
+            <Badge
+              variant="secondary"
+              pill
+              className={`${styles.Badge}`}
+              onClick={() => setCategory('German')}
+            >
+              Playing
+            </Badge>
+            <Badge
+              variant="secondary"
+              pill
+              className={`${styles.Badge}`}
+              onClick={() => setCategory('Austrian')}
+            >
+              Zoomies
+            </Badge>
+            <Badge
+              variant="secondary"
+              pill
+              className={`${styles.Badge}`}
+              onClick={() => setCategory('Lebanese')}
+            >
+              Camping
+            </Badge>
+            <Badge
+              variant="secondary"
+              pill
+              className={`${styles.Badge}`}
+              onClick={() => setCategory('Moroccan')}
+            >
+              Kids & Pets
+            </Badge>
+            <Badge
+              variant="secondary"
+              pill
+              className={`${styles.Badge}`}
+              onClick={() => setCategory('Caribbean')}
+            >
+              Cute
+            </Badge>
+            <Badge
+              variant="secondary"
+              pill
+              className={`${styles.Badge}`}
+              onClick={() => setCategory('Indian')}
+            >
+              Silly
+            </Badge>
+          </Container>
+        </Col>
+
+        <Col className="py-2 p-0 p-lg-2" lg={8}>
+          {/* Posts text search bar */}
+          <i className={`fas fa-search ${styles.SearchIcon}`} />
+          <Form
+            className={styles.SearchBar}
+            onSubmit={(e) => e.preventDefault()}
+          >
+            <Form.Control
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              type="text"
+              className="mr-sm-2"
+              placeholder="Search posts"
+              aria-label="search bar"
+            />
+            <i
+              className={`fa-solid fa-eraser ${styles.Clear}`}
+              onClick={() => setQuery('')}
+            />
+          </Form>
+
+          {hasLoaded ? (
+            <>
+              {posts.results.length ? (
+                // InfiniteScroll component handles loading more pages of posts as the user scrolls
+                <InfiniteScroll
+                  children={posts.results.map((post) => (
+                    <Post
+                      key={post.id}
+                      {...post}
+                      setPosts={setPosts}
+                      // truncate post description on the main page to 500 characters
+                      description={
+                        post.description.length > 500
+                          ? post.description.slice(0, 500) + ' .....'
+                          : post.description
+                      }
+                    />
+                  ))}
+                  dataLength={posts.results.length}
+                  loader={<Asset spinner />}
+                  hasMore={!!posts.next}
+                  next={() => fetchMoreData(posts, setPosts)}
+                />
+              ) : (
+                // if no results found, show no results asset with a relevant message
+                <Container className={appStyles.Content}>
+                  <Asset
+                    src={NoResults}
+                    width={20}
+                    height={20}
+                    message={message}
+                  />
+                </Container>
+              )}
+            </>
+          ) : (
+            // display a loading spinner if the posts haven't been loaded yet
+            <Container className={appStyles.Content}>
+              <Asset spinner />
+            </Container>
+          )}
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
-export default PostsPage;
+export default MainPostsPage;
