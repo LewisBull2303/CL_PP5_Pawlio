@@ -1,0 +1,16 @@
+/* Display of links within the small side menus  */
+.Link {
+  display: inline;
+  margin-left: 7px;
+}
+
+.LikeFeedAddDisplay a {
+  display: block !important;
+  margin: 5px 0;
+}
+
+.SplitColumns {
+  display: table-cell;
+  border-collapse: separate;
+  border-spacing: 7px;
+}
