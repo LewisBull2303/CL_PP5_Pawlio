@@ -56,12 +56,6 @@ const SignUpForm = () => {
 
           {/* Sign up form with alert messages for any errors in input fields */}
           <Form onSubmit={handleSubmit}>
-            {errors.username?.map((message, idx) => (
-              <Alert variant="warning" className={appStyles.Alert} key={idx}>
-                {message}
-              </Alert>
-            ))}
-
             <Form.Group controlId="username">
               <Form.Label className="d-none">Username</Form.Label>
               <Form.Control
@@ -75,7 +69,7 @@ const SignUpForm = () => {
               />
             </Form.Group>
 
-            {errors.password1?.map((message, idx) => (
+            {errors.username?.map((message, idx) => (
               <Alert variant="warning" className={appStyles.Alert} key={idx}>
                 {message}
               </Alert>
@@ -93,7 +87,7 @@ const SignUpForm = () => {
               />
             </Form.Group>
 
-            {errors.password2?.map((message, idx) => (
+            {errors.password1?.map((message, idx) => (
               <Alert variant="warning" className={appStyles.Alert} key={idx}>
                 {message}
               </Alert>
@@ -110,6 +104,11 @@ const SignUpForm = () => {
                 onChange={handleChange}
               />
             </Form.Group>
+            {errors.password2?.map((message, idx) => (
+              <Alert variant="warning" className={appStyles.Alert} key={idx}>
+                {message}
+              </Alert>
+            ))}
 
             {errors.non_field_errors?.map((message, idx) => (
               <Alert variant="warning" className={appStyles.Alert} key={idx}>
