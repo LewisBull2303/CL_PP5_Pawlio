@@ -67,13 +67,12 @@ const SignUpForm = () => {
                 value={username}
                 onChange={handleChange}
               />
+              {errors.username?.map((message, idx) => (
+                <Alert variant="warning" className={appStyles.Alert} key={idx}>
+                  {message}
+                </Alert>
+              ))}
             </Form.Group>
-
-            {errors.username?.map((message, idx) => (
-              <Alert variant="warning" className={appStyles.Alert} key={idx}>
-                {message}
-              </Alert>
-            ))}
 
             <Form.Group controlId="password1">
               <Form.Label className="d-none">Password</Form.Label>
@@ -92,12 +91,6 @@ const SignUpForm = () => {
               ))}
             </Form.Group>
 
-            {errors.password1?.map((message, idx) => (
-              <Alert variant="warning" className={appStyles.Alert} key={idx}>
-                {message}
-              </Alert>
-            ))}
-
             <Form.Group controlId="password2">
               <Form.Label className="d-none">Confirm password</Form.Label>
               <Form.Control
@@ -108,12 +101,12 @@ const SignUpForm = () => {
                 value={password2}
                 onChange={handleChange}
               />
+              {errors.password2?.map((message, idx) => (
+                <Alert variant="warning" className={appStyles.Alert} key={idx}>
+                  {message}
+                </Alert>
+              ))}
             </Form.Group>
-            {errors.password2?.map((message, idx) => (
-              <Alert variant="warning" className={appStyles.Alert} key={idx}>
-                {message}
-              </Alert>
-            ))}
 
             {errors.non_field_errors?.map((message, idx) => (
               <Alert variant="warning" className={appStyles.Alert} key={idx}>
