@@ -83,12 +83,6 @@ function PostCreateForm() {
       <Form.Group>
         <Form.Label>Title</Form.Label>
 
-        {errors.title?.map((message, idx) => (
-          <Alert variant="warning" className={appStyles.Alert} key={idx}>
-            {message}
-          </Alert>
-        ))}
-
         <Form.Control
           type="text"
           name="title"
@@ -97,16 +91,15 @@ function PostCreateForm() {
           onChange={handleChange}
           aria-label="title"
         />
-      </Form.Group>
-
-      <Form.Group>
-        <Form.Label>Category</Form.Label>
-
-        {errors.category?.map((message, idx) => (
+        {errors.title?.map((message, idx) => (
           <Alert variant="warning" className={appStyles.Alert} key={idx}>
             {message}
           </Alert>
         ))}
+      </Form.Group>
+
+      <Form.Group>
+        <Form.Label>Category</Form.Label>
 
         <Form.Control
           as="select"
@@ -133,16 +126,16 @@ function PostCreateForm() {
           <option value="Cute">Cute</option>
           <option value="Silly">Silly</option>
         </Form.Control>
+        {errors.category?.map((message, idx) => (
+          <Alert variant="warning" className={appStyles.Alert} key={idx}>
+            {message}
+          </Alert>
+        ))}
       </Form.Group>
 
       <Form.Group>
         <Form.Label>Description</Form.Label>
 
-        {errors.content?.map((message, idx) => (
-          <Alert variant="warning" className={appStyles.Alert} key={idx}>
-            {message}
-          </Alert>
-        ))}
         <Form.Control
           as="textarea"
           rows={6}
@@ -152,6 +145,11 @@ function PostCreateForm() {
           onChange={handleChange}
           aria-label="post description"
         />
+        {errors.content?.map((message, idx) => (
+          <Alert variant="warning" className={appStyles.Alert} key={idx}>
+            {message}
+          </Alert>
+        ))}
       </Form.Group>
 
       <Button
