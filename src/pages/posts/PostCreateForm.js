@@ -119,17 +119,17 @@ function PostCreateForm() {
           <option value="">Select a category</option>
           <option value="Dog">Dog</option>
           <option value="Puppy">Puppy</option>
-          <option value="Old Pet">Senior Dog</option>
+          <option value="Old Pet">Old Pet</option>
           <option value="Nature">Nature</option>
           <option value="Family">Family</option>
-          <option value="Big Pet">Big Dog</option>
-          <option value="Small Pet">Small Dog</option>
+          <option value="Big Pet">Big Pet</option>
+          <option value="Small Pet">Small Pet</option>
           <option value="Funny">Funny</option>
           <option value="Sleeping">Sleeping</option>
           <option value="Playing">Playing</option>
           <option value="Zoomies">Zoomies</option>
           <option value="Camping">Camping</option>
-          <option value="Kids & Pets">Kids & Dogs</option>
+          <option value="Kids & Pets">Kids & Pets</option>
           <option value="Cute">Cute</option>
           <option value="Silly">Silly</option>
         </Form.Control>
