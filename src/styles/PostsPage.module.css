@@ -35,10 +35,6 @@
   background-color: var(--dark-blue);
 }
 
-.Badge:active {
-  background-color: var(--dark-blue);
-}
-
 /* Reduce the font size of badges on smaller screens */
 @media all and (max-width: 991px) {
   .Badge {
