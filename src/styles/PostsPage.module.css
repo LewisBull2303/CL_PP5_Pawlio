@@ -32,7 +32,7 @@
 
 .Badge:hover {
   cursor: pointer;
-  color: var(--dark-blue);
+  background-color: var(--dark-blue);
 }
 
 /* Reduce the font size of badges on smaller screens */
