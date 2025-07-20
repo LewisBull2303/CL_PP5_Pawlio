@@ -61,7 +61,7 @@ The key functions of the platform are:
 19. As a user, I can dd my profile picture so that other users can easily identify me
 20. As a User, I can view my users profile pictures so that I can identify other users
 21. As a user, I can update my picture and bio on my profile so that other users can see up to date information about me
-22. As a user, I can change the password to my account so that I can keep it secure]#
+22. As a user, I can change the password to my account so that I can keep it secure
 
 ### Other Users Profiles
 
