@@ -1,9 +1,10 @@
-# Pawlio 
+# Pawlio <img width="1320" height="1000" alt="image" src="https://github.com/user-attachments/assets/a2f1a4d3-ffae-4e93-987e-24a50005b9cc" />
 
 Developer: Lewis Bull
 
 [Visit Live Website here](https://cl-pp5-pawlio-ba8f8e344581.herokuapp.com/)
 
+<img width="1277" height="709" alt="image" src="https://github.com/user-attachments/assets/5952be3e-d5ff-48ef-ae87-6cbaef7c9879" />
 
 ## About
 
