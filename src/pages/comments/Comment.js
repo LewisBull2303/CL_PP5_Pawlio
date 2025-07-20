@@ -1,19 +1,20 @@
-import React, { useState } from 'react';
-import { Media } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import { MoreDropdown } from '../../components/MoreDropdown';
-import CommentEditForm from './CommentEditForm';
+import React, { useState } from "react";
+import { Media } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import Avatar from "../../components/Avatar";
+import styles from "../../styles/Comment.module.css";
+import { DropdownMenu } from "../../components/DropdownMenu";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import { axiosRes } from "../../api/axiosDefaults";
+import CommentEditForm from "./CommentEditForm";
+import FeedbackMsg from "../../components/FeedbackMsg";
 
-import styles from '../../styles/Comment.module.css';
-import { useCurrentUser } from '../../contexts/CurrentUserContext';
-import { axiosRes } from '../../api/axiosDefaults';
-
-const Comment = (props) => {
+const Commentss = (props) => {
   const {
     profile_id,
     profile_image,
     owner,
-    updated_at,
+    updated_on,
     content,
     id,
     setPost,
@@ -23,64 +24,88 @@ const Comment = (props) => {
   const [showEditForm, setShowEditForm] = useState(false);
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
+  const [showAlert, setShowAlert] = useState(false);
+  const [isDeleted, setIsDeleted] = useState(false);
 
+  /*
+    Handles deleting of the comment based on its id
+    Removes the comment from all comments
+    Displays a feedback message to a user in place of deleted comment
+    Decrements the number of current comments by 1
+  */
   const handleDelete = async () => {
-    try {
-      await axiosRes.delete(`/comments/${id}/`);
-      setPost((prevPost) => ({
-        results: [
-          {
-            ...prevPost.results[0],
-            comments_count: prevPost.results[0].comments_count - 1,
-          },
-        ],
-      }));
+    setIsDeleted(true);
 
-      setComments((prevComments) => ({
-        ...prevComments,
-        results: prevComments.results.filter((comment) => comment.id !== id),
-      }));
-    } catch (err) {}
+    setTimeout(async () => {
+      try {
+        await axiosRes.delete(`/comments/${id}/`);
+        setPost((prevPost) => ({
+          results: [
+            {
+              ...prevPost.results[0],
+              comments_number: prevPost.results[0].comments_number - 1,
+            },
+          ],
+        }));
+
+        setComments((prevComments) => ({
+          ...prevComments,
+          results: prevComments.results.filter((comment) => comment.id !== id),
+        }));
+      } catch (err) {
+        //console.log(err)
+      }
+    }, 2500);
   };
 
-  return (
-    <>
-      <hr />
+  return isDeleted ? (
+    <FeedbackMsg variant="info" message="Comment has been deleted" />
+  ) : (
+    <div>
+      {showAlert && (
+        <FeedbackMsg variant="info" message="Comment has been updated" />
+      )}
+      <p style={{ color: 'red' }}>
+  owner: {owner} | current user: {currentUser?.username || "null"} | is_owner:{" "}
+  {is_owner ? "true" : "false"}
+</p>
+
       <Media>
-        <Link to={`/profiles/${profile_id}`} className={styles.Owner}>
-          <img
-            src={profile_image}
-            width={55}
-            height={55}
-            alt="avatar"
-            style={{ borderRadius: '50%' }}
-          />
+        <Link to={`/profiles/${profile_id}`} className="my-3">
+          <Avatar src={profile_image} />
         </Link>
-        <Media.Body className="align-self-center ml-2">
-          <span className={styles.Owner}>{owner}</span>
-          <span className={styles.Date}>{updated_at}</span>
-          {showEditForm ? (
-            <CommentEditForm
-              id={id}
-              profile_id={profile_id}
-              content={content}
-              profileImage={profile_image}
-              setComments={setComments}
-              setShowEditForm={setShowEditForm}
-            />
-          ) : (
-            <p>{content}</p>
-          )}
+        <Media.Body className="align-self-center mb-4">
+          <div className={styles.CommentBox}>
+            <span className={styles.OwnerName}>{owner}</span>
+            <span className={styles.Date}> | {updated_on}</span>
+            <span className={styles.DropdownDots}>
+              {/* Display the dropdown menu for owner of the comment
+                  to either edit or delete it */}
+              {is_owner && !showEditForm && (
+                <DropdownMenu
+                  handleEdit={() => setShowEditForm(true)}
+                  handleDelete={handleDelete}
+                />
+              )}
+            </span>
+            {showEditForm ? (
+              <CommentEditForm
+                id={id}
+                profile_id={profile_id}
+                content={content}
+                profileImage={profile_image}
+                setComments={setComments}
+                setShowEditForm={setShowEditForm}
+                setShowAlert={setShowAlert}
+              />
+            ) : (
+              <p className="pr-2 pt-2">{content}</p>
+            )}
+          </div>
         </Media.Body>
-        {is_owner && !showEditForm && (
-          <MoreDropdown
-            handleEdit={() => setShowEditForm(true)}
-            handleDelete={handleDelete}
-          />
-        )}
       </Media>
-    </>
+    </div>
   );
 };
 
-export default Comment;
+export default Commentss;
