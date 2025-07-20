@@ -25,12 +25,11 @@ const Comment = (props) => {
   const currentUser = useCurrentUser();
   console.log(currentUser?.username)
   const is_owner = currentUser?.username === owner;
-  
-  if (currentUser?.id == currentUser?.profile_id){
+
+  if (currentUser?.username === owner){
     is_owner == true
   }
-
-  if (is_owner){
+    if (is_owner){
     console.log("Yes")
   }
   else{
