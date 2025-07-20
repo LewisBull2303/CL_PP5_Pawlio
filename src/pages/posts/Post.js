@@ -4,7 +4,7 @@ import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import { Card, Media, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { Link, useHistory } from 'react-router-dom';
 import { axiosRes } from '../../api/axiosDefaults';
-import { MoreDropdown } from '../../components/MoreDropdown';
+import { DropdownMenu } from '../../components/DropdownMenu';
 
 const Post = (props) => {
   const {
@@ -89,7 +89,7 @@ const Post = (props) => {
           <div className="d-flex align-items-center">
             <span>{updated_at}</span>
             {is_owner && postPage && (
-              <MoreDropdown
+              <DropdownMenu
                 handleEdit={handleEdit}
                 handleDelete={handleDelete}
               />
