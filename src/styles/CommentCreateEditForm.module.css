@@ -18,3 +18,10 @@
   background-color: aliceblue;
   color: #242a3d;
 }
+
+.DropdownDots {
+  position: relative;
+  z-index: 999;
+  padding: 0 0.5rem;
+  cursor: pointer;
+}

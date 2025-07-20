@@ -1,14 +1,6 @@
-i {
-  position: relative;
-  z-index: 999;
-  padding: 0 0.5rem;
-  cursor: pointer;
-  color: black;
-}
-
 .CommentBox {
   color: var(--black);
-  border: 1px solid var(--dark-gre);
+  border: 1px solid var(--dark-grey);
   border-radius: 35px;
   padding: 5px 10px 5px 20px;
 }
@@ -29,6 +21,5 @@ i {
   z-index: 999;
   padding: 0 0.5rem;
   cursor: pointer;
-  color: black;
 }
 

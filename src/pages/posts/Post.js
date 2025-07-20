@@ -149,7 +149,7 @@ const Post = (props) => {
               <OverlayTrigger
                 placement="top"
                 overlay={
-                  <Tooltip>This is your post, you cannot like it </Tooltip>
+                  <Tooltip>This is your post, you can like it </Tooltip>
                 }
               >
                 <img
