@@ -9,7 +9,7 @@ import { axiosRes } from "../../api/axiosDefaults";
 import CommentEditForm from "./CommentEditForm";
 import FeedbackMsg from "../../components/FeedbackMsg";
 
-const Commentss = (props) => {
+const Comment = (props) => {
   const {
     profile_id,
     profile_image,
@@ -108,4 +108,4 @@ const Commentss = (props) => {
   );
 };
 
-export default Commentss;
+export default Comment;

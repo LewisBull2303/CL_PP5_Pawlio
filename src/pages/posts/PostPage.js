@@ -7,7 +7,7 @@ import { axiosReq } from "../../api/axiosDefaults";
 import Post from "./Post";
 import CommentCreateForm from "../comments/CommentCreateForm";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import Commentss from "../comments/TESTComment";
+import Comment from "../comments/Comment";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Asset from "../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
@@ -59,7 +59,6 @@ function PostPage() {
             <PopularProfiles />
           </Container>
         </Col>
-        <h1>TESTTTT</h1>
         <Col className="py-1 p-0 p-lg-2" lg={8}>
           <Post {...post.results[0]} setPosts={setPost} postPage />
           <Container className={`${appStyles.Content} pb-3 mb-3`}>
@@ -78,7 +77,7 @@ function PostPage() {
               // InfiniteScroll component handles loading more pages of comments as the user scrolls
               <InfiniteScroll
                 children={comments.results.map((comment) => (
-                  <Commentss
+                  <Comment
                     key={comment.id}
                     {...comment}
                     setPost={setPost}
