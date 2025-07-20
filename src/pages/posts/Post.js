@@ -155,9 +155,9 @@ const Post = (props) => {
                 <img
                   src={Unlike}
                   className={appStyles.LikeIcon}
-                  alt="Like hand"
-                  height="35"
-                  width="35"
+                  alt="Heart"
+                  height="25"
+                  width="25"
                 />
               </OverlayTrigger>
             ) : like_id ? (
@@ -166,9 +166,9 @@ const Post = (props) => {
                 <img
                   src={Like}
                   className={appStyles.LikeIcon}
-                  alt="Like hand"
-                  height="35"
-                  width="35"
+                  alt="Heart"
+                  height="25"
+                  width="25"
                 />
               </span>
             ) : currentUser ? (
@@ -177,9 +177,9 @@ const Post = (props) => {
                 <img
                   src={Unlike}
                   className={appStyles.LikeIcon}
-                  alt="Unlike hand"
-                  height="35"
-                  width="35"
+                  alt="Heart"
+                  height="25"
+                  width="25"
                 />
               </span>
             ) : null // user must be logged in to the app to view the content
