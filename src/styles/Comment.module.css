@@ -19,6 +19,7 @@
 .DropdownDots {
   height: 30px;
   width: 20px;
+  z-index: 999;
   color: black;
   float: right;
 }
