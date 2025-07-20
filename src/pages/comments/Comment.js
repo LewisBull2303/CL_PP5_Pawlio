@@ -77,7 +77,7 @@ const Comment = (props) => {
             <span className={styles.DropdownDots}>
               {/* Display the dropdown menu for owner of the comment
                   to either edit or delete it */}
-              {is_owner && !showEditForm && (
+              {!showEditForm && (
                 <DropdownMenu
                   handleEdit={() => setShowEditForm(true)}
                   handleDelete={handleDelete}
