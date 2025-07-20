@@ -12,16 +12,14 @@
 }
 
 .Date {
-  font-weight: bold;
-  color: red;
-  display: inline-block;
-  background: yellow;
+  font-weight: lighter;
+  color: var(--black);
 }
 
 .DropdownDots {
-  display: inline-block;
-  font-size: 20px;
-  background: lime;
-  color: black !important;
-  z-index: 9999;
+  position: relative;
+  z-index: 10;
+  padding: 0 0.5rem;
+  cursor: pointer;
+  color: black;
 }
