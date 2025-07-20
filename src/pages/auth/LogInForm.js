@@ -66,6 +66,7 @@ function SignInForm() {
                 type="text"
                 placeholder="Your username"
                 name="username"
+                label="Username"
                 maxLength={20}
                 value={username}
                 onChange={handleChange}
@@ -84,6 +85,7 @@ function SignInForm() {
                 className={`${appStyles.Input} text-center`}
                 type="password"
                 placeholder="Password"
+                label="Password"
                 name="password"
                 value={password}
                 onChange={handleChange}
