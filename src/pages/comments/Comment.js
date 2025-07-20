@@ -23,7 +23,7 @@ const Comment = (props) => {
 
   const [showEditForm, setShowEditForm] = useState(false);
   const currentUser = useCurrentUser();
-  console.log(currentUser)
+  console.log(currentUser?.username)
   const is_owner = currentUser?.username === owner;
   if (is_owner){
     console.log("Yes")
