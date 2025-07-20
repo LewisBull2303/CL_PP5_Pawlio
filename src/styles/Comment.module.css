@@ -1,3 +1,11 @@
+i {
+  position: relative;
+  z-index: 999;
+  padding: 0 0.5rem;
+  cursor: pointer;
+  color: black;
+}
+
 .CommentBox {
   color: var(--black);
   border: 1px solid var(--dark-gre);
@@ -18,8 +26,9 @@
 
 .DropdownDots {
   position: relative;
-  z-index: 10;
+  z-index: 999;
   padding: 0 0.5rem;
   cursor: pointer;
   color: black;
 }
+
