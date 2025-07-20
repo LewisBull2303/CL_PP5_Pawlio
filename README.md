@@ -278,4 +278,238 @@ The API for this application was built with the Django REST Framework. The repos
 - Displays if the user loads a page with a url that does not exist
 - Contains a button to redirect users to the main page
 
+## Future Improvements / Additional Features
 
+Below are some of the ways that this project could be improved in the future
+
+1. Better user authentication, potentially requiring an email addess thet would need to be confirmed before allowing access to the platform
+2. Options to send other users messages on the app, through a personal messaging system
+3. Ability for users to make their own categories and tags to allow for more freedom of expression
+4. Forgot password button to allow users to reset their password if they could not log into their account
+5. Allow authentication through other apps such as google, linkedIn, Instagram etc
+6. A page that shows the most liked or commented posts on the website
+7. Ability to reply to other users comments
+8. Option to like other users comments
+
+There was originally plans for the users to be able to private message each other on the website, but I decided to keep the app more streamlined to allow for further growth and progression
+
+## Validation
+
+## Manual Testing
+
+1. As a new user, I can create a new account to be able to access the app
+
+|Test|Expected Result|Actual Result|
+|---|---|---|
+|Navigate to https://cl-pp5-pawlio-ba8f8e344581.herokuapp.com/ and click on sign up in the Navbar or the Happy to join button on the landing page. The user types in a username, password and confirms the password|Redirects the user to the login page, and if they login with their account credentials they are taken to the home page and the navbar displays their profile image|Works as expected|
+
+
+2. As a pre-existing user, I can log in to my account with my credentials to access the app
+
+|Test|Expected Result|Actual Result|
+|---|---|---|
+|Navigate to https://cl-pp5-pawlio-ba8f8e344581.herokuapp.com/ and click on Login in the Navbar or the Im already a member button on the landing page. The user types in their username and password |Allows the user to login|Works as expected|
+
+3. As a User, I can maintain the logged-in status until I choose to log out of the app
+
+|Test|Expected Result|Actual Result|
+|---|---|---|
+|Log in and stay logged in|Allows the user to stay logged in unless they choose to log themselves out|Works as expected|
+
+
+4. As a user, I can create posts so that I can share pictures of animals with the whole community
+
+|Test|Expected Result|Actual Result|
+|---|---|---|
+|Click on the add post button in the navbar or the side menu|Add the post title, select the category and upload image (post description is optional) and click ‘create’ button. The post will appear in the main posts page|Works as expected|
+
+5. As a user, I can view post by category and can categorize my posts to users can see it by its tag
+
+|Test|Expected Result|Actual Result|
+|---|---|---|
+|Click on the ‘Add post’ in the left-hand side small menu and the posts create page will be shown. Add posts details and select a category of the post (mandatory field)|Post is added and a category badge (type of post) is displayed within the post under its title and description|Works as expected|
+|Click on one of the category button in the side menu|Only posts with that category tag will show up and filter out the rest|Works and Expected|
+
+6. As a user, I can view other peoples posts so that I can get inspired by their images
+
+|Test|Expected Result|Actual Result|
+|---|---|---|
+|As a logged in user navigate to the main page by clicking on the 'Home' icon in the navbar|All posts will be displayed on the page|Works as expected|
+
+7. As a user, I can view the details of a post so I can see the full description and other users comments
+
+|Test|Expected Result|Actual Result|
+|---|---|---|
+|From the main post page click on the post image|Redirects to a specific post page and displays post details|Works as expected|
+
+8. As a user I can like a post so that I can show my interest
+
+|Test|Expected Result|Actual Result|
+|---|---|---|
+|Click on the like button for a post|The like counter will go up and the like button will change to indicate it has been liked, the post is also added to the like page|Works as expected|
+
+9. As a user, I can see the home page with an explanation of the portal, so that I know what the app is about
+
+|Test|Expected Result|Actual Result|
+|---|---|---|
+|Navigate to https://cl-pp5-pawlio-ba8f8e344581.herokuapp.com/|The user is taken to the landing page with a description of the app|Works as expected|
+
+10. As a user, I can see the navbar on every page, so that I can easily return to the main page and access my profile page
+
+|Test|Expected Result|Actual Result|
+|---|---|---|
+|Navigate to any page on the website|The navbar is clearly displayed at the top of the page|Works as expected|
+ 
+11. As a logged-out user, I can see log in and sign up options so that I can log in or sign up
+
+|Test|Expected Result|Actual Result|
+|---|---|---|
+|Navigate to the main page and ensure you are logged out. If logged in, click on the sign out button in the navbar|Redirects to the landing page amd displays option to sign in or sign up|Works as expected|
+
+12. As a user, I can view the details of a single post so that I can read other users comments and know what they think about
+
+|Test|Expected Result|Actual Result|
+|---|---|---|
+|From the the main post page click on the post image|Redirects to a chosen post page and displays post details with comments below|Works as expected|
+
+13. As a user, I can view a category for the post so that I know what the image relates to
+
+|Test|Expected Result|Actual Result|
+|---|---|---|
+|From the the main post page look at a post|Once the post has been created by the user, a category is displayed within each post|Works as expected|
+
+14. As a user, I can add comments to a post so that I can share my thoughts about a post
+
+|Test|Expected Result|Actual Result|
+|---|---|---|
+|From the the main post page click on the post image, it will redirect to the post details page, under the image the user can write their comment and hit add|Adds the comment to the post and increments the number of comments by 1|Works as expected|
+
+15. As a user, I can see when comments were created, so I know how old a comment is
+
+|Test|Expected Result|Actual Result|
+|---|---|---|
+|Click on a post image to navigate to the post details page|All comments with the creation date are displayed under the post|Works as expected|
+
+16. As a user, I can edit my comment so that I can update it
+
+|Test|Expected Result|Actual Result|
+|---|---|---|
+|Navigate to a comment you made and click the dropddown menu button and then click the edit comment button, change the content of the comment and click save|The users comment will be updated|Works as expected|
+
+17. As a user, I can delete my comment from the post
+
+|Test|Expected Result|Actual Result|
+|---|---|---|
+|Navigate to a comment you made and click the dropddown menu button and then click the delete comment button, change the content of the comment and click save|The users comment will be deleted|Works as expected|
+
+18. As a user, I can edit my post title and description so that I can make corrections or update my post after it was created
+
+|Test|Expected Result|Actual Result|
+|---|---|---|
+|The user navigates to a post they made, they can click the dropdown menu button on the post and click the edit post button|The users will be prompted to edit the title, image, description or category and once done it will be updated on the website|Works as expected|
+
+19. As a user, I can dd my profile picture so that other users can easily identify me
+
+|Test|Expected Result|Actual Result|
+|---|---|---|
+|The user navigates to a post they made, they can click the dropdown menu button on the post and click the edit post button|The users will be prompted to edit the title, image, description or category and once done it will be updated on the website|Works as expected|
+
+20. As a User, I can view my users profile pictures so that I can identify other users
+
+|Test|Expected Result|Actual Result|
+|---|---|---|
+|The user navigates to their profile page and click on the dropdown menu, the user can then click the edit profile button|The users will be able to change their profile picture and if they do it will be updated|Works as expected|
+
+21. As a user, I can update my picture and bio on my profile so that other users can see up to date information about me
+
+|Test|Expected Result|Actual Result|
+|---|---|---|
+|The user navigates to their profile page and click on the dropdown menu, the user can then click the edit profile button|The users will be able to change their profile picture and bio, if they do it will be updated so users can see it|Works as expected|
+
+22. As a user, I can change the password to my account so that I can keep it secure
+
+|Test|Expected Result|Actual Result|
+|---|---|---|
+|The user navigates to their profile page and click on the dropdown menu, the user can then click the edit password button|The users will be able to change their password to keep their profile encrypted|Works as expected|
+
+23. As a user, I can view all the posts by a specific user so that I can see their latest activity
+
+|Test|Expected Result|Actual Result|
+|---|---|---|
+|Click on the user avatar or name|Redirects to the chosen user profile page and displays all their posts within the profile page|Works as expected|
+
+24. As a user, I can view other users profiles with their bios, the number of posts, followers and profiles they follow
+
+|Test|Expected Result|Actual Result|
+|---|---|---|
+|Click on the user avatar or name|Redirects to the chosen user profile page and displays all their information to see such as the bio, number of followers, number of posts and the number of accounts they follow|Works as expected|
+
+25. As a user, I can follow and unfollow other users so that I can get specific user' posts in my feed
+
+|Test|Expected Result|Actual Result|
+|---|---|---|
+|Click on the 'follow' button within the user profile page or by the username in 'Top Users' menu|Follows the user, increases the 'following' number on current profile and increases the number of followers on followed user's profile|Works as expected|
+
+26. As a user, I can see a list of the most followed profiles
+
+|Test|Expected Result|Actual Result|
+|---|---|---|
+|Go to the home page of the website|On the left there will be a small menu that displays 3 the most followed profiles|Works as expected|
+
+27. As a user, I can view posts ordered by most recently added so that I am up to date with the newest content
+
+|Test|Expected Result|Actual Result|
+|---|---|---|
+|Add a new post and navigate to the main posts page|Adds post on top of the other posts and displays a date when it was added|Works as expected|
+
+28. As a user, I can keep scrolling through the posts so that they are loaded automatically and I don't have to select the next page
+
+|Test|Expected Result|Actual Result|
+|---|---|---|
+|Navigate to the main posts page and scroll to the bottom of the page|Loads new content and moves the scroll bar. Displays a loading gif before the posts have been loaded|Works as expected|
+
+29. As a user, I can see the posts I liked so that I can find the posts I enjoy the most
+
+|Test|Expected Result|Actual Result|
+|---|---|---|
+|On the main posts page click on the 'Liked posts' icon/text|Loads all liked posts|Works as expected|
+
+30. As a user, I can view posts from users I followed, so I can follow their activity
+
+|Test|Expected Result|Actual Result|
+|---|---|---|
+|On the main posts page click on the 'Feed' icon/text|Loads all posts from followed users|Works as expected|
+
+31. As a user, I can view posts category tags, so that I choose posts to display that I’m interested in
+
+|Test|Expected Result|Actual Result|
+|---|---|---|
+|On the main posts page click on the category badge of posts you'd like to view|Loads all posts with the selected category|Works as expected|
+
+32. As a user, I can search for posts with keywords so that I can find the posts I am interested in
+
+|Test|Expected Result|Actual Result|
+|---|---|---|
+|On the main posts page click on the search bar and type a phrase|Searches through all posts, users and post categories and diplays ones with the seached keyword either as the username or in the title or category|Works as expected|
+
+33. As the site owner, I want my site to be fully responsive so that user can use it on different devices
+
+|Test|Expected Result|Actual Result|
+|---|---|---|
+|Change device screen size using chrome dev tools|The web functionality remains the same on various screen sizes|Works as expected|
+
+34. As a site owner, I want users to see a 404 page when they go to a url that doesnt exist
+
+|Test|Expected Result|Actual Result|
+|---|---|---|
+|Navigate to a url that does not exist such as https://cl-pp5-pawlio-ba8f8e344581.herokuapp.com/bad-request|Reroutes to a customised 404 page|Works as expected|
+
+35. As a user, I can view feedback messages so that I know if my comment, profile or post has been updated
+
+|Test|Expected Result|Actual Result|
+|---|---|---|
+|In the post page comments section click on the dropdown menu and edit icon to edit your existing comment. Make changes to your comment and click 'Update'|Saves the comment, changes time display to 'now' and displays the feedback message to the user|Works as expected|
+|In the post page comments section click on the dropdown menu and delete icon to delete your existing comment|Deletes the comment and displays the feedback message in its place|Works as expected|
+|In the profile page click on the dropdown menu and edit icon to edit user profile. Make desired changes and click Save|Updates the profile, displays the feedback message and redirects the user to their profile page after a short delay|Works as expected|
+|In the profile page click on the dropdown menu and the key icon to change user password. Update the password and click Save|Updates the password, displays the feedback message and redirects the user to their profile page after a short delay|Works as expected|
+|Within the post page click on the dropdown menu and delete icon to delete the post|Deletes the post, displays the feedback message and redirects the user to the main posts page|Works as expected|
