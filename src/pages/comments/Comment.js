@@ -14,7 +14,7 @@ const Comment = (props) => {
     profile_id,
     profile_image,
     owner,
-    updated_on,
+    updated_at,
     content,
     id,
     setPost,
@@ -73,7 +73,7 @@ const Comment = (props) => {
         <Media.Body className="align-self-center mb-4">
           <div className={styles.CommentBox}>
             <span className={styles.OwnerName}>{owner}</span>
-            <span className={styles.Date}> | {updated_on}</span>
+            <span className={styles.Date}> | {updated_at}</span>
             <span className={styles.DropdownDots}>
               {/* Display the dropdown menu for owner of the comment
                   to either edit or delete it */}
