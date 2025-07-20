@@ -1,4 +1,4 @@
-<img width="1064" height="663" alt="image" src="https://github.com/user-attachments/assets/fc3e405d-f1b7-4139-ad12-133585715550" /># Pawlio <img width="100" height="70" alt="image" src="https://github.com/user-attachments/assets/a2f1a4d3-ffae-4e93-987e-24a50005b9cc" />
+<img width="1731" height="1165" alt="image" src="https://github.com/user-attachments/assets/9afe2916-235a-47d3-bd93-8d2737a36a28" /><img width="888" height="411" alt="image" src="https://github.com/user-attachments/assets/5b29f83a-a658-4a7f-b8a8-1645a5ce7934" /># Pawlio <img width="100" height="70" alt="image" src="https://github.com/user-attachments/assets/a2f1a4d3-ffae-4e93-987e-24a50005b9cc" />
 
 Developer: Lewis Bull
 
@@ -401,20 +401,6 @@ Lighthouse was used to test the performance, accessibility, best practice and SE
 
 </details>
 
-### Wave
-
-The WAVE WebAIM web accessibility evaluation tool was used to test the websites accessibility. There were a few errors related to missing labels and contrast issues on buttons. These errors were rectified.
-
-<details>
- <summary>Images</summary>
-
-<img width="1891" height="763" alt="image" src="https://github.com/user-attachments/assets/f24b6524-3010-4623-ac36-6c0e7bfe42b8" />
-
-
-
-
-</details>
-
 ## Manual Testing
 
 1. As a new user, I can create a new account to be able to access the app
@@ -423,12 +409,26 @@ The WAVE WebAIM web accessibility evaluation tool was used to test the websites 
 |---|---|---|
 |Navigate to https://cl-pp5-pawlio-ba8f8e344581.herokuapp.com/ and click on sign up in the Navbar or the Happy to join button on the landing page. The user types in a username, password and confirms the password|Redirects the user to the login page, and if they login with their account credentials they are taken to the home page and the navbar displays their profile image|Works as expected|
 
+<details>
+ <summary>Images</summary>
+ 
+<img width="1511" height="739" alt="image" src="https://github.com/user-attachments/assets/a9955f58-846b-4c01-b8bd-1ec9ddf67a59" />
+
+</details>
 
 2. As a pre-existing user, I can log in to my account with my credentials to access the app
 
 |Test|Expected Result|Actual Result|
 |---|---|---|
 |Navigate to https://cl-pp5-pawlio-ba8f8e344581.herokuapp.com/ and click on Login in the Navbar or the Im already a member button on the landing page. The user types in their username and password |Allows the user to login|Works as expected|
+
+<details>
+ <summary>Images</summary>
+
+<img width="1683" height="780" alt="image" src="https://github.com/user-attachments/assets/fed219d9-e89a-458b-8756-ee34ab8f27c8" />
+
+</details>
+
 
 3. As a User, I can maintain the logged-in status until I choose to log out of the app
 
@@ -437,11 +437,29 @@ The WAVE WebAIM web accessibility evaluation tool was used to test the websites 
 |Log in and stay logged in|Allows the user to stay logged in unless they choose to log themselves out|Works as expected|
 
 
+<details>
+ <summary>Images</summary>
+
+<img width="1371" height="701" alt="image" src="https://github.com/user-attachments/assets/86394634-24ce-4e48-a9e6-2d11f4eb6d95" />
+
+
+</details>
+
+
 4. As a user, I can create posts so that I can share pictures of animals with the whole community
 
 |Test|Expected Result|Actual Result|
 |---|---|---|
 |Click on the add post button in the navbar or the side menu|Add the post title, select the category and upload image (post description is optional) and click ‘create’ button. The post will appear in the main posts page|Works as expected|
+
+<details>
+ <summary>Images</summary>
+
+<img width="1486" height="718" alt="image" src="https://github.com/user-attachments/assets/455047b7-5f73-427c-ae72-120e11910b17" />
+
+
+</details>
+
 
 5. As a user, I can view post by category and can categorize my posts to users can see it by its tag
 
@@ -450,11 +468,29 @@ The WAVE WebAIM web accessibility evaluation tool was used to test the websites 
 |Click on the ‘Add post’ in the left-hand side small menu and the posts create page will be shown. Add posts details and select a category of the post (mandatory field)|Post is added and a category badge (type of post) is displayed within the post under its title and description|Works as expected|
 |Click on one of the category button in the side menu|Only posts with that category tag will show up and filter out the rest|Works and Expected|
 
+<details>
+ <summary>Images</summary>
+
+<img width="588" height="781" alt="image" src="https://github.com/user-attachments/assets/9ace1ae4-a428-4d3b-9e7c-ac0dc16c2056" />
+<img width="1556" height="821" alt="image" src="https://github.com/user-attachments/assets/5cf25aa9-2b94-4e68-bf41-30aff67140ed" />
+
+</details>
+
+
 6. As a user, I can view other peoples posts so that I can get inspired by their images
 
 |Test|Expected Result|Actual Result|
 |---|---|---|
 |As a logged in user navigate to the main page by clicking on the 'Home' icon in the navbar|All posts will be displayed on the page|Works as expected|
+
+<details>
+ <summary>Images</summary>
+
+<img width="821" height="951" alt="image" src="https://github.com/user-attachments/assets/a095a18f-db2b-4341-bf03-b68e029db0fb" />
+
+
+</details>
+
 
 7. As a user, I can view the details of a post so I can see the full description and other users comments
 
@@ -462,11 +498,28 @@ The WAVE WebAIM web accessibility evaluation tool was used to test the websites 
 |---|---|---|
 |From the main post page click on the post image|Redirects to a specific post page and displays post details|Works as expected|
 
+<details>
+ <summary>Images</summary>
+
+<img width="1402" height="1049" alt="image" src="https://github.com/user-attachments/assets/f02e9229-9e00-4d93-8a68-79a839327c1d" />
+
+</details>
+
+
 8. As a user I can like a post so that I can show my interest
 
 |Test|Expected Result|Actual Result|
 |---|---|---|
 |Click on the like button for a post|The like counter will go up and the like button will change to indicate it has been liked, the post is also added to the like page|Works as expected|
+
+<details>
+ <summary>Images</summary>
+
+<img width="1068" height="786" alt="image" src="https://github.com/user-attachments/assets/2bffc08f-1a4c-4b17-960c-f3a4779002e0" />
+<img width="1207" height="874" alt="image" src="https://github.com/user-attachments/assets/0ed7d180-2a5a-4e7b-9692-d7fb13759ed2" />
+
+</details>
+
 
 9. As a user, I can see the home page with an explanation of the portal, so that I know what the app is about
 
@@ -474,17 +527,44 @@ The WAVE WebAIM web accessibility evaluation tool was used to test the websites 
 |---|---|---|
 |Navigate to https://cl-pp5-pawlio-ba8f8e344581.herokuapp.com/|The user is taken to the landing page with a description of the app|Works as expected|
 
+<details>
+ <summary>Images</summary>
+
+<img width="1238" height="745" alt="image" src="https://github.com/user-attachments/assets/703443b5-6a85-4ab7-b38c-71b6305e62de" />
+
+</details>
+
+
 10. As a user, I can see the navbar on every page, so that I can easily return to the main page and access my profile page
 
 |Test|Expected Result|Actual Result|
 |---|---|---|
 |Navigate to any page on the website|The navbar is clearly displayed at the top of the page|Works as expected|
  
+<details>
+ <summary>Images</summary>
+
+<img width="1443" height="651" alt="image" src="https://github.com/user-attachments/assets/bb9b097d-b6cb-4ef6-94ec-b9d2a82667f4" />
+<img width="1326" height="519" alt="image" src="https://github.com/user-attachments/assets/a613c922-27cc-43e8-a33d-2c1d7d762747" />
+<img width="1287" height="483" alt="image" src="https://github.com/user-attachments/assets/a98e133c-7d8d-4317-b36b-671956a1e1a9" />
+<img width="1379" height="538" alt="image" src="https://github.com/user-attachments/assets/ece12838-b0a9-43f7-9cb8-ef809268ed17" />
+
+</details>
+
+
 11. As a logged-out user, I can see log in and sign up options so that I can log in or sign up
 
 |Test|Expected Result|Actual Result|
 |---|---|---|
 |Navigate to the main page and ensure you are logged out. If logged in, click on the sign out button in the navbar|Redirects to the landing page amd displays option to sign in or sign up|Works as expected|
+
+<details>
+ <summary>Images</summary>
+
+<img width="1312" height="242" alt="image" src="https://github.com/user-attachments/assets/f0bf205e-c179-4769-9f41-23214305faf5" />
+
+</details>
+
 
 12. As a user, I can view the details of a single post so that I can read other users comments and know what they think about
 
@@ -492,11 +572,27 @@ The WAVE WebAIM web accessibility evaluation tool was used to test the websites 
 |---|---|---|
 |From the the main post page click on the post image|Redirects to a chosen post page and displays post details with comments below|Works as expected|
 
+<details>
+ <summary>Images</summary>
+
+<img width="1394" height="1105" alt="image" src="https://github.com/user-attachments/assets/19f3ec3e-e2c5-4242-b4d2-b2e69bf31a3d" />
+
+</details>
+
+
 13. As a user, I can view a category for the post so that I know what the image relates to
 
 |Test|Expected Result|Actual Result|
 |---|---|---|
 |From the the main post page look at a post|Once the post has been created by the user, a category is displayed within each post|Works as expected|
+
+<details>
+ <summary>Images</summary>
+
+<img width="844" height="952" alt="image" src="https://github.com/user-attachments/assets/2f1d5518-6a75-496b-a2ef-739c933b18bf" />
+
+</details>
+
 
 14. As a user, I can add comments to a post so that I can share my thoughts about a post
 
@@ -504,11 +600,28 @@ The WAVE WebAIM web accessibility evaluation tool was used to test the websites 
 |---|---|---|
 |From the the main post page click on the post image, it will redirect to the post details page, under the image the user can write their comment and hit add|Adds the comment to the post and increments the number of comments by 1|Works as expected|
 
+<details>
+ <summary>Images</summary>
+
+<img width="1296" height="1082" alt="image" src="https://github.com/user-attachments/assets/a8b91373-dbf9-465a-bf61-c98a5068d0c5" />
+<img width="1246" height="1096" alt="image" src="https://github.com/user-attachments/assets/87a79982-ef0f-4370-bec6-cababa657b68" />
+
+</details>
+
+
 15. As a user, I can see when comments were created, so I know how old a comment is
 
 |Test|Expected Result|Actual Result|
 |---|---|---|
 |Click on a post image to navigate to the post details page|All comments with the creation date are displayed under the post|Works as expected|
+
+<details>
+ <summary>Images</summary>
+
+<img width="269" height="197" alt="image" src="https://github.com/user-attachments/assets/c3c44eab-946e-4da5-8d81-e4b0f75cf334" />
+
+</details>
+
 
 16. As a user, I can edit my comment so that I can update it
 
@@ -516,11 +629,31 @@ The WAVE WebAIM web accessibility evaluation tool was used to test the websites 
 |---|---|---|
 |Navigate to a comment you made and click the dropddown menu button and then click the edit comment button, change the content of the comment and click save|The users comment will be updated|Works as expected|
 
+<details>
+ <summary>Images</summary>
+
+<img width="963" height="442" alt="image" src="https://github.com/user-attachments/assets/a236bb6d-90cd-4999-be0f-92ef08e64e95" />
+<img width="786" height="337" alt="image" src="https://github.com/user-attachments/assets/5a6bf3f4-3ba2-4ea9-ab9c-bb0ea1141eef" />
+<img width="888" height="411" alt="image" src="https://github.com/user-attachments/assets/5cb93ca3-04ed-4061-aebf-db601b859265" />
+
+</details>
+
+
 17. As a user, I can delete my comment from the post
 
 |Test|Expected Result|Actual Result|
 |---|---|---|
 |Navigate to a comment you made and click the dropddown menu button and then click the delete comment button, change the content of the comment and click save|The users comment will be deleted|Works as expected|
+
+<details>
+ <summary>Images</summary>
+
+<img width="813" height="360" alt="image" src="https://github.com/user-attachments/assets/529ec420-5a0a-4ff3-aba1-24a94027d970" />
+<img width="832" height="288" alt="image" src="https://github.com/user-attachments/assets/93a0d38f-243a-42f5-96f3-f592186401bd" />
+
+
+</details>
+
 
 18. As a user, I can edit my post title and description so that I can make corrections or update my post after it was created
 
@@ -528,17 +661,48 @@ The WAVE WebAIM web accessibility evaluation tool was used to test the websites 
 |---|---|---|
 |The user navigates to a post they made, they can click the dropdown menu button on the post and click the edit post button|The users will be prompted to edit the title, image, description or category and once done it will be updated on the website|Works as expected|
 
+<details>
+ <summary>Images</summary>
+
+<img width="1628" height="1026" alt="image" src="https://github.com/user-attachments/assets/17ab08c7-1291-4840-aa51-82ee457b6ec1" />
+<img width="1389" height="664" alt="image" src="https://github.com/user-attachments/assets/10749236-e05e-45a1-81c3-d4e321d7baea" />
+<img width="1377" height="1094" alt="image" src="https://github.com/user-attachments/assets/2e20556e-3440-49f7-a300-70a9f00f0c50" />
+<img width="1307" height="540" alt="image" src="https://github.com/user-attachments/assets/d8c78555-08b7-4b65-a5fb-c3330889f94c" />
+<img width="1238" height="943" alt="image" src="https://github.com/user-attachments/assets/8d62e31c-b06b-4c6e-a48c-97b1ec17083c" />
+
+</details>
+
+
 19. As a user, I can dd my profile picture so that other users can easily identify me
 
 |Test|Expected Result|Actual Result|
 |---|---|---|
-|The user navigates to a post they made, they can click the dropdown menu button on the post and click the edit post button|The users will be prompted to edit the title, image, description or category and once done it will be updated on the website|Works as expected|
+|The user navigates to the profile page through the navbar or a post that they have made, they can then click the profile dropdown and click the edit profile button the user can then change their profile picture|The users will be able to update their profile picture and once done it will be updated on the website|Works as expected|
+
+<details>
+ <summary>Images</summary>
+
+<img width="1287" height="477" alt="image" src="https://github.com/user-attachments/assets/b7541f2a-9964-4350-bb23-08574a809239" />
+<img width="1275" height="550" alt="image" src="https://github.com/user-attachments/assets/e52ad4eb-4dc0-44b7-885b-6b9e93ed3c7b" />
+<img width="1378" height="546" alt="image" src="https://github.com/user-attachments/assets/d2b11917-a26f-4c67-a7c5-8718ae72d1a1" />
+<img width="1350" height="440" alt="image" src="https://github.com/user-attachments/assets/29a65f74-ddff-4bdd-8669-ebb01c5b06eb" />
+
+</details>
+
 
 20. As a User, I can view my users profile pictures so that I can identify other users
 
 |Test|Expected Result|Actual Result|
 |---|---|---|
-|The user navigates to their profile page and click on the dropdown menu, the user can then click the edit profile button|The users will be able to change their profile picture and if they do it will be updated|Works as expected|
+|On the home page of the website the user can find another users post|The users will be able to see the other users profile picture to identify them|Works as expected|
+
+<details>
+ <summary>Images</summary>
+
+<img width="1055" height="466" alt="image" src="https://github.com/user-attachments/assets/cb2e519f-7ab1-4789-a0d1-2febfb6e052e" />
+
+</details>
+
 
 21. As a user, I can update my picture and bio on my profile so that other users can see up to date information about me
 
@@ -546,11 +710,31 @@ The WAVE WebAIM web accessibility evaluation tool was used to test the websites 
 |---|---|---|
 |The user navigates to their profile page and click on the dropdown menu, the user can then click the edit profile button|The users will be able to change their profile picture and bio, if they do it will be updated so users can see it|Works as expected|
 
+<details>
+ <summary>Images</summary>
+
+<img width="1287" height="477" alt="image" src="https://github.com/user-attachments/assets/b7541f2a-9964-4350-bb23-08574a809239" />
+<img width="1275" height="550" alt="image" src="https://github.com/user-attachments/assets/e52ad4eb-4dc0-44b7-885b-6b9e93ed3c7b" />
+<img width="1378" height="546" alt="image" src="https://github.com/user-attachments/assets/d2b11917-a26f-4c67-a7c5-8718ae72d1a1" />
+<img width="1350" height="440" alt="image" src="https://github.com/user-attachments/assets/29a65f74-ddff-4bdd-8669-ebb01c5b06eb" />
+
+</details>
+
+
 22. As a user, I can change the password to my account so that I can keep it secure
 
 |Test|Expected Result|Actual Result|
 |---|---|---|
 |The user navigates to their profile page and click on the dropdown menu, the user can then click the edit password button|The users will be able to change their password to keep their profile encrypted|Works as expected|
+
+<details>
+ <summary>Images</summary>
+
+<img width="1709" height="569" alt="image" src="https://github.com/user-attachments/assets/401a37e6-eaa4-4ae7-8916-bde6f1dec759" />
+<img width="1172" height="511" alt="image" src="https://github.com/user-attachments/assets/433418ee-1c06-43ba-97b3-7694aaeac676" />
+
+</details>
+
 
 23. As a user, I can view all the posts by a specific user so that I can see their latest activity
 
@@ -558,11 +742,30 @@ The WAVE WebAIM web accessibility evaluation tool was used to test the websites 
 |---|---|---|
 |Click on the user avatar or name|Redirects to the chosen user profile page and displays all their posts within the profile page|Works as expected|
 
+<details>
+ <summary>Images</summary>
+
+<img width="1026" height="710" alt="image" src="https://github.com/user-attachments/assets/124a6674-730a-4818-9239-8b79366e66b9" />
+<img width="1742" height="1173" alt="image" src="https://github.com/user-attachments/assets/404cd78d-7534-48f0-bbd0-6dedaeb15178" />
+
+
+</details>
+
+
 24. As a user, I can view other users profiles with their bios, the number of posts, followers and profiles they follow
 
 |Test|Expected Result|Actual Result|
 |---|---|---|
 |Click on the user avatar or name|Redirects to the chosen user profile page and displays all their information to see such as the bio, number of followers, number of posts and the number of accounts they follow|Works as expected|
+
+<details>
+ <summary>Images</summary>
+
+<img width="1414" height="1136" alt="image" src="https://github.com/user-attachments/assets/da6cca47-95c4-4bed-a478-437d6cdcedbf" />
+
+
+</details>
+
 
 25. As a user, I can follow and unfollow other users so that I can get specific user' posts in my feed
 
@@ -570,11 +773,30 @@ The WAVE WebAIM web accessibility evaluation tool was used to test the websites 
 |---|---|---|
 |Click on the 'follow' button within the user profile page or by the username in 'Top Users' menu|Follows the user, increases the 'following' number on current profile and increases the number of followers on followed user's profile|Works as expected|
 
+<details>
+ <summary>Images</summary>
+
+<img width="1451" height="532" alt="image" src="https://github.com/user-attachments/assets/ccfe08f8-9d16-41ed-a10b-708c88f3c961" />
+<img width="1403" height="611" alt="image" src="https://github.com/user-attachments/assets/92d5a093-91f1-4af3-8ebf-a7d23e9c737d" />
+
+
+</details>
+
+
 26. As a user, I can see a list of the most followed profiles
 
 |Test|Expected Result|Actual Result|
 |---|---|---|
 |Go to the home page of the website|On the left there will be a small menu that displays 3 the most followed profiles|Works as expected|
+
+<details>
+ <summary>Images</summary>
+
+<img width="508" height="631" alt="image" src="https://github.com/user-attachments/assets/1818699c-d579-4af7-b1af-26c17788f91c" />
+
+
+</details>
+
 
 27. As a user, I can view posts ordered by most recently added so that I am up to date with the newest content
 
@@ -582,11 +804,29 @@ The WAVE WebAIM web accessibility evaluation tool was used to test the websites 
 |---|---|---|
 |Add a new post and navigate to the main posts page|Adds post on top of the other posts and displays a date when it was added|Works as expected|
 
+<details>
+ <summary>Images</summary>
+
+<img width="1731" height="1165" alt="image" src="https://github.com/user-attachments/assets/1657c2db-c9ec-427c-91f7-f010411d0b02" />
+
+
+</details>
+
+
 28. As a user, I can keep scrolling through the posts so that they are loaded automatically and I don't have to select the next page
 
 |Test|Expected Result|Actual Result|
 |---|---|---|
 |Navigate to the main posts page and scroll to the bottom of the page|Loads new content and moves the scroll bar. Displays a loading gif before the posts have been loaded|Works as expected|
+
+<details>
+ <summary>Images</summary>
+
+<img width="1541" height="1030" alt="image" src="https://github.com/user-attachments/assets/0a145862-9e39-4d07-960d-aa32f371ff69" />
+
+
+</details>
+
 
 29. As a user, I can see the posts I liked so that I can find the posts I enjoy the most
 
@@ -594,11 +834,29 @@ The WAVE WebAIM web accessibility evaluation tool was used to test the websites 
 |---|---|---|
 |On the main posts page click on the 'Liked posts' icon/text|Loads all liked posts|Works as expected|
 
+<details>
+ <summary>Images</summary>
+
+<img width="1564" height="1168" alt="image" src="https://github.com/user-attachments/assets/53809f59-2d08-4ec2-9f16-739fbe8b2071" />
+
+
+</details>
+
+
 30. As a user, I can view posts from users I followed, so I can follow their activity
 
 |Test|Expected Result|Actual Result|
 |---|---|---|
 |On the main posts page click on the 'Feed' icon/text|Loads all posts from followed users|Works as expected|
+
+<details>
+ <summary>Images</summary>
+
+<img width="1452" height="1110" alt="image" src="https://github.com/user-attachments/assets/681bd32d-09ee-4616-b03b-8fbd1b562fa3" />
+
+
+</details>
+
 
 31. As a user, I can view posts category tags, so that I choose posts to display that I’m interested in
 
@@ -606,11 +864,29 @@ The WAVE WebAIM web accessibility evaluation tool was used to test the websites 
 |---|---|---|
 |On the main posts page click on the category badge of posts you'd like to view|Loads all posts with the selected category|Works as expected|
 
+<details>
+ <summary>Images</summary>
+
+<img width="1548" height="1076" alt="image" src="https://github.com/user-attachments/assets/d01efada-650d-4a1b-9253-ce1aad164d2f" />
+
+</details>
+
+
 32. As a user, I can search for posts with keywords so that I can find the posts I am interested in
 
 |Test|Expected Result|Actual Result|
 |---|---|---|
 |On the main posts page click on the search bar and type a phrase|Searches through all posts, users and post categories and diplays ones with the seached keyword either as the username or in the title or category|Works as expected|
+
+<details>
+ <summary>Images</summary>
+
+<img width="1427" height="765" alt="image" src="https://github.com/user-attachments/assets/45d8390a-8be9-46d3-a59e-3d344bd4e399" />
+<img width="1526" height="823" alt="image" src="https://github.com/user-attachments/assets/f7f05282-eda1-408a-a814-025df456fe4d" />
+
+
+</details>
+
 
 33. As the site owner, I want my site to be fully responsive so that user can use it on different devices
 
@@ -618,11 +894,29 @@ The WAVE WebAIM web accessibility evaluation tool was used to test the websites 
 |---|---|---|
 |Change device screen size using chrome dev tools|The web functionality remains the same on various screen sizes|Works as expected|
 
+<details>
+ <summary>Images</summary>
+
+<img width="996" height="1251" alt="image" src="https://github.com/user-attachments/assets/f8c69cb5-c120-4ecb-9544-a6d28873a00f" />
+<img width="1395" height="1275" alt="image" src="https://github.com/user-attachments/assets/0c921d54-7234-4bc2-b527-80d7111c5d10" />
+
+</details>
+
+
 34. As a site owner, I want users to see a 404 page when they go to a url that doesnt exist
 
 |Test|Expected Result|Actual Result|
 |---|---|---|
 |Navigate to a url that does not exist such as https://cl-pp5-pawlio-ba8f8e344581.herokuapp.com/bad-request|Reroutes to a customised 404 page|Works as expected|
+
+<details>
+ <summary>Images</summary>
+
+<img width="1599" height="893" alt="image" src="https://github.com/user-attachments/assets/2edc28ea-35d8-4bc1-8840-51fac15574d1" />
+
+
+</details>
+
 
 35. As a user, I can view feedback messages so that I know if my comment, profile or post has been updated
 
@@ -633,6 +927,16 @@ The WAVE WebAIM web accessibility evaluation tool was used to test the websites 
 |In the profile page click on the dropdown menu and edit icon to edit user profile. Make desired changes and click Save|Updates the profile, displays the feedback message and redirects the user to their profile page after a short delay|Works as expected|
 |In the profile page click on the dropdown menu and the key icon to change user password. Update the password and click Save|Updates the password, displays the feedback message and redirects the user to their profile page after a short delay|Works as expected|
 |Within the post page click on the dropdown menu and delete icon to delete the post|Deletes the post, displays the feedback message and redirects the user to the main posts page|Works as expected|
+
+<details>
+ <summary>Images</summary>
+
+<img width="908" height="206" alt="image" src="https://github.com/user-attachments/assets/a82b351f-d615-4c25-ba17-1bbfff6e343c" />
+<img width="893" height="177" alt="image" src="https://github.com/user-attachments/assets/b95af48c-c8a8-45fd-bfa8-efb0f8b880f5" />
+<img width="1393" height="482" alt="image" src="https://github.com/user-attachments/assets/c1059e76-11ad-4421-9143-a5e3bae1d9ed" />
+
+</details>
+
 
 ## Performing Tests on Different Devices
 
