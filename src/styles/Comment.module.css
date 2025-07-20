@@ -17,5 +17,7 @@
 }
 
 .DropdownDots {
+  height: 8px;
+  width: 8px;
   float: right;
 }
