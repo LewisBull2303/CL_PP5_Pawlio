@@ -90,7 +90,7 @@ The key functions of the platform are:
 
 The color scheme for this application was inspired by other similar social media websites such as instagram and twitter, focusing mainly on base colors like, white, gray and black. It was my aim to keep the colors fairly neutral to create a calming and familiar feel to the whole webpage, another benefit that it adds is that the objects with colors such as the like button, profile pictures and images all stand out more. The use of neautral colors allows the users focus to be drawn to the images on the page allowing for better user engagement. The Apps background color is an off white with the navbar matching but being seperated by a black line boarder. The main content page is then white to add contrast and once again draw in the focus of the user. The buttons are all black at a base line but when hovered over turn blue and when active also become blue. The like button is at a base black, but when hovered and not liked, becomes red, when it is liked it is a full red and when it it liked and hovered over it becomes blue. All of these colors were carefully thought out to allow for contrast and clear directionn on what the user can interact with.
 
-GET COLOR PALETTE IMAGE HERE
+<img width="1091" height="533" alt="image" src="https://github.com/user-attachments/assets/4d26791f-1b5c-452e-8db7-0536bd8ea01c" />
 
 ## Font
 
@@ -334,6 +334,9 @@ Below are some of the ways that this project could be improved in the future
 There was originally plans for the users to be able to private message each other on the website, but I decided to keep the app more streamlined to allow for further growth and progression
 
 ## Validation
+
+### HTML
+The W3C Markup Validation Service was used to validate the HTML of the website. No errors were identified.
 
 ## Manual Testing
 
