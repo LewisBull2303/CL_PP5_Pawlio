@@ -65,10 +65,6 @@ const Comment = (props) => {
       {showAlert && (
         <FeedbackMsg variant="info" message="Comment has been updated" />
       )}
-      <p style={{ color: 'red' }}>
-  owner: {owner} | current user: {currentUser?.username || "null"} | is_owner:{" "}
-  {is_owner ? "true" : "false"}
-</p>
 
       <Media>
         <Link to={`/profiles/${profile_id}`} className="my-3">
