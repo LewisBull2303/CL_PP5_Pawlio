@@ -1,22 +1,22 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useHistory, useParams } from 'react-router-dom';
-
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
-import Image from 'react-bootstrap/Image';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
-import Alert from 'react-bootstrap/Alert';
-
-import { axiosReq } from '../../api/axiosDefaults';
+import React, { useState, useEffect, useRef } from "react";
+import { useHistory, useParams } from "react-router-dom";
+import {
+  Alert,
+  Button,
+  Col,
+  Container,
+  Form,
+  Image,
+  Row,
+} from "react-bootstrap";
+import { axiosReq } from "../../api/axiosDefaults";
 import {
   useCurrentUser,
   useSetCurrentUser,
-} from '../../contexts/CurrentUserContext';
-
-import btnStyles from '../../styles/Button.module.css';
-import appStyles from '../../App.module.css';
+} from "../../contexts/CurrentUserContext";
+import editButtonStyles from "../../styles/PostCreateEditForm.module.css";
+import appStyles from "../../App.module.css";
+import FeedbackMsg from "../../components/FeedbackMsg";
 
 const ProfileEditForm = () => {
   const currentUser = useCurrentUser();
@@ -26,14 +26,20 @@ const ProfileEditForm = () => {
   const imageFile = useRef();
 
   const [profileData, setProfileData] = useState({
-    name: '',
-    content: '',
-    image: '',
+    name: "",
+    content: "",
+    image: "",
   });
   const { name, content, image } = profileData;
 
   const [errors, setErrors] = useState({});
 
+  const [showAlert, setShowAlert] = useState(false);
+
+  /*
+    Handles the edit of user profile information
+    Makes a request to the API based on profile's id
+  */
   useEffect(() => {
     const handleMount = async () => {
       if (currentUser?.profile_id?.toString() === id) {
@@ -42,17 +48,20 @@ const ProfileEditForm = () => {
           const { name, content, image } = data;
           setProfileData({ name, content, image });
         } catch (err) {
-          console.log(err);
-          history.push('/');
+          // console.log(err);
+          history.push("/");
         }
       } else {
-        history.push('/');
+        history.push("/");
       }
     };
 
     handleMount();
   }, [currentUser, history, id]);
 
+  /* 
+    Handles changes to the profile form input fields
+  */
   const handleChange = (event) => {
     setProfileData({
       ...profileData,
@@ -60,14 +69,19 @@ const ProfileEditForm = () => {
     });
   };
 
+  /* 
+    Handles the profile form submission
+    Displays a feedback message to the user on successful submission
+    Redirects the user to the profile page after a short delay
+  */
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData();
-    formData.append('name', name);
-    formData.append('content', content);
+    formData.append("name", name);
+    formData.append("content", content);
 
     if (imageFile?.current?.files[0]) {
-      formData.append('image', imageFile?.current?.files[0]);
+      formData.append("image", imageFile?.current?.files[0]);
     }
 
     try {
@@ -76,9 +90,11 @@ const ProfileEditForm = () => {
         ...currentUser,
         profile_image: data.image,
       }));
-      history.goBack();
+      setShowAlert(true);
+      setTimeout(function () {
+        history.goBack();
+      }, 2500);
     } catch (err) {
-      console.log(err);
       setErrors(err.response?.data);
     }
   };
@@ -86,13 +102,23 @@ const ProfileEditForm = () => {
   const textFields = (
     <>
       <Form.Group>
-        <Form.Label>Bio</Form.Label>
+        {showAlert && (
+          <FeedbackMsg
+            variant="info"
+            message="Your profile has been updated. Taking you back to your profile's page..."
+          />
+        )}
+        <Form.Label className="font-weight-bold">
+          Profile Bio
+        </Form.Label>
         <Form.Control
           as="textarea"
           value={content}
           onChange={handleChange}
           name="content"
           rows={7}
+          className={appStyles.Input}
+          aria-label="profile content"
         />
       </Form.Group>
 
@@ -101,14 +127,21 @@ const ProfileEditForm = () => {
           {message}
         </Alert>
       ))}
+
       <Button
-        className={`${btnStyles.Button} ${btnStyles.Blue}`}
+        className={`my-3 ${appStyles.button}`}
+        onMouseDown={(e) => e.preventDefault()}
+        type="submit"
+      >
+        Save
+      </Button>
+
+      <Button
+        className={`mx-3 ${appStyles.button}`}
+        onMouseDown={(e) => e.preventDefault()}
         onClick={() => history.goBack()}
       >
-        cancel
-      </Button>
-      <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
-        save
+        Cancel
       </Button>
     </>
   );
@@ -116,31 +149,32 @@ const ProfileEditForm = () => {
   return (
     <Form onSubmit={handleSubmit}>
       <Row>
-        <Col className="py-2 p-0 p-md-2 text-center" md={7} lg={6}>
+        <Col className="d-none d-md-block p-0 p-md-2 text-center" md={8} lg={8}>
+          <Container className={appStyles.Content}>{textFields}</Container>
+        </Col>
+        <Col className="py-2 pb-4 p-md-2 text-center" md={4} lg={4}>
           <Container className={appStyles.Content}>
             <Form.Group>
               {image && (
                 <figure>
-                  <Image src={image} fluid />
+                  <Image className={appStyles.Image} src={image} alt="your uploaded profile picture" rounded />
                 </figure>
               )}
-              {errors?.image?.map((message, idx) => (
-                <Alert variant="warning" key={idx}>
-                  {message}
-                </Alert>
-              ))}
+
               <div>
                 <Form.Label
-                  className={`${btnStyles.Button} btn my-auto`}
+                  className={`${appStyles.button} ${editButtonStyles.ButtonChangeImage} btn my-auto mb-sm-4`}
                   htmlFor="image-upload"
                 >
-                  Change the image
+                  Change your picture
                 </Form.Label>
               </div>
+
               <Form.File
                 id="image-upload"
                 ref={imageFile}
                 accept="image/*"
+                className="d-none"
                 onChange={(e) => {
                   if (e.target.files.length) {
                     setProfileData({
@@ -149,14 +183,17 @@ const ProfileEditForm = () => {
                     });
                   }
                 }}
-                style={{ display: 'none' }}
               />
             </Form.Group>
+
+            {errors?.image?.map((message, idx) => (
+              <Alert variant="warning" key={idx}>
+                {message}
+              </Alert>
+            ))}
+
             <div className="d-md-none">{textFields}</div>
           </Container>
-        </Col>
-        <Col md={5} lg={6} className="d-none d-md-block p-0 p-md-2 text-center">
-          <Container className={appStyles.Content}>{textFields}</Container>
         </Col>
       </Row>
     </Form>

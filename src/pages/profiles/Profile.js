@@ -1,15 +1,15 @@
-import React from 'react';
-import styles from '../../styles/Profile.module.css';
-import btnStyles from '../../styles/Button.module.css';
-import { useCurrentUser } from '../../contexts/CurrentUserContext';
-import { Link } from 'react-router-dom';
-import { Button } from 'react-bootstrap';
-import { useSetProfileData } from '../../contexts/ProfileDataContext';
+import React from "react";
+import styles from "../../styles/Profile.module.css";
+import buttonsStyles from "../../styles/FollowButtons.module.css";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import { Link } from "react-router-dom";
+import Avatar from "../../components/Avatar";
+import { Button } from "react-bootstrap";
+import { useSetProfileData } from "../../contexts/ProfileDataContext";
 
 const Profile = (props) => {
-  const { profile, mobile, imageSize = 55 } = props;
+  const { profile, imageSize = 40 } = props;
   const { id, following_id, image, owner } = profile;
-
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
 
@@ -17,36 +17,33 @@ const Profile = (props) => {
 
   return (
     <div
-      className={`my-3 d-flex align-items-center ${mobile && 'flex-column'}`}
+      className={`my-3 d-flex align-items-center ${styles.ProfilesDisplaySmall}`}
     >
       <div>
-        <Link className="align-self-center" to={`/profiles/${id}`}>
-          <img
-            src={image}
-            height={imageSize}
-            width={55}
-            alt="avatar"
-            style={{ borderRadius: '50%' }}
-          />
+        <Link to={`/profiles/${id}`}>
+          <Avatar src={image} height={imageSize} />
         </Link>
       </div>
-      <div className={`mx-2 ${styles.WordBreak}`}>
-        <strong>{owner}</strong>
+      <div>
+        <Link to={`/profiles/${id}`}>
+          <strong>{owner}</strong>
+        </Link>
       </div>
-      <div className={`text-right ${!mobile && 'ml-auto'}`}>
-        {!mobile &&
-          currentUser &&
+
+      <div className={`${buttonsStyles.FollowButtonsRemove} ml-auto`}>
+        {/* Displays follow/unfollow buttons and do not allow users to follow themselves */}
+        {currentUser &&
           !is_owner &&
           (following_id ? (
             <Button
-              className={`${btnStyles.Button} ${btnStyles.BlackOutline}`}
+              className={`${buttonsStyles.Button} ${buttonsStyles.ButtonUnfollow}`}
               onClick={() => handleUnfollow(profile)}
             >
               unfollow
             </Button>
           ) : (
             <Button
-              className={`${btnStyles.Button} ${btnStyles.Black}`}
+              className={`${buttonsStyles.Button} ${buttonsStyles.ButtonFollow}`}
               onClick={() => handleFollow(profile)}
             >
               follow

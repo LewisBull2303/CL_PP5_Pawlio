@@ -1,0 +1,52 @@
+.Button {
+  border-radius: 100px;
+  border-color: transparent;
+  font-size: 0.8rem;
+  padding: 4px 9px;
+  margin-left: 2px;
+  min-width: 70px;
+}
+
+.ButtonFollow {
+  font-weight: bold;
+  background-color: var(--dark-grey);
+  color: #fff;
+}
+
+.ButtonFollow:hover,
+.ButtonFollow:focus,
+.ButtonFollow:active {
+  background-color: var(--dark-blue) !important;
+  box-shadow: 1px 1px 5px var(--dark-grey) !important;
+  border-color: var(--dark-blue) !important;
+  font-weight: bold;
+  color: var(--dark-grey);
+}
+
+.ButtonUnfollow {
+  font-weight: bold;
+  background-color: var(--grey);
+  color: var(--dark-grey);
+}
+
+.ButtonUnfollow:hover,
+.ButtonUnfollow:focus,
+.ButtonUnfollow:active {
+  background-color: var(--dark-grey) !important;
+  border-color: var(--dark-grey) !important;
+  color: #fff;
+}
+
+/* Remove follow/unfollow buttons on medium-small screens */
+@media all and (max-width: 991px) {
+  .FollowButtonsRemove {
+    display: none;
+  }
+}
+
+/* Add follow buttons on small screens and displaye centered below the username */
+@media all and (max-width: 768px) {
+  .FollowButtonsRemove {
+    display: contents;
+  }
+}
