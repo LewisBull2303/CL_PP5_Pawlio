@@ -1,23 +1,21 @@
 .CommentBox {
-  color: var(--black);
-  border: 1px solid var(--dark-grey);
+  color: var(--dark-grey);
+  border: 1px solid var(--grey);
   border-radius: 35px;
   padding: 5px 10px 5px 20px;
 }
 
-.Owner {
-  color: var(--dark-blue);
-  margin-right: 8px;
+.OwnerName {
+  font-weight: bold;
+  color: var(--dark-grey);
+  margin-right: 6px;
 }
 
 .Date {
-  color: var(--black);
+  font-weight: lighter;
+  color: #b5b5b8;
 }
 
 .DropdownDots {
-  position: relative;
-  z-index: 999;
-  padding: 0 0.5rem;
-  cursor: pointer;
+  float: right;
 }
-
