@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Button, Row, Col, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import landingImage from '../assets/landing-page-image.png';
+import landingImage from '../assets/landing-page-image.webp';
 import styles from '../styles/Landing.module.css';
 import btnStyles from '../styles/Button.module.css';
 
