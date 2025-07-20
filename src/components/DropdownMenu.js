@@ -5,7 +5,7 @@ import { useHistory } from "react-router";
 
 const DropdownDots = React.forwardRef(({ onClick }, ref) => (
   <i
-    className="fa-solid fa-ellipsis-vertical"
+    className="fa-solid fa-ellipsis"
     ref={ref}
     onClick={(e) => {
       e.preventDefault();

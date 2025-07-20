@@ -1,33 +1,51 @@
 .Post {
   background-color: var(--off-white);
-  border: 1px solid rgba(154, 154, 154, 0.3);
-  border-radius: 2px;
+  border-radius: 3px;
   margin-bottom: 16px;
   text-align: center;
 }
 
-.Post figure,
-h5 {
-  margin: 0 0;
+.Container {
+  display: grid;
+  grid-template-columns: 60px auto 60px;
+  grid-template-rows: 30px 30px;
+  grid-auto-flow: row;
 }
 
-.Heart {
-  color: var(--red);
+/* Display of user avatar, username & post date */
+.AvatarGrid {
+  grid-column: 1;
+  grid-row: 1 / 3;
 }
 
-.Heart:hover {
-  color: var(--dark-blue);
+.Username {
+  grid-column: 2;
+  grid-row: 1/2;
+  text-align: left;
+  margin-left: 10px;
 }
 
-.HeartOutline:hover {
-  color: var(--red);
+.UpdatedOn {
+  grid-column: 2;
+  grid-row: 2/3;
+  text-align: left;
+  margin-left: 10px;
+  font-size: 80%;
+  width: max-content;
 }
 
-.Owner {
-  font-weight: bold;
-  padding-left: 8px;
+.EditIcon {
+  grid-column: 3;
+  grid-row: 1/3;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.Owner:hover {
-  color: var(--dark-blue);
+/* Type of cuisine badge within the post */
+.BadgePost {
+  padding: 5px 8px;
+  margin: 0 4px;
+  font-size: inherit;
 }
