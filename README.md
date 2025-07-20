@@ -150,14 +150,15 @@ There were several components created and re-used for this application:
   - loading gif (spinner) when content is being loaded
   - image with src and alt attribute
   - paragraph with a message
-- DropdownMenu – A reusable component that renders a dropdown menu, allowing users to manage their content. It provides options to edit or delete their own posts and comments, update profile details, or change their password.
-- FeedbackMsg – This component displays user feedback messages triggered by actions such as editing or deleting comments, removing posts, or updating profile information or passwords.
-- Landing– A dedicated component for the landing page shown to new or unauthenticated users. It includes navigation links for signing up and logging in, alongside the app’s navbar.
-- LikeFeedAddPost – A versatile component featuring three icons: one to add a new post, one to view liked posts, and another to show posts from followed profiles. It appears on multiple pages within the app.
-- NavBar – A reusable navigation bar that adapts based on the user's login status. Logged-in users see links to the main feed and their avatar, while logged-out users see links to log in or sign up. This component is consistently used across all pages.
-- PageNotFound – A specific component that displays a 404 error graphic and a button to return to the main menu when a user navigates to a non-existent URL.
-- PasswordCriteria – A reusable component that displays password requirements on hover or focus. It is used both during sign-up and when changing the user’s password in the profile settings.
-- PopularProfiles – A reusable component that showcases the top three most-followed profiles in the app. It displays the user's avatar, name, and a follow/unfollow button (hidden on medium-sized screens). This component is commonly used alongside <LikeFeedAddPost /> and category badges on relevant pages.
+  - User Stories Answered - 28
+- DropdownMenu – A reusable component that renders a dropdown menu, allowing users to manage their content. It provides options to edit or delete their own posts and comments, update profile details, or change their password. - User Stories Answered - 19, 20
+- FeedbackMsg – This component displays user feedback messages triggered by actions such as editing or deleting comments, removing posts, or updating profile information or passwords. User Stories Answered - 35
+- Landing– A dedicated component for the landing page shown to new or unauthenticated users. It includes navigation links for signing up and logging in, alongside the app’s navbar. User Stories Answered - 9
+- LikeFeedAddPost – A versatile component featuring three icons: one to add a new post, one to view liked posts, and another to show posts from followed profiles. It appears on multiple pages within the app. User Stories Answered - 4, 29, 30
+- NavBar – A reusable navigation bar that adapts based on the user's login status. Logged-in users see links to the main feed and their avatar, while logged-out users see links to log in or sign up. This component is consistently used across all pages. User Stories Answered - 10 , 11
+- PageNotFound – A specific component that displays a 404 error graphic and a button to return to the main menu when a user navigates to a non-existent URL. User Stories Answered - 34
+- PasswordCriteria – A reusable component that displays password requirements on hover or focus. It is used both during sign-up and when changing the user’s password in the profile settings. User Stories Answered - 1, 22
+- PopularProfiles – A reusable component that showcases the top three most-followed profiles in the app. It displays the user's avatar, name, and a follow/unfollow button (hidden on medium-sized screens). This component is commonly used alongside <LikeFeedAddPost /> and category badges on relevant pages. User Stories Answered - 26
 
 # Back-End API
 
@@ -171,6 +172,7 @@ The API for this application was built with the Django REST Framework. The repos
 - The main body contains an explanation of the app
 - Includes navbar, main body and footer
 - Contains directs links to the login and sign up page
+- User Stories Answered - 9, 11
 
 ### Logo and Navigation Bar
 - Remains across all pages of the website
@@ -178,6 +180,7 @@ The API for this application was built with the Django REST Framework. The repos
   - New or not logged in users, will see the home icon, sign up icon and log in icon
   - Logged in users will see the home icon, the sign out button and their avatar profile picture
 - The navbar is fully responsive and changes to a hamburger menu on smaller screen sizes
+- User Stories Answered - 10, 11
 
 ### Footer
 - A footer is displayed at the bottom of the landing page
@@ -190,6 +193,7 @@ The API for this application was built with the Django REST Framework. The repos
 - The password must meet the criteria which user can see when they hover over the password criteria button
 - User cannot register if the name is already in use
 - Once registered the user is taken to the login page to log in
+- User Stories Answered - 1
 
 ### Login Form
 - Returning users are able to use their credentials to login
@@ -197,12 +201,14 @@ The API for this application was built with the Django REST Framework. The repos
 - Both username and password are needed to login
 - Once logged in the user is taken to the main home page
 - Warning messages are displayed when incorrect input has been put in
+- User Stories Answered - 2
 
 ### Post Create/Update Form
 - Contains the image, title, category and descriptions
 - Description field is option
 - Allows users to share their pictures with others
 - Allow users to categorise their post to make it easy to be found by other users
+- User Stories Answered - 4, 5, 18, 31
 
 ### Main Home Page
 - Main home page is diplayed for all logged in users
@@ -212,71 +218,89 @@ The API for this application was built with the Django REST Framework. The repos
   - Post category badges
 - Without any search filters all posts are displayed
 - Display all posts that are ordered by the most recent one
+- User Stories Answered - 6, 27
 
 ### Post Page
 - Contains details of a single post, with the image title, description and category tag
 - Contains number of likes and comments the post has
 - Contains like icon to allow user to like the post
 - Features comment section below the post
+- User Stories Answered - 7, 8 12, 13, 14
 
 #### Comments
 - Enable users to share their opinion on a specific post
 - Display passed time since adding the post
 - Users have an option to update or delete the comment
+- User Stories Answered - 14, 15, 16, 17
 
 ### Likes
 - Allow users to express their interest in the post
 - Like icons are red if user likes the post
 - User cannot like their own post
 - Allow user to search to liked posts only when click on the feed option in the small menu
+- User Stories Answered - 8
 
 ### Profile Page
 - Contains information about the user
 - Displays info how many posts and followers a user has and how many users they are following
 - Display profile information
 - Contains a dropdwon menu to edit the profile and change profile password
+- User Stories Answered - 19, 20, 21, 23, 24
 
 ### Profile Picture
 - Allow users to change their default avatar to their own custom picture
 - Displayed in the navbar at the top of the post and in the main home page and the users comments
 - Displayed within Most followed users menu
+- User Stories Answered - 19, 20
 
 ### Password Change Form
 - Allow users to change their password
 - Contains password criteria visible on hover/tap of view password criteria button
+- User Stories Answered - 22
 
 ### Infinite Scroll
 - Allows users to scroll through the content without having to jump to a new page or previous page
 - User for the posts and comments
 - Improves general user experience and user engagement
 - Displated the loading gif before loading
+- User Stories Answered - 28
 
 ### Follow/Unfollow
 - Users are able to follow/unfollow profiles that they like
+- User Stories Answered - 25
 
 ### Add Liked Feed Menu
 - Allow users to create a post
 - Allow users to view only post they liked
 - Allow users to view only posts created by users they follow
+- User Stories Answered - 4, 29, 30
 
 #### Top Users Menu
 - Displayed the 10 most followed users
 - Contains follow buttons next to username which allow following users
 - Featured on the majority of pages
+- User Stories Answered - 26
 
 ### Category Badges
 - Allow the user to tag a post
 - Allow other users to find content they are most interested in
+- User Stories Answered - 31
 
 ### Search Bar
 - By typing a phrase in the search bar users can find a specific post or a user they are looking for
 - Allows to search through post title, users or post category
 - Allow users to search through liked posts only or post by users followed
 - User can click on the eraser icon to clear the search content
+- User Stories Answered - 32
 
 ### 404 Page
 - Displays if the user loads a page with a url that does not exist
 - Contains a button to redirect users to the main page
+- User Stories Answered - 34
+
+### Feedback Messages
+- The user is provided with a feedback message about the action they have just completed or tried
+- User Stories Answered - 35
 
 ## Future Improvements / Additional Features
 
