@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Button, Form, InputGroup } from 'react-bootstrap';
-import styles from '../../styles/CommentCreateEditForm.module.css';
-import Avatar from '../../components/Avatar';
-import { axiosRes } from '../../api/axiosDefaults';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { Button, Form, InputGroup } from "react-bootstrap";
+import styles from "../../styles/CommentCreateEditForm.module.css";
+import Avatar from "../../components/Avatar";
+import { axiosRes } from "../../api/axiosDefaults";
 
 function CommentCreateForm(props) {
   const { post, setPost, setComments, profileImage, profile_id } = props;
-  const [content, setContent] = useState('');
+  const [content, setContent] = useState("");
 
   /* 
     Handles changes to the create comment input field
@@ -23,7 +23,7 @@ function CommentCreateForm(props) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axiosRes.post('/comments/', {
+      const { data } = await axiosRes.post("/comments/", {
         content,
         post,
       });
@@ -39,7 +39,7 @@ function CommentCreateForm(props) {
           },
         ],
       }));
-      setContent('');
+      setContent("");
     } catch (err) {
       // console.log(err);
     }
@@ -51,13 +51,7 @@ function CommentCreateForm(props) {
         <InputGroup>
           <p className="my-2">
             <Link to={`/profiles/${profile_id}`}>
-              <img
-                src={profileImage}
-                width={55}
-                height={55}
-                alt="avatar"
-                style={{ borderRadius: '50%' }}
-              />
+              <Avatar src={profileImage} />
             </Link>
           </p>
           <Form.Control
