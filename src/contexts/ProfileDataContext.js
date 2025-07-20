@@ -1,10 +1,10 @@
-import { createContext, useContext, useEffect, useState } from 'react';
-import { axiosReq, axiosRes } from '../api/axiosDefaults';
-import { useCurrentUser } from '../contexts/CurrentUserContext';
-import { followHelper, unfollowHelper } from '../utils/utils';
+import { createContext, useContext, useEffect, useState } from "react";
+import { axiosReq, axiosRes } from "../api/axiosDefaults";
+import { useCurrentUser } from "./CurrentUserContext";
+import { followHelper, unfollowHelper } from "../utils/utils";
 
-const ProfileDataContext = createContext();
-const SetProfileDataContext = createContext();
+export const ProfileDataContext = createContext();
+export const SetProfileDataContext = createContext();
 
 export const useProfileData = () => useContext(ProfileDataContext);
 export const useSetProfileData = () => useContext(SetProfileDataContext);
@@ -17,9 +17,15 @@ export const ProfileDataProvider = ({ children }) => {
 
   const currentUser = useCurrentUser();
 
+  /*
+    Makes a request to the /followers/ endpoint
+    Sends information about what profile (its id)
+    the user just followed (clicked)
+    Updates profile page and PopularProfiles data
+  */
   const handleFollow = async (clickedProfile) => {
     try {
-      const { data } = await axiosRes.post('/followers/', {
+      const { data } = await axiosRes.post("/followers/", {
         followed: clickedProfile.id,
       });
 
@@ -38,14 +44,19 @@ export const ProfileDataProvider = ({ children }) => {
         },
       }));
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 
+  /*
+    Makes a request to the /followers/ endpoint
+    Sends information about what profile (its id)
+    the user just followed (clicked)
+    Updates PopularProfiles data
+  */
   const handleUnfollow = async (clickedProfile) => {
     try {
       await axiosRes.delete(`/followers/${clickedProfile.following_id}/`);
-
       setProfileData((prevState) => ({
         ...prevState,
         pageProfile: {
@@ -61,25 +72,29 @@ export const ProfileDataProvider = ({ children }) => {
         },
       }));
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   };
 
+  /*
+    Fetches app popularProfiles data on mount
+    in the descending order of how many followers they have
+    Displays the most followed profile at the top
+  */
   useEffect(() => {
     const handleMount = async () => {
       try {
         const { data } = await axiosReq.get(
-          '/profiles/?ordering=-followers_count'
+          "/profiles/?ordering=-followers_number"
         );
         setProfileData((prevState) => ({
           ...prevState,
           popularProfiles: data,
         }));
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
-
     handleMount();
   }, [currentUser]);
 
