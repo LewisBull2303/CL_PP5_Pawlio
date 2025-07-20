@@ -76,15 +76,15 @@ function ProfilePage() {
           <Row className="justify-content-around">
             <Col xs={3} className="my-3">
               <div>Followers</div>
-              <div>{profile?.followers_number}</div>
+              <div>{profile?.followers_count}</div>
             </Col>
             <Col xs={3} className="my-3">
               <div>Following</div>
-              <div>{profile?.following_number}</div>
+              <div>{profile?.followers_count}</div>
             </Col>
             <Col xs={3} className="my-3">
               <div>Posts</div>
-              <div>{profile?.posts_number}</div>
+              <div>{profile?.posts_count}</div>
             </Col>
           </Row>
         </Col>
