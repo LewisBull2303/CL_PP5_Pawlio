@@ -3,7 +3,7 @@ import { Navbar, Container, Nav } from 'react-bootstrap';
 import logo from '../assets/logo.png';
 import styles from '../styles/NavBar.module.css';
 import { NavLink } from 'react-router-dom';
-import postStyles from '../styles/Posts.module.css';
+import postStyles from '../styles/Post.module.css';
 import {
   useCurrentUser,
   useSetCurrentUser,
