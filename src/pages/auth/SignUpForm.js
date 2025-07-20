@@ -63,6 +63,7 @@ const SignUpForm = () => {
                 type="text"
                 placeholder="Your username"
                 name="username"
+                label="Username"
                 maxLength={20}
                 value={username}
                 onChange={handleChange}
@@ -80,6 +81,7 @@ const SignUpForm = () => {
                 className={`${appStyles.Input} text-center`}
                 type="password"
                 placeholder="Password"
+                label="Password1"
                 name="password1"
                 value={password1}
                 onChange={handleChange}
@@ -98,6 +100,7 @@ const SignUpForm = () => {
                 type="password"
                 placeholder="Confirm password"
                 name="password2"
+                label="Password2"
                 value={password2}
                 onChange={handleChange}
               />
