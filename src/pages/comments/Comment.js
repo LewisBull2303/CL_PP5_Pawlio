@@ -23,7 +23,14 @@ const Comment = (props) => {
 
   const [showEditForm, setShowEditForm] = useState(false);
   const currentUser = useCurrentUser();
+  console.log(currentUser)
   const is_owner = currentUser?.username === owner;
+  if (is_owner){
+    console.log("Yes")
+  }
+  else{
+    console.log("No")
+  }
   const [showAlert, setShowAlert] = useState(false);
   const [isDeleted, setIsDeleted] = useState(false);
 
@@ -77,7 +84,7 @@ const Comment = (props) => {
             <span className={styles.DropdownDots}>
               {/* Display the dropdown menu for owner of the comment
                   to either edit or delete it */}
-              {!showEditForm && (
+              {is_owner && !showEditForm && (
                 <DropdownMenu
                   handleEdit={() => setShowEditForm(true)}
                   handleDelete={handleDelete}
