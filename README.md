@@ -106,7 +106,7 @@ WIREFRAME IMAGES HERE
 - HTML
 - CSS
 - Javascript
-- - React (17.0.2)
+  - React (17.0.2)
 
 ### Libraries, Frameworks and Dependencies
 
@@ -146,19 +146,18 @@ I chose React for this application for several key reasons:
 
 There were several components created and re-used for this application:
 
-- <Asset /> - multipurpose reusable compontent which displays different versions of the component depending on the props we pass to it
-- - loading gif (spinner) when content is being loaded
+- Asset - multipurpose reusable compontent which displays different versions of the component depending on the props we pass to it
+  - loading gif (spinner) when content is being loaded
   - image with src and alt attribute
   - paragraph with a message
-  
-- <DropdownMenu /> – A reusable component that renders a dropdown menu, allowing users to manage their content. It provides options to edit or delete their own posts and comments, update profile details, or change their password.
-- <FeedbackMsg /> – This component displays user feedback messages triggered by actions such as editing or deleting comments, removing posts, or updating profile information or passwords.
-- <Landing /> – A dedicated component for the landing page shown to new or unauthenticated users. It includes navigation links for signing up and logging in, alongside the app’s navbar.
-- <LikeFeedAddPost /> – A versatile component featuring three icons: one to add a new post, one to view liked posts, and another to show posts from followed profiles. It appears on multiple pages within the app.
-- <NavBar /> – A reusable navigation bar that adapts based on the user's login status. Logged-in users see links to the main feed and their avatar, while logged-out users see links to log in or sign up. This component is consistently used across all pages.
-- <PageNotFound /> – A specific component that displays a 404 error graphic and a button to return to the main menu when a user navigates to a non-existent URL.
-- <PasswordCriteria /> – A reusable component that displays password requirements on hover or focus. It is used both during sign-up and when changing the user’s password in the profile settings.
-- <PopularProfiles /> – A reusable component that showcases the top three most-followed profiles in the app. It displays the user's avatar, name, and a follow/unfollow button (hidden on medium-sized screens). This component is commonly used alongside <LikeFeedAddPost /> and category badges on relevant pages.
+- DropdownMenu – A reusable component that renders a dropdown menu, allowing users to manage their content. It provides options to edit or delete their own posts and comments, update profile details, or change their password.
+- FeedbackMsg – This component displays user feedback messages triggered by actions such as editing or deleting comments, removing posts, or updating profile information or passwords.
+- Landing– A dedicated component for the landing page shown to new or unauthenticated users. It includes navigation links for signing up and logging in, alongside the app’s navbar.
+- LikeFeedAddPost – A versatile component featuring three icons: one to add a new post, one to view liked posts, and another to show posts from followed profiles. It appears on multiple pages within the app.
+- NavBar – A reusable navigation bar that adapts based on the user's login status. Logged-in users see links to the main feed and their avatar, while logged-out users see links to log in or sign up. This component is consistently used across all pages.
+- PageNotFound – A specific component that displays a 404 error graphic and a button to return to the main menu when a user navigates to a non-existent URL.
+- PasswordCriteria – A reusable component that displays password requirements on hover or focus. It is used both during sign-up and when changing the user’s password in the profile settings.
+- PopularProfiles – A reusable component that showcases the top three most-followed profiles in the app. It displays the user's avatar, name, and a follow/unfollow button (hidden on medium-sized screens). This component is commonly used alongside <LikeFeedAddPost /> and category badges on relevant pages.
 
 # Back-End API
 
