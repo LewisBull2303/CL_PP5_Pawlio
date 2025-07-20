@@ -1,3 +1,11 @@
+.CommentBox {
+  color: var(--dark-grey);
+  border: 1px solid var(--off-white);
+  border-radius: 35px;
+  padding: 5px 10px 5px 20px;
+}
+
+
 .Owner {
   font-weight: bold;
   color: var(--dark-blue);
@@ -7,4 +15,11 @@
 .Date {
   font-weight: lighter;
   color: #c1c1c5;
+}
+
+.DropdownDots {
+  position: relative;
+  z-index: 10;
+  padding: 0 0.5rem;
+  cursor: pointer;
 }
