@@ -537,3 +537,62 @@ There was originally plans for the users to be able to private message each othe
 |In the profile page click on the dropdown menu and edit icon to edit user profile. Make desired changes and click Save|Updates the profile, displays the feedback message and redirects the user to their profile page after a short delay|Works as expected|
 |In the profile page click on the dropdown menu and the key icon to change user password. Update the password and click Save|Updates the password, displays the feedback message and redirects the user to their profile page after a short delay|Works as expected|
 |Within the post page click on the dropdown menu and delete icon to delete the post|Deletes the post, displays the feedback message and redirects the user to the main posts page|Works as expected|
+
+## Performing Tests on Different Devices
+
+The website was tested using Google Chrome Developer Tools Toggle Device Toolbar to simulate viewports of different devices.
+
+The website was tested on the following devices:
+
+- ASUS ZenBook (laptop screen)
+- Samsung Galaxy Tab A (tablet screen)
+- Samsung S7 (mobile screen)
+
+## Brower Compatibility
+
+Testing has been carried out on the following browsers, no issues were found:
+
+- Googe Chrome
+- Firefox Browser
+- Microsoft Edge
+
+|Bug|Fix|
+|---|---|
+|On small screens, the hamburger menu would not appear|Updated the logic in the code to correctly check the screen size and then display the hamburger menu icon|
+|Users profile would not update when edited|Updated the logic to allow the request to go through to the backend|
+|Issue where the comment and profile dropdown menu would not appear|Corrected the drf_api.serializer in the backend to see if the user correct user is logged in|
+
+## Config
+
+1. Go to the GitHub repository
+2. Click on Fork button in top right corner
+3. You will then have a copy of the repository in your own GitHub account.
+
+## Making a local clone
+
+1. Go to the GitHub repository
+2. Locate the Code button above the list of files and click it
+3. Highlight the "HTTPS" button to clone with HTTPS and copy the link
+4. Open commandline interface on your computer
+5. Change the current working directory to the one where you want the cloned directory
+6. Type git clone and paste the URL from the clipboard
+7. Press Enter to create your local clone
+
+## Credits
+
+404 Image was taken from [here](https://nicepage.com/sd/758347/404-page-with-cat-website-design) and edited using [remove.bg](https://www.remove.bg/)
+The default Profile picture and post image was taken from the [Moments](https://learn.codeinstitute.net/dashboard) project by Code institute
+
+### Code
+
+This project was inspired by the [Moments](https://learn.codeinstitute.net/dashboard) social media platform which was a final walk-through project with Code Institute. I have adjusted the project and added additonal features, such as filtering of posts based on their category. The Pawlio application can be expanded on and include the potential improvements mentioned in the 'Future features / improvements' section.
+
+Thank you to Aleksandra for help with the file set up and styles
+
+### Acknowledgements
+
+First and foremost, I would like to give a special thank you to my wonderful Fiance Jasmine, whose support has made managing a full-time job, Open University, and Code Institute submissions possible.
+
+Special thank you also to Mo Shami, My mentors, whose help and guidance has been truly invaluable to me.
+
+The live link to the repository is here : https://github.com/LewisBull2303/CL_PP5_Pawlio
