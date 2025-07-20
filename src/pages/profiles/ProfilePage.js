@@ -17,7 +17,7 @@ import {
 import InfiniteScroll from "react-infinite-scroll-component";
 import Post from "../posts/Post";
 import { fetchMoreData } from "../../utils/utils";
-import NoResultsImage from "../../assets/no-results-found.png";
+import NoResultsImage from "../../assets/no-results.png";
 import { ProfileEditDropdown } from "../../components/DropdownMenu";
 
 function ProfilePage() {
