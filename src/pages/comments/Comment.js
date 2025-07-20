@@ -23,18 +23,7 @@ const Comment = (props) => {
 
   const [showEditForm, setShowEditForm] = useState(false);
   const currentUser = useCurrentUser();
-  console.log(currentUser?.username)
   const is_owner = currentUser?.username === owner;
-
-  if (currentUser?.username === owner){
-    is_owner == true
-  }
-    if (is_owner){
-    console.log("Yes")
-  }
-  else{
-    console.log("No")
-  }
   const [showAlert, setShowAlert] = useState(false);
   const [isDeleted, setIsDeleted] = useState(false);
 
