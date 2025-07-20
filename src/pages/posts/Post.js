@@ -6,7 +6,7 @@ import { Badge, Card, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
-import Like from "../../assets/like.png";
+import Like from "../../assets/LikeIcon.png";
 import Unlike from "../../assets/unlike.png";
 import { DropdownMenu } from "../../components/DropdownMenu";
 import FeedbackMsg from "../../components/FeedbackMsg";
