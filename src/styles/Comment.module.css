@@ -1,6 +1,6 @@
 .CommentBox {
-  color: var(--dark-grey);
-  border: 1px solid var(--off-white);
+  color: var(--black);
+  border: 1px solid var(--dark-gre);
   border-radius: 35px;
   padding: 5px 10px 5px 20px;
 }
@@ -14,7 +14,7 @@
 
 .Date {
   font-weight: lighter;
-  color: #c1c1c5;
+  color: var(--black);
 }
 
 .DropdownDots {
