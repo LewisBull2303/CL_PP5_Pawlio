@@ -1,4 +1,4 @@
-# Pawlio <img width="100" height="70" alt="image" src="https://github.com/user-attachments/assets/a2f1a4d3-ffae-4e93-987e-24a50005b9cc" />
+<img width="1064" height="663" alt="image" src="https://github.com/user-attachments/assets/fc3e405d-f1b7-4139-ad12-133585715550" /># Pawlio <img width="100" height="70" alt="image" src="https://github.com/user-attachments/assets/a2f1a4d3-ffae-4e93-987e-24a50005b9cc" />
 
 Developer: Lewis Bull
 
@@ -337,6 +337,83 @@ There was originally plans for the users to be able to private message each othe
 
 ### HTML
 The W3C Markup Validation Service was used to validate the HTML of the website. No errors were identified.
+
+<details>
+ <summary>Images</summary>
+
+<img width="1152" height="752" alt="image" src="https://github.com/user-attachments/assets/8e10393a-e4f5-48cc-8d14-84e4774be7f4" />
+<img width="1219" height="640" alt="image" src="https://github.com/user-attachments/assets/8f3eacbd-0554-4928-9a69-2ba8f4cf95cb" />
+<img width="1174" height="622" alt="image" src="https://github.com/user-attachments/assets/48a60c33-6b3e-46d8-b10b-d1a898277ded" />
+<img width="1226" height="650" alt="image" src="https://github.com/user-attachments/assets/ede3218a-84a2-4ac1-a4b3-731885c7ca4a" />
+<img width="1181" height="750" alt="image" src="https://github.com/user-attachments/assets/e0953445-940d-4805-865a-9ff29ad902cf" />
+<img width="1306" height="627" alt="image" src="https://github.com/user-attachments/assets/5f55f64c-95f8-49ad-8072-73991a07387e" />
+<img width="1349" height="770" alt="image" src="https://github.com/user-attachments/assets/933d2953-e95e-4ab8-a392-792a70ac2bef" />
+<img width="1551" height="718" alt="image" src="https://github.com/user-attachments/assets/3d20183d-0f3c-4211-ae94-2a3230a5ef60" />
+<img width="1242" height="620" alt="image" src="https://github.com/user-attachments/assets/489a41be-5e41-4cd8-b88b-e4531ab83609" />
+<img width="1244" height="615" alt="image" src="https://github.com/user-attachments/assets/7c9aaf94-8561-4b5c-adb6-b86ff6f3e675" />
+
+</details>
+
+### CSS
+The W3C Jigsaw CSS Validation Service was used to validate the CSS of the website. All CSS modules pass the validation with no errors. 
+
+<details>
+ <summary>Images</summary>
+
+<img width="1148" height="388" alt="image" src="https://github.com/user-attachments/assets/881123f5-ce7c-4a43-8193-a7a5b632fadf" />
+<img width="1205" height="599" alt="image" src="https://github.com/user-attachments/assets/81ac740c-54aa-4b78-9ec8-17450a537d45" />
+<img width="1407" height="565" alt="image" src="https://github.com/user-attachments/assets/6d0ddcbc-42c5-4815-aa6c-e798a02b3a76" />
+<img width="1386" height="663" alt="image" src="https://github.com/user-attachments/assets/a059a25a-ef89-4f52-ab94-db93afafb124" />
+<img width="1928" height="602" alt="image" src="https://github.com/user-attachments/assets/f2ae70e4-9c74-44d9-aaab-7c644ad277ef" />
+<img width="1810" height="333" alt="image" src="https://github.com/user-attachments/assets/f756b806-4f5c-4388-906f-0c2eaa3649fa" />
+<img width="1795" height="429" alt="image" src="https://github.com/user-attachments/assets/b106fcc5-f873-4738-96ee-38f3bb900f5c" />
+<img width="1969" height="462" alt="image" src="https://github.com/user-attachments/assets/95a5a499-1e24-438f-9f03-558535125c5f" />
+<img width="1885" height="426" alt="image" src="https://github.com/user-attachments/assets/e065bb11-d8c5-41e0-b3ab-5537baeea640" />
+<img width="1765" height="395" alt="image" src="https://github.com/user-attachments/assets/15122d7a-5272-4bfd-9219-ff0c8cd55993" />
+<img width="1661" height="695" alt="image" src="https://github.com/user-attachments/assets/f19ce10f-b9e5-456b-bbee-18f5a2998037" />
+<img width="1817" height="625" alt="image" src="https://github.com/user-attachments/assets/cca40ca3-8e7b-42da-bf4d-e4421b037883" />
+<img width="1680" height="522" alt="image" src="https://github.com/user-attachments/assets/ca08eac9-4e74-4f06-8306-b66c2ad472a5" />
+<img width="1816" height="441" alt="image" src="https://github.com/user-attachments/assets/0d9ea8ce-24fc-4b7e-ab56-e4c9e2e5647d" />
+<img width="1681" height="495" alt="image" src="https://github.com/user-attachments/assets/8e7055bb-4efc-47b9-8ed8-194511705f8d" />
+<img width="1814" height="486" alt="image" src="https://github.com/user-attachments/assets/f7b8ecab-aac7-4548-9c91-0ca7baeab6e2" />
+<img width="1757" height="551" alt="image" src="https://github.com/user-attachments/assets/d3ed9852-6fe2-4240-9a4e-401d61d24aa9" />
+
+</details>
+
+### Google Lighthouse
+
+Lighthouse was used to test the performance, accessibility, best practice and SEO of the site. The validation was done for both desktop & mobile.
+
+<details>
+ <summary>Desktop Images</summary>
+
+<img width="934" height="530" alt="image" src="https://github.com/user-attachments/assets/b8e9428c-5333-40d3-a191-f2932d485567" />
+<img width="904" height="775" alt="image" src="https://github.com/user-attachments/assets/9467ba14-7a6f-44f6-9c74-c776ab31656c" />
+
+
+</details>
+
+<details>
+ <summary>Mobile Images</summary>
+
+<img width="835" height="537" alt="image" src="https://github.com/user-attachments/assets/e6a3cf36-5ad4-4899-8b29-eb9294e7381b" />
+<img width="1064" height="663" alt="image" src="https://github.com/user-attachments/assets/a3e8e4c2-5ed1-466e-8dd5-25e8a0031438" />
+
+</details>
+
+### Wave
+
+The WAVE WebAIM web accessibility evaluation tool was used to test the websites accessibility. There were a few errors related to missing labels and contrast issues on buttons. These errors were rectified.
+
+<details>
+ <summary>Images</summary>
+
+<img width="1891" height="763" alt="image" src="https://github.com/user-attachments/assets/f24b6524-3010-4623-ac36-6c0e7bfe42b8" />
+
+
+
+
+</details>
 
 ## Manual Testing
 
