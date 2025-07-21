@@ -10,6 +10,7 @@
 .ButtonFollow {
   font-weight: bold;
   background-color: var(--white);
+  border-color: var(--dark-blue);
   color: var(--dark-blue);
 }
 
@@ -33,7 +34,7 @@
 .ButtonUnfollow:focus,
 .ButtonUnfollow:active {
   background-color: var(--white) !important;
-  border-color: var(--white) !important;
+  border-color: var(--dark-blue) !important;
   color: var(--dark-blue);
 }
 
