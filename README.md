@@ -1,4 +1,4 @@
-<img width="1725" height="955" alt="image" src="https://github.com/user-attachments/assets/c3ac7780-ed02-4dc8-9726-24bd40df1b81" /># Pawlio <img width="100" height="70" alt="image" src="https://github.com/user-attachments/assets/a2f1a4d3-ffae-4e93-987e-24a50005b9cc" />
+# Pawlio <img width="100" height="70" alt="image" src="https://github.com/user-attachments/assets/a2f1a4d3-ffae-4e93-987e-24a50005b9cc" />
 
 Developer: Lewis Bull
 
@@ -98,21 +98,30 @@ Google fonts were used on the website. Iter was used as my main font with sans s
 
 ## WireFrames
 
-Desktop Wireframes:
+<details>
+ <summary>Desktop Wireframes</summary>
 
 <img width="1442" height="908" alt="image" src="https://github.com/user-attachments/assets/51a77988-c5a1-463a-b1c7-d3b173cda7a4" />
 
-Tablet WireFrames:
+</details>
+
+<details>
+ <summary>Tablet Wireframes</summary>
 
 <img width="1477" height="588" alt="image" src="https://github.com/user-attachments/assets/88744985-1eb6-411b-a545-6b6616b045a7" />
 <img width="1542" height="577" alt="image" src="https://github.com/user-attachments/assets/9c6f46b9-f9e0-443d-8812-c70e955cb5a6" />
 <img width="1115" height="608" alt="image" src="https://github.com/user-attachments/assets/113edc93-ab4c-44b5-a689-e7be79ce950f" />
 
-Mobile WireFrames:
+</details>
+
+<details>
+ <summary>Mobile Wireframes</summary>
 
 <img width="1489" height="722" alt="image" src="https://github.com/user-attachments/assets/ed78d82d-114b-41c5-8ac0-22f66b995a73" />
 <img width="1453" height="718" alt="image" src="https://github.com/user-attachments/assets/7c7b93d7-e589-49b4-9788-a5caf6d174f1" />
 <img width="1009" height="813" alt="image" src="https://github.com/user-attachments/assets/c75737f9-5ea3-4fb3-8c79-75a3239f515b" />
+
+</details>
 
 
 ## Technologies used:
