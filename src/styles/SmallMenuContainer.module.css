@@ -63,21 +63,11 @@
 
 @media all and (max-width: 430px) {
   /* Adjust display of icons and links below them */
-  .Link {
-    display: block;
-  }
 
-  .LikeFeedAddDisplay a {
-    text-align: center !important;
-    margin: 0;
-  }
-
-  .LikeFeedAddDisplay img {
-    vertical-align: 0;
-  }
-    /* Display of menus one under another on smaller screens */
+   /* Display of menus one under another on smaller screens */
   .CollapsedColumn {
     display: inline-flex;
+    flex-direction: column;
     width: 100%;
     justify-content: space-around;
   }
@@ -96,4 +86,18 @@
   .CategoriesColumn {
     display: inline-table;
   }
+
+  .Link {
+    display: block;
+  }
+
+  .LikeFeedAddDisplay a {
+    text-align: center !important;
+    margin: 0;
+  }
+
+  .LikeFeedAddDisplay img {
+    vertical-align: 0;
+  }
+  
 }
