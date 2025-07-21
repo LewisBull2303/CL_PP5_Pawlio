@@ -1,31 +1,38 @@
+/* Styling for the main navigation bar container */
 .NavBar {
   box-shadow: 1px 1px 5px var(--dark-grey);
   background-color: var(--off-white);
 }
 
+/* Padding for individual navigation links */
 .NavLink {
   padding: 8px;
 }
 
+/* Styles for active navigation icon: slight rotation, scaling, and color change */
 .Active i {
   transform: rotate(-15deg) scale(1.1);
   color: var(--dark-blue);
 }
 
+/* Remove border from the navbar toggle button */
 .NavbarToggle {
   border: none !important;
 }
 
+/* Change background color when dropdown is active */
 .Dropdown:active {
   background-color: var(--off-white) !important;
 }
 
+/* Hover effect for icons inside links: color change and transform with smooth transition */
 a:hover i {
   color: var(--dark-blue);
   transition: color ease-in-out 0.3s;
   transform: rotate(-15deg) scale(1.1);
 }
 
+/* Remove default underline or other generated content from links */
 a::after {
   display: none !important;
 }

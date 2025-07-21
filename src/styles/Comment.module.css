@@ -1,3 +1,4 @@
+/* Styling for the comment container box with rounded borders and padding */
 .CommentBox {
   color: var(--dark-grey);
   border: 1px solid var(--grey);
@@ -5,17 +6,20 @@
   padding: 5px 10px 5px 20px;
 }
 
+/* Styling for the comment owner’s name: bold and dark grey */
 .OwnerName {
   font-weight: bold;
   color: var(--dark-grey);
   margin-right: 6px;
 }
 
+/* Styling for the comment date: lighter font weight and lighter color */
 .Date {
   font-weight: lighter;
   color: #b5b5b8;
 }
 
+/* Styling for the dropdown menu trigger (dots), positioned right with high z-index */
 .DropdownDots {
   height: 30px;
   width: 20px;

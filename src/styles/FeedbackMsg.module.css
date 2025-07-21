@@ -1,4 +1,4 @@
-/* The user feedback message box */
+/* Styling for the user feedback message box */
 .alert {
   position: relative;
   padding: 1rem 1rem;
@@ -8,12 +8,13 @@
   font-weight: bold;
 }
 
+/* Specific styling for informational alerts */
 .info {
   background-color: var(--off-white);
   border-color: #b6effb;
 }
 
-/* The close X button */
+/* Styling for the close (X) button inside alerts */
 .closebtn {
   margin-left: 15px;
   color: var(--dark-grey);
@@ -25,11 +26,12 @@
   transition: 0.3s;
 }
 
-/* When moving the mouse over the close button */
+/* Hover effect for the close button to change color */
 .closebtn:hover {
   color: var(--dark-blue);
 }
 
+/* Utility class to hide elements */
 .hide {
   display: none;
 }

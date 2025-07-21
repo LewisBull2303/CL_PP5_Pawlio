@@ -1,3 +1,4 @@
+/* Container for asset content: vertically stacked, centered, with minimum height */
 .Asset {
   display: flex;
   flex-direction: column;
@@ -6,11 +7,13 @@
   min-height: 120px;
 }
 
+/* Images inside the asset container with fixed width and height */
 .Asset > img {
   width: 150px;
   height: 140px;
 }
 
+/* Spinner element inside the asset container with large fixed dimensions */
 .Asset .spinner {
   width: 600px;
   height: 595px;

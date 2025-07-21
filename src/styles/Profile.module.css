@@ -1,3 +1,4 @@
+/* Force long words to break and wrap to the next line */
 .WordBreak {
   word-break: break-all;
 }

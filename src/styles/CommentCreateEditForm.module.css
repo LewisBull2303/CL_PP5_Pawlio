@@ -1,3 +1,4 @@
+/* Styling for form elements with rounded left borders and padding */
 .Form {
   color: var(--dark-grey);
   padding-left: 20px;
@@ -7,17 +8,19 @@
   border-bottom-left-radius: 35px !important;
 }
 
+/* Focus state for form to highlight with a dark blue border */
 .Form:focus {
   box-shadow: none;
   border: 1px solid var(--dark-blue);
 }
 
+/* Styling for horizontal line or separator */
 .Line {
   background: #e1f1fd;
   margin: 20px 0 25px;
 }
 
-/* Add, update & cancel comment buttons */
+/* Styling for add, update, and cancel comment buttons */
 .CommentsButton {
   background-color: var(--dark-blue);
   color: var(--white);
@@ -29,6 +32,7 @@
   padding: 3px 15px;
 }
 
+/* Hover and focus states for comment buttons to invert colors and lighten shadow */
 .CommentsButton:hover,
 .CommentsButton:focus {
   background-color: var(--white) !important;

@@ -1,6 +1,9 @@
+/* Main row layout: full height minus header space */
 .Row {
   height: calc(100vh - 81px);
 }
+
+/* Style for input fields */
 .Input {
   background: #ffffff;
   border: 1px solid #f0f1f9;
@@ -11,6 +14,7 @@
   padding: 10px;
 }
 
+/* Header text styling */
 .Header {
   font-style: normal;
   font-weight: bold;
@@ -22,6 +26,7 @@
   color: #2142b2;
 }
 
+/* Link styling */
 .Link {
   text-decoration: none;
   text-align: center;
@@ -29,22 +34,27 @@
   margin: auto;
 }
 
+/* Default link color */
 .Link span {
   color: #ff9254;
 }
 
+/* Hover effect on link */
 .Link span:hover {
   color: #2e6deb;
 }
 
+/* General container padding */
 .Container {
   padding: 30px 10px;
 }
 
+/* Fixed height for sign-in column */
 .SignInCol {
   height: 320px;
 }
 
+/* Fixed height for sign-up column */
 .SignUpCol {
   height: 375px;
 }

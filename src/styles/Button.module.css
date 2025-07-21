@@ -1,3 +1,4 @@
+/* Base styling for buttons with blue border and text on light background */
 .Button {
   background-color: #faf9f9;
   border: 1px #2e6deb solid;
@@ -5,6 +6,7 @@
   color: #2e6deb;
 }
 
+/* Hover and focus states for buttons: invert colors and add blue shadow */
 .Button:hover,
 .Button:focus {
   background-color: #2e6deb !important;
@@ -13,19 +15,23 @@
   border-color: white !important;
 }
 
+/* Active (pressed) state for hovered buttons: darker blue background */
 .Button:hover:active {
   background-color: #2142b2 !important;
 }
 
+/* Active state for buttons: darker blue background */
 .Button:active {
   background-color: #2142b2 !important;
 }
 
+/* Wide button style with extra horizontal padding and full width */
 .Wide {
   padding: 10px 50px;
   width: 100%;
 }
 
+/* Blue buttons and hover states with solid blue background and white text */
 .Blue,
 .BlueOutline:hover,
 .Bright:hover {
@@ -33,6 +39,7 @@
   color: #ffffff;
 }
 
+/* Blue outline buttons and hover states: white background with blue text */
 .BlueOutline,
 .Blue:hover {
   /* border: 1px solid #2142b2; */
@@ -40,6 +47,7 @@
   color: #2142b2;
 }
 
+/* Black buttons and hover outline: dark background with light text */
 .Black,
 .BlackOutline:hover {
   /* background-color: #242a3d;
@@ -48,6 +56,7 @@
   color: aliceblue;
 }
 
+/* Hover states for black buttons and outlines: light background with dark text */
 .Black:hover,
 .BlackOutline {
   /* background-color: #dadadf;
@@ -57,6 +66,7 @@
   color: #242a3d;
 }
 
+/* Bright style buttons with cyan background and dark blue text */
 .Bright {
   background-color: #2ed9ff;
   color: #2142b2;

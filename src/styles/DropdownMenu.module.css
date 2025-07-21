@@ -1,9 +1,11 @@
+/* Styling for individual items within a dropdown menu */
 .DropdownItem {
   display: inline-block;
   max-width: 40%;
   padding: 0;
 }
 
+/* Background color change when a dropdown item is active (pressed) */
 .DropdownItem:active {
   background-color: var(--grey) !important;
 }

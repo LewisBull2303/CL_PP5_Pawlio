@@ -1,31 +1,35 @@
+/* Styling for the landing page image */
 .LandingImage {
   width: 370px;
   margin: 0 auto;
   height: 100%;
 }
 
+/* Right margin for buttons on landing page */
 .LandingButtonMargin {
   margin-right: 15px;
 }
 
+/* Footer container styling with flow-root for clearfix and top margin */
 .footer {
   display: flow-root;
   margin-top: 20px;
 }
 
+/* Footer paragraph spacing adjustments */
 .footer p {
   margin-bottom: 0;
   padding-top: 7px;
 }
 
-/* Remove right margin to the buttons on smaller screens */
+/* Remove right margin on landing page buttons for small screens */
 @media all and (max-width: 500px) {
   .LandingButtonMargin {
     margin-right: 0;
   }
 }
 
-/* Adjust landing page image size on smaller screens */
+/* Resize landing image responsively on very small screens */
 @media all and (max-width: 440px) {
   .LandingImage {
     width: 80%;

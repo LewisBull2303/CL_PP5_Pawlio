@@ -1,3 +1,4 @@
+/* Base styling for all buttons */
 .Button {
   border-radius: 100px;
   border-color: transparent;
@@ -7,6 +8,7 @@
   min-width: 70px;
 }
 
+/* Styling for the "Follow" button */
 .ButtonFollow {
   font-weight: bold;
   background-color: var(--white);
@@ -14,6 +16,7 @@
   color: var(--dark-blue);
 }
 
+/* Hover, focus, and active states for "Follow" button */
 .ButtonFollow:hover,
 .ButtonFollow:focus,
 .ButtonFollow:active {
@@ -24,12 +27,14 @@
   color: var(--white);
 }
 
+/* Styling for the "Unfollow" button */
 .ButtonUnfollow {
   font-weight: bold;
   background-color: var(--dark-blue);
   color: var(--white);
 }
 
+/* Hover, focus, and active states for "Unfollow" button */
 .ButtonUnfollow:hover,
 .ButtonUnfollow:focus,
 .ButtonUnfollow:active {
@@ -38,20 +43,21 @@
   color: var(--dark-blue);
 }
 
-/* Remove follow/unfollow buttons on medium-small screens */
+/* Hide follow/unfollow buttons on medium-small screens and below */
 @media all and (max-width: 991px) {
   .FollowButtonsRemove {
     display: none;
   }
 }
 
-/* Add follow buttons on small screens and display centered below the username */
+/* Hide follow/unfollow buttons on smaller screens (redundant but explicit) */
 @media all and (max-width: 768px) {
   .FollowButtonsRemove {
     display: none;
   }
 }
 
+/* Hide follow/unfollow buttons on very small screens */
 @media all and (max-width: 430px) {
   .FollowButtonsRemove {
     display: none;

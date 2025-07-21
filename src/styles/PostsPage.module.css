@@ -1,3 +1,4 @@
+/* Style for the search input field */
 .SearchBar input {
   border-radius: 20px;
   color: #242a3d;
@@ -5,6 +6,7 @@
   margin-bottom: 16px;
 }
 
+/* Position and size of the search icon inside the search bar */
 .SearchIcon {
   position: absolute;
   font-size: 1.2rem;
@@ -12,11 +14,13 @@
   padding-left: 15px;
 }
 
+/* Hover effect for the search icon */
 .SearchIcon:hover {
   cursor: default;
   color: var(--dark-blue);
 }
 
+/* Position and size for the clear (X) icon inside the search bar */
 .Clear {
   position: absolute;
   font-size: 1.2rem;
@@ -24,18 +28,19 @@
   right: 12px;
 }
 
-/* Styling of badges with cuisine type */
+/* Styling for cuisine type badges */
 .Badge {
   font-size: 1rem;
   margin: 0 0 10px 5px;
 }
 
+/* Hover effect for badges to indicate interactivity */
 .Badge:hover {
   cursor: pointer;
   background-color: var(--dark-blue);
 }
 
-/* Reduce the font size of badges on smaller screens */
+/* Responsive font size adjustment for badges on smaller screens */
 @media all and (max-width: 991px) {
   .Badge {
     font-size: 0.9rem;
