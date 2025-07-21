@@ -25,7 +25,7 @@ Developer: Lewis Bull
 - [Validation](#validation)
 - [Testing](#testing)
   - [Manual Testing](#manual-testing)
-  - [Performing tests on various devices](#performing-tests-on-different-devices)
+  - [Performing tests on Different devices](#performing-tests-on-different-devices)
   - [Browser Compatibility](#browser-compatibility)
 - [Bugs](#bugs)
 - [Config](#Config)
@@ -659,6 +659,8 @@ Lighthouse was used to test the performance, accessibility, best practice and SE
 
 </details>
 
+## Testing
+
 ## Manual Testing
 
 1. As a new user, I can create a new account to be able to access the app
@@ -1206,7 +1208,7 @@ The website was tested on the following devices:
 - Samsung Galaxy Tab A (tablet screen)
 - Samsung S7 (mobile screen)
 
-## Brower Compatibility
+## Browser Compatibility
 
 Testing has been carried out on the following browsers, no issues were found:
 
