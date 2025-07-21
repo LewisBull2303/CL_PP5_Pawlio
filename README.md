@@ -1,4 +1,4 @@
-<img width="1259" height="968" alt="image" src="https://github.com/user-attachments/assets/b7c5772a-5c5b-4e22-bb5d-be34b05bc946" /># Pawlio <img width="100" height="70" alt="image" src="https://github.com/user-attachments/assets/a2f1a4d3-ffae-4e93-987e-24a50005b9cc" />
+# Pawlio <img width="100" height="70" alt="image" src="https://github.com/user-attachments/assets/a2f1a4d3-ffae-4e93-987e-24a50005b9cc" />
 
 Developer: Lewis Bull
 
