@@ -25,9 +25,9 @@ Developer: Lewis Bull
 - [Validation](#validation)
 - [Testing](#testing)
   - [Manual Testing](#manual-testing)
-  - [Performing tests on various devices](#performing-tests-on-various-devices)
+  - [Performing tests on various devices](#performing-tests-on-different-devices)
   - [Browser Compatibility](#browser-compatibility)
-- [Bugs](#Bugs)
+- [Bugs](#bugs)
 - [Config](#Config)
 - [Credits](#credits)
 
@@ -1213,6 +1213,8 @@ Testing has been carried out on the following browsers, no issues were found:
 - Googe Chrome
 - Firefox Browser
 - Microsoft Edge
+
+## Bugs
 
 |Bug|Fix|
 |---|---|
