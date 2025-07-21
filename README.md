@@ -161,29 +161,29 @@ Google fonts were used on the website. Iter was used as my main font with sans s
 
 ### Libraries, Frameworks and Dependencies
 
-- Axios - axios was used to send API requests from the react project to the API and avoid any CORS erros when sending cookies
-- JWT - Library to decode out JSON Web token. I used JWT to prevent unauthenticated user from making extra network requests to refresh their access tokens.
-- Popper - A 3rd party library used by React-Bootstrp to make sure the dropdown menu position is fixed on all browsers
-- React 17 - Javascript library for building user interfaces
-- React-Bootstrap 4.6 - I used bootstrap react library fore UI Components, styling and responsivenes
-- React Infinite Scroll - I used this component to load content such as posts and comments automaticallt as the user scrolls toward the bottom of the page without having a jump to the next/previous page
-- React Router - Used for dynamic routing, I used this library to enable the navigation among views of components and control what the user sees depending on the url
+- [Axios](https://axios-http.com/docs/intro) - axios was used to send API requests from the react project to the API and avoid any CORS erros when sending cookies
+- [JWT](https://jwt.io/) - Library to decode out JSON Web token. I used JWT to prevent unauthenticated user from making extra network requests to refresh their access tokens.
+- [Popper](https://floating-ui.com/?utm_source=popper.js.org) - A 3rd party library used by React-Bootstrp to make sure the dropdown menu position is fixed on all browsers
+- [React 17](https://17.reactjs.org/) - Javascript library for building user interfaces
+- [React-Bootstrap 4.6](https://react-bootstrap-v4.netlify.app/] - I used bootstrap react library fore UI Components, styling and responsivenes
+- [React Infinite Scroll](https://www.npmjs.com/package/react-infinite-scroll-component) - I used this component to load content such as posts and comments automaticallt as the user scrolls toward the bottom of the page without having a jump to the next/previous page
+- [React Router](https://v5.reactrouter.com/web/guides/quick-start) - Used for dynamic routing, I used this library to enable the navigation among views of components and control what the user sees depending on the url
 
 ### Tools and Programs
-- Font Awesome - Icons from Font Awesome were used throughout the site
-- Google Fonts - import of Inter font
-- Git was used for version control within VSCode to push the code to GitHub
-- GitHub was used as a remote repository to store project code
-- Favicon.io for making the site favicon
-- Cloudinary to store static files
-- Coolors to help find colors
-- Font Awesome - Icons from Font Awesome were used throughout the site
-- Heroku was used to deploy the project into a live environment
+- [Am I Responsive](https://ui.dev/amiresponsive) was used to create the multi-device mock-up at the top of this README.md file
+- [Favicon.io](https://favicon.io/) for making the site favicon
+- [Font Awesome](https://fontawesome.com/) - Icons from Font Awesome were used throughout the site
+- [Google Fonts](https://fonts.google.com/) - import of Inter font
+- [Git](https://git-scm.com/) was used for version control within VSCode to push the code to GitHub
+- [GitHub](https://github.com/) was used as a remote repository to store project code
+- [Cloudinary](https://cloudinary.com/) to store static files
+- [Coolors](https://coolors.co/) to help find colors
+- [Heroku](https://www.heroku.com/) was used to deploy the project into a live environment
 - Validation:
-  - WC3 Validator was used to validate the html
-  - Jigsaw W3 Validator was used to validate the css
-  - JSHint used to validate JSX code
-  - Lighthouse used to validate performance, accessibility, best practice and SEO of the app
+  - [WC3 Validator](https://validator.w3.org/) was used to validate the html
+  - [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/) was used to validate the css
+  - [ESLint](https://eslint.org/) used to validate JSX code
+  - [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) used to validate performance, accessibility, best practice and SEO of the app
 
 # Front-end
 
