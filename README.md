@@ -1,4 +1,4 @@
-# Pawlio <img width="100" height="70" alt="image" src="https://github.com/user-attachments/assets/a2f1a4d3-ffae-4e93-987e-24a50005b9cc" />
+<img width="1725" height="955" alt="image" src="https://github.com/user-attachments/assets/c3ac7780-ed02-4dc8-9726-24bd40df1b81" /># Pawlio <img width="100" height="70" alt="image" src="https://github.com/user-attachments/assets/a2f1a4d3-ffae-4e93-987e-24a50005b9cc" />
 
 Developer: Lewis Bull
 
@@ -139,8 +139,16 @@ Mobile WireFrames:
 - Google Fonts - import of Inter font
 - Git was used for version control within VSCode to push the code to GitHub
 - GitHub was used as a remote repository to store project code
-- Favicon.io
-- Cloudinary
+- Favicon.io for making the site favicon
+- Cloudinary to store static files
+- Coolors to help find colors
+- Font Awesome - Icons from Font Awesome were used throughout the site
+- Heroku was used to deploy the project into a live environment
+- Validation:
+  - WC3 Validator was used to validate the html
+  - Jigsaw W3 Validator was used to validate the css
+  - JSHint used to validate JSX code
+  - Lighthouse used to validate performance, accessibility, best practice and SEO of the app
 
 # Front-end
 
@@ -190,6 +198,13 @@ The API for this application was built with the Django REST Framework. The repos
 - Contains directs links to the login and sign up page
 - User Stories Answered - 9, 11
 
+<details>
+ <summary>Images</summary>
+
+<img width="1229" height="785" alt="image" src="https://github.com/user-attachments/assets/c4bc177c-9e2a-4f7a-bf1d-c2e911b91199" />
+
+</details>
+
 ### Logo and Navigation Bar
 - Remains across all pages of the website
 - The Navbar has 2 different variations
@@ -198,10 +213,27 @@ The API for this application was built with the Django REST Framework. The repos
 - The navbar is fully responsive and changes to a hamburger menu on smaller screen sizes
 - User Stories Answered - 10, 11
 
+<details>
+ <summary>Images</summary>
+
+<img width="1565" height="250" alt="image" src="https://github.com/user-attachments/assets/088dc107-fbf5-4e39-97b8-730d45f0fcef" />
+<img width="1440" height="276" alt="image" src="https://github.com/user-attachments/assets/6d88f356-24d2-4fbb-9766-e56bfe2275ee" />
+
+
+</details>
+
 ### Footer
 - A footer is displayed at the bottom of the landing page
 - Contains links to social media and github pages
 - Contains copyright info
+
+<details>
+ <summary>Images</summary>
+
+<img width="1336" height="319" alt="image" src="https://github.com/user-attachments/assets/1fcf433c-f1ca-4bc8-807e-6bf8556b8ca7" />
+
+
+</details>
 
 ### Sign Up Form
 - New users can create an account
@@ -211,6 +243,14 @@ The API for this application was built with the Django REST Framework. The repos
 - Once registered the user is taken to the login page to log in
 - User Stories Answered - 1
 
+<details>
+ <summary>Images</summary>
+
+<img width="1320" height="655" alt="image" src="https://github.com/user-attachments/assets/eff586d1-01f8-47e2-a5aa-a62e6c6d09c2" />
+
+
+</details>
+
 ### Login Form
 - Returning users are able to use their credentials to login
 - The user muist have a valid account in the system
@@ -219,12 +259,27 @@ The API for this application was built with the Django REST Framework. The repos
 - Warning messages are displayed when incorrect input has been put in
 - User Stories Answered - 2
 
+<details>
+ <summary>Images</summary>
+
+<img width="1378" height="514" alt="image" src="https://github.com/user-attachments/assets/b69f87db-a4e6-422d-926d-72c62c04e79b" />
+
+
+</details>
+
 ### Post Create/Update Form
 - Contains the image, title, category and descriptions
 - Description field is option
 - Allows users to share their pictures with others
 - Allow users to categorise their post to make it easy to be found by other users
 - User Stories Answered - 4, 5, 18, 31
+
+<details>
+ <summary>Images</summary>
+
+<img width="1305" height="577" alt="image" src="https://github.com/user-attachments/assets/7e9a36b1-aaed-42fe-81e0-61794dc62d0c" />
+
+</details>
 
 ### Main Home Page
 - Main home page is diplayed for all logged in users
@@ -236,6 +291,13 @@ The API for this application was built with the Django REST Framework. The repos
 - Display all posts that are ordered by the most recent one
 - User Stories Answered - 6, 27
 
+<details>
+ <summary>Images</summary>
+
+
+
+</details>
+
 ### Post Page
 - Contains details of a single post, with the image title, description and category tag
 - Contains number of likes and comments the post has
@@ -243,11 +305,28 @@ The API for this application was built with the Django REST Framework. The repos
 - Features comment section below the post
 - User Stories Answered - 7, 8 12, 13, 14
 
+<details>
+ <summary>Images</summary>
+
+<img width="1604" height="1168" alt="image" src="https://github.com/user-attachments/assets/152dfe69-2eb5-4500-ba2c-d2371b5e6b3b" />
+
+
+</details>
+
 #### Comments
 - Enable users to share their opinion on a specific post
 - Display passed time since adding the post
 - Users have an option to update or delete the comment
 - User Stories Answered - 14, 15, 16, 17
+
+<details>
+ <summary>Images</summary>
+
+<img width="1233" height="598" alt="image" src="https://github.com/user-attachments/assets/3ff83c45-6ea8-45ab-90bb-602f68c127d7" />
+<img width="1116" height="477" alt="image" src="https://github.com/user-attachments/assets/7296b51d-e945-4288-aca8-8fd63bcbce18" />
+
+
+</details>
 
 ### Likes
 - Allow users to express their interest in the post
@@ -256,6 +335,15 @@ The API for this application was built with the Django REST Framework. The repos
 - Allow user to search to liked posts only when click on the feed option in the small menu
 - User Stories Answered - 8
 
+<details>
+ <summary>Images</summary>
+
+<img width="972" height="790" alt="image" src="https://github.com/user-attachments/assets/49ecb1ed-0c8f-4f29-8802-ee3932deaf7c" />
+<img width="1348" height="525" alt="image" src="https://github.com/user-attachments/assets/24b433e4-f061-41a1-b022-4fe26982986c" />
+
+
+</details>
+
 ### Profile Page
 - Contains information about the user
 - Displays info how many posts and followers a user has and how many users they are following
@@ -263,16 +351,42 @@ The API for this application was built with the Django REST Framework. The repos
 - Contains a dropdwon menu to edit the profile and change profile password
 - User Stories Answered - 19, 20, 21, 23, 24
 
+<details>
+ <summary>Images</summary>
+
+<img width="1601" height="1044" alt="image" src="https://github.com/user-attachments/assets/dbe5a2d6-9e79-4980-9f75-3e6363664613" />
+
+
+</details>
+
 ### Profile Picture
 - Allow users to change their default avatar to their own custom picture
 - Displayed in the navbar at the top of the post and in the main home page and the users comments
 - Displayed within Most followed users menu
 - User Stories Answered - 19, 20
 
+<details>
+ <summary>Images</summary>
+
+<img width="205" height="187" alt="image" src="https://github.com/user-attachments/assets/b0824b19-31b5-460f-a9b6-b2aefaee02a6" />
+<img width="588" height="179" alt="image" src="https://github.com/user-attachments/assets/107de544-415e-4445-a059-64ab7acc8a0d" />
+<img width="753" height="206" alt="image" src="https://github.com/user-attachments/assets/304309a5-b4a8-4532-bd7b-82ad669fc2c3" />
+
+
+</details>
+
 ### Password Change Form
 - Allow users to change their password
 - Contains password criteria visible on hover/tap of view password criteria button
 - User Stories Answered - 22
+
+<details>
+ <summary>Images</summary>
+
+<img width="1289" height="531" alt="image" src="https://github.com/user-attachments/assets/84701781-92bf-490a-a80c-3f442771c6b2" />
+
+
+</details>
 
 ### Infinite Scroll
 - Allows users to scroll through the content without having to jump to a new page or previous page
@@ -281,9 +395,25 @@ The API for this application was built with the Django REST Framework. The repos
 - Displated the loading gif before loading
 - User Stories Answered - 28
 
+<details>
+ <summary>Images</summary>
+
+<img width="1725" height="955" alt="image" src="https://github.com/user-attachments/assets/1b8c24e6-f6cc-4f19-97c7-14b39a3985d5" />
+
+
+</details>
+
 ### Follow/Unfollow
 - Users are able to follow/unfollow profiles that they like
 - User Stories Answered - 25
+
+<details>
+ <summary>Images</summary>
+
+<img width="1145" height="526" alt="image" src="https://github.com/user-attachments/assets/8b05695d-3c92-4e57-9841-7799bad0c2bf" />
+
+
+</details>
 
 ### Add Liked Feed Menu
 - Allow users to create a post
@@ -291,16 +421,40 @@ The API for this application was built with the Django REST Framework. The repos
 - Allow users to view only posts created by users they follow
 - User Stories Answered - 4, 29, 30
 
+<details>
+ <summary>Images</summary>
+
+<img width="1000" height="307" alt="image" src="https://github.com/user-attachments/assets/f9bd2e24-be06-4871-a300-782d0570a8e4" />
+
+
+</details>
+
 #### Top Users Menu
 - Displayed the 10 most followed users
 - Contains follow buttons next to username which allow following users
 - Featured on the majority of pages
 - User Stories Answered - 26
 
+<details>
+ <summary>Images</summary>
+
+<img width="501" height="781" alt="image" src="https://github.com/user-attachments/assets/aedf1235-0542-4ef6-916e-eb655cb33e23" />
+
+
+</details>
+
 ### Category Badges
 - Allow the user to tag a post
 - Allow other users to find content they are most interested in
 - User Stories Answered - 31
+
+<details>
+ <summary>Images</summary>
+
+<img width="575" height="863" alt="image" src="https://github.com/user-attachments/assets/9d9702c2-3227-49c6-8eef-e5b99ecde0b6" />
+
+
+</details>
 
 ### Search Bar
 - By typing a phrase in the search bar users can find a specific post or a user they are looking for
@@ -309,14 +463,39 @@ The API for this application was built with the Django REST Framework. The repos
 - User can click on the eraser icon to clear the search content
 - User Stories Answered - 32
 
+<details>
+ <summary>Images</summary>
+
+<img width="1059" height="202" alt="image" src="https://github.com/user-attachments/assets/06e42e4f-2484-4ce1-b743-dc8884a69eb1" />
+
+
+</details>
+
 ### 404 Page
 - Displays if the user loads a page with a url that does not exist
 - Contains a button to redirect users to the main page
 - User Stories Answered - 34
 
+<details>
+ <summary>Images</summary>
+
+<img width="1612" height="874" alt="image" src="https://github.com/user-attachments/assets/d147f1bf-7427-461d-9719-0c2b36e5b509" />
+
+
+</details>
+
 ### Feedback Messages
 - The user is provided with a feedback message about the action they have just completed or tried
 - User Stories Answered - 35
+
+<details>
+ <summary>Images</summary>
+
+<img width="908" height="206" alt="image" src="https://github.com/user-attachments/assets/a82b351f-d615-4c25-ba17-1bbfff6e343c" />
+<img width="893" height="177" alt="image" src="https://github.com/user-attachments/assets/b95af48c-c8a8-45fd-bfa8-efb0f8b880f5" />
+<img width="1393" height="482" alt="image" src="https://github.com/user-attachments/assets/c1059e76-11ad-4421-9143-a5e3bae1d9ed" />
+
+</details>
 
 ## Future Improvements / Additional Features
 
