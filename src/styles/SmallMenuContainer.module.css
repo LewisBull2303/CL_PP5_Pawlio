@@ -15,11 +15,6 @@
   border-spacing: 7px;
 }
 
-.CollapsedColumn {
-  display: flex; /* default large screen style */
-  width: 100%;
-}
-
 /* Adjust display of icons in the menu */
 @media all and (min-width: 991px) {
   .LikeFeedAddDisplay {
@@ -68,30 +63,6 @@
 
 @media all and (max-width: 430px) {
   /* Adjust display of icons and links below them */
-
-   /* Display of menus one under another on smaller screens */
-  .CollapsedColumn {
-    display: inline-flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: space-around;
-  }
-
-  .CollapsedColumn:nth-child(2) {
-    margin: 0;
-  }
-
-  /* Adjust display of top users' icons and follow buttons */
-  .UsersDisplay {
-    display: flex;
-    justify-content: space-around;
-  }
-
-  /* Display of posts categories badges */
-  .CategoriesColumn {
-    display: inline-table;
-  }
-
   .Link {
     display: block;
   }
@@ -104,5 +75,4 @@
   .LikeFeedAddDisplay img {
     vertical-align: 0;
   }
-  
 }
