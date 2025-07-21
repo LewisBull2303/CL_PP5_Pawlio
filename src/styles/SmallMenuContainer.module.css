@@ -20,13 +20,6 @@
   width: 100%;
 }
 
-@media all and (min-width: 992px) {
-  .CollapsedColumn {
-    display: flex;
-    width: 100%;
-  }
-}
-
 /* Adjust display of icons in the menu */
 @media all and (min-width: 991px) {
   .LikeFeedAddDisplay {

@@ -45,15 +45,15 @@
   }
 }
 
-/* Add follow buttons on small screens and displaye centered below the username */
+/* Add follow buttons on small screens and display centered below the username */
 @media all and (max-width: 768px) {
   .FollowButtonsRemove {
-    display: contents;
+    display: none;
   }
 }
 
 @media all and (max-width: 430px) {
   .FollowButtonsRemove {
-    display: contents;
+    display: none;
   }
 }
