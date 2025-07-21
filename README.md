@@ -118,7 +118,7 @@ The color scheme for this application was inspired by other similar social media
 
 <img width="1091" height="533" alt="image" src="https://github.com/user-attachments/assets/4d26791f-1b5c-452e-8db7-0536bd8ea01c" />
 
-## Font
+## Fonts
 
 Google fonts were used on the website. Iter was used as my main font with sans serif as the backup font. Inter was used throughout the site to ensure high legibility of the content. 
 
