@@ -9,32 +9,32 @@
 
 .ButtonFollow {
   font-weight: bold;
-  background-color: var(--dark-grey);
-  color: #fff;
+  background-color: var(--white);
+  color: var(--dark-blue);
 }
 
 .ButtonFollow:hover,
 .ButtonFollow:focus,
 .ButtonFollow:active {
   background-color: var(--dark-blue) !important;
-  box-shadow: 1px 1px 5px var(--dark-grey) !important;
+  box-shadow: 1px 1px 5px var(--dark-blue) !important;
   border-color: var(--dark-blue) !important;
   font-weight: bold;
-  color: var(--dark-grey);
+  color: var(--white);
 }
 
 .ButtonUnfollow {
   font-weight: bold;
-  background-color: var(--grey);
-  color: var(--dark-grey);
+  background-color: var(--dark-blue);
+  color: var(--white);
 }
 
 .ButtonUnfollow:hover,
 .ButtonUnfollow:focus,
 .ButtonUnfollow:active {
-  background-color: var(--dark-grey) !important;
-  border-color: var(--dark-grey) !important;
-  color: #fff;
+  background-color: var(--white) !important;
+  border-color: var(--white) !important;
+  color: var(--dark-blue);
 }
 
 /* Remove follow/unfollow buttons on medium-small screens */
