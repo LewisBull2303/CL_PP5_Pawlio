@@ -6,6 +6,32 @@ Developer: Lewis Bull
 
 <img width="1277" height="709" alt="image" src="https://github.com/user-attachments/assets/5952be3e-d5ff-48ef-ae87-6cbaef7c9879" />
 
+## Table of Content
+
+- [About](#About)
+- [Project Goals](#project-goals)
+- [User Stories](#user-stories)
+- [Design](#design)
+  - [Fonts](#fonts)
+  - [Wireframes](#wireframes)
+- [Technologies Used](#technologies-used)
+  - [Languages](#languages)
+  - [Libraries, Frameworks and Dependencies](Libraries,-Frameworks-and-Dependencies)
+  - [Tools and Programs](Tools-and-Programs)
+- [Front-end](#front-end)
+- [Back-End API](#Back-End-API)
+- [Features](#features)
+- [Future Improvements / Additional Features](#Future-Improvements-/-Additional-Features)
+- [Validation](#validation)
+- [Testing](#testing)
+  - [Manual Testing](#manual-testing)
+  - [Performing tests on various devices](#Performing-tests-on-various-devices)
+  - [Browser Compatibility](#browser-compatibility)
+- [Bugs](#Bugs)
+- [Config](#Config)
+- [Credits](#credits)
+
+
 ## About
 
 Pawlio is a web based platform where users can share pictures of their pets or animals with the rest of the community on the app. Every user can like other peoples posts, and add comments to share their opinions on posts. Users can also follow their favourite profiles and easily see updates on folowed accounts activity. Pawlio is an app for all ages and was made for animal lovers who love to share adorable pictures of their favourite animals.
