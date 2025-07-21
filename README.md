@@ -602,7 +602,16 @@ ESLint was used to validate all of the JS code:
  <summary>Images</summary>
 
 <img width="672" height="137" alt="image" src="https://github.com/user-attachments/assets/8a9e0554-7728-4cc9-a038-10c8dbe5374f" />
+<img width="670" height="48" alt="image" src="https://github.com/user-attachments/assets/2d47e72f-d013-45cd-9abb-7120acb9735d" />
+<img width="702" height="24" alt="image" src="https://github.com/user-attachments/assets/e4b08ba1-0f27-492f-a5ec-3b325cb3aae6" />
+<img width="706" height="70" alt="image" src="https://github.com/user-attachments/assets/1180525e-b461-4fca-809d-2c1475b2acdf" />
+<img width="731" height="74" alt="image" src="https://github.com/user-attachments/assets/3fde6b14-24ca-49a9-aff8-58a8fc5cc212" />
 
+<img width="727" height="204" alt="image" src="https://github.com/user-attachments/assets/2acf5183-8db4-47c1-8358-7c5bbd39bb34" />
+<img width="720" height="120" alt="image" src="https://github.com/user-attachments/assets/05c0d93b-2cf5-4be9-9869-3293f8a9dbca" />
+<img width="705" height="132" alt="image" src="https://github.com/user-attachments/assets/ed0588e4-845a-4495-860f-5f6261bd26ea" />
+<img width="714" height="148" alt="image" src="https://github.com/user-attachments/assets/18c58959-eaf0-430f-adba-4e0b1a9cc028" />
+<img width="580" height="37" alt="image" src="https://github.com/user-attachments/assets/b8b5b443-0138-4a46-9a69-9ab1f55c5881" />
 
 </details>
 
