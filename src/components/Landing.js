@@ -5,6 +5,10 @@ import landingImage from '../assets/landing-page-image.webp';
 import styles from '../styles/Landing.module.css';
 import btnStyles from '../styles/Button.module.css';
 
+/*
+  Landing page with app description and links to social media in footer
+*/
+
 const Landing = () => {
   return (
     <>

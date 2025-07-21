@@ -4,6 +4,11 @@ import { Button, Col, Container, Image, Row } from 'react-bootstrap';
 import appStyles from '../App.module.css';
 import { Link } from 'react-router-dom';
 
+/*
+  Displays a 404 page customised graphic
+  and a link to return to the main page
+*/
+
 const PageNotFound = () => {
   return (
     <Row>
