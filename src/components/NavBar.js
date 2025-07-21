@@ -1,23 +1,20 @@
 import React from 'react';
-import { Navbar, Container, Nav } from 'react-bootstrap';
+import { Navbar, NavDropdown, Container, Nav } from 'react-bootstrap';
 import logo from '../assets/logo.png';
 import styles from '../styles/NavBar.module.css';
 import { NavLink } from 'react-router-dom';
-import postStyles from '../styles/Post.module.css';
 import {
   useCurrentUser,
   useSetCurrentUser,
 } from '../contexts/CurrentUserContext';
+import Avatar from './Avatar';
 import axios from 'axios';
 import useClickOutsideToggle from '../hooks/useClickOutsideToggle';
+import { removeTokenTimestamp } from '../utils/utils';
 
-const NavBar = (props) => {
+const NavBar = () => {
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
-  const { owner } = props;
-  const is_owner = currentUser?.username === owner;
-
-  console.log(currentUser);
 
   const { expanded, setExpanded, ref } = useClickOutsideToggle();
 
@@ -26,70 +23,67 @@ const NavBar = (props) => {
     Removes saved current user
     Redirects to the landing page in <NavLink>
   */
-  const handleSignOut = async () => {
+  const handleLogOut = async () => {
     try {
       await axios.post('dj-rest-auth/logout/');
       setCurrentUser(null);
+      setExpanded(false);
+      removeTokenTimestamp();
     } catch (err) {
-      console.log(err);
+      //console.log(err)
     }
   };
 
-  const addPostIcon = (
-    <NavLink
-      className={styles.NavLink}
-      activeClassName={styles.Active}
-      to="/posts/create"
-    >
-      <i className="far fa-plus-square"></i>Add post
-    </NavLink>
-  );
   /* 
     Displays current username with its avatar in the navbar
+    With a dropdown option to view user profile or log-out on click
   */
-
-  const loggedInIcons = (
+  const loggedInNavBar = (
     <>
-      <NavLink className={styles.NavLink} to="/" onClick={handleSignOut}>
-        <i className="fas fa-sign-out-alt"></i>Sign out
-      </NavLink>
-      <NavLink
-        className={styles.NavLink}
-        to={`/profiles/${currentUser?.profile_id}`}
+      <NavDropdown
+        title={
+          <div className="exp">
+            <Avatar
+              src={currentUser?.profile_image}
+              height={40}
+              className="exp"
+            />
+            {currentUser?.username}
+          </div>
+        }
+        id="basic-nav-dropdown"
       >
-        <img
-          src={currentUser?.profile_image || '/default-avatar.png'}
-          alt="Profile"
-          height={40}
-          width={40}
-          style={{ borderRadius: '50%' }}
-          onError={(e) => {
-            e.target.onerror = null; // prevent infinite loop
-            e.target.src = '/default-avatar.png';
-          }}
-        />
-      </NavLink>
+        <NavDropdown.Item className={`${styles.Dropdown} text-right`}>
+          <NavLink to={`/profiles/${currentUser?.profile_id}`}>Profile</NavLink>
+        </NavDropdown.Item>
+        <NavDropdown.Item className={`${styles.Dropdown} text-right`}>
+          <NavLink to="/" onClick={handleLogOut}>
+            Log out
+          </NavLink>
+        </NavDropdown.Item>
+      </NavDropdown>
     </>
   );
+
   /* 
     Navbar visble to user not logged-in
     With options to create a new account or log in to an existing one
   */
-  const loggedOutIcons = (
+  const loggedOutNavBar = (
     <>
+      <NavLink
+        className={styles.NavLink}
+        activeClassName={styles.Active}
+        to="/signup"
+      >
+        <i className="fa-solid fa-user-plus"></i>Sign up
+      </NavLink>
       <NavLink
         className={styles.NavLink}
         activeClassName={styles.Active}
         to="/login"
       >
-        <i className="fas fa-sign-in-alt"></i>Sign in
-      </NavLink>
-      <NavLink
-        to="/signup"
-        className={styles.NavLink}
-        activeClassName={styles.Active}
-      >
-        <i className="fas fa-user-plus"></i>Sign up
+        <i className="fa-solid fa-right-to-bracket"></i>Log in
       </NavLink>
     </>
   );
@@ -104,27 +98,27 @@ const NavBar = (props) => {
       <Container>
         <NavLink to="/">
           <Navbar.Brand>
-            <img src={logo} alt="logo" height="80" />
+            <img src={logo} alt="Pawlio logo" height="60" width="85" />
           </Navbar.Brand>
         </NavLink>
-        {currentUser && addPostIcon}
         <Navbar.Toggle
-          ref={ref}
           onClick={() => setExpanded(!expanded)}
+          ref={ref}
+          className={styles.NavbarToggle}
           aria-controls="basic-navbar-nav"
         />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ml-auto text-left">
+          <Nav className="ml-auto text-right">
             <NavLink
               exact
               className={styles.NavLink}
               activeClassName={styles.Active}
               to="/"
             >
-              <i className="fas fa-home"></i>Home
+              <i className="fa-solid fa-house"></i>Home
             </NavLink>
 
-            {currentUser ? loggedInIcons : loggedOutIcons}
+            {currentUser ? loggedInNavBar : loggedOutNavBar}
           </Nav>
         </Navbar.Collapse>
       </Container>
