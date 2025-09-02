@@ -56,11 +56,15 @@ const NavBar = () => {
         id="basic-nav-dropdown"
       >
         <NavDropdown.Item className={`${styles.Dropdown} text-right`}>
-          <NavLink to={`/profiles/${currentUser?.profile_id}`}>Profile</NavLink>
+          <NavLink to={`/profiles/${currentUser?.profile_id}`}><Avatar
+              src={currentUser?.profile_image}
+              height={40}
+              className="exp"
+            />Profile</NavLink>
         </NavDropdown.Item>
         <NavDropdown.Item className={`${styles.Dropdown} text-right`}>
           <NavLink to="/" onClick={handleLogOut}>
-            Log out
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>Log out
           </NavLink>
         </NavDropdown.Item>
       </NavDropdown>
