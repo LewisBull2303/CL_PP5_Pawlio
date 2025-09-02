@@ -53,6 +53,7 @@
 
   .UsersDisplay {
     display: flex;
+    text-overflow: ellipsis;
     justify-content: space-around;
   }
 
@@ -69,7 +70,6 @@
 
   .LikeFeedAddDisplay a {
     text-align: center !important;
-    text-overflow: ellipsis;
     margin: 0;
   }
 

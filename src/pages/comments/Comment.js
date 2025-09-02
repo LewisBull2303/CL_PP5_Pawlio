@@ -39,6 +39,7 @@ const Comment = (props) => {
     setTimeout(async () => {
       try {
         await axiosRes.delete(`/comments/${id}/`);
+        await fetchComments();
         setPost((prevPost) => ({
           results: [
             {

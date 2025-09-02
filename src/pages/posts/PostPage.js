@@ -23,6 +23,14 @@ function PostPage() {
   const profile_image = currentUser?.profile_image;
   const [comments, setComments] = useState({ results: [] });
 
+  const fetchComments = async () => {
+  try {
+    const { data } = await axiosReq.get(`/comments/?post=${id}`);
+    setComments(data);
+  } catch (err) {
+    // handle error
+  }
+};
   /*
     Handles request for posts and their comments
     Run code every time the post id in the url changes
@@ -69,6 +77,7 @@ function PostPage() {
                 post={id}
                 setPost={setPost}
                 setComments={setComments}
+                fetchComments={fetchComments}
               />
             ) : comments.results.length ? (
               "Comments"
@@ -82,6 +91,7 @@ function PostPage() {
                     {...comment}
                     setPost={setPost}
                     setComments={setComments}
+                    fetchComments={fetchComments}
                   />
                 ))}
                 dataLength={comments.results.length}

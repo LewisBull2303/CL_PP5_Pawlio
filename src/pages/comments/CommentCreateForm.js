@@ -40,6 +40,7 @@ function CommentCreateForm(props) {
         ],
       }));
       setContent("");
+      await fetchComments();
     } catch (err) {
       // console.log(err);
     }
