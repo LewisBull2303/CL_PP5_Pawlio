@@ -99,7 +99,6 @@ function PostPage() {
                 post={id}
                 setPost={setPost}
                 setComments={setComments}
-                fetchComments={fetchComments} // <-- allow create form to refresh comments and sync count
               />
             ) : comments.results.length ? (
               "Comments"

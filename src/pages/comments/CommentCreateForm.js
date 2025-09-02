@@ -36,11 +36,13 @@ function CommentCreateForm(props) {
 
     // Update post comment count safely
     setPost((prevPost) => ({
-      ...prevPost,
-      results: prevPost.results.map((p) =>
-        p.id === post ? { ...p, comments_count: p.comments_count + 1 } : p
-      ),
-    }));
+  results: [
+    {
+      ...prevPost.results[0],
+      comments_count: prevPost.results[0].comments_count + 1,
+    },
+  ],
+}));
 
     setContent("");
   } catch (err) {
