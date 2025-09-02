@@ -41,6 +41,7 @@ const NavBar = () => {
   const loggedInNavBar = (
     <>
       <NavDropdown
+      renderMenuOnMount={true}
         title={
           <div className="exp">
             <Avatar

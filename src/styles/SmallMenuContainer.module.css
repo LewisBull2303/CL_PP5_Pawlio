@@ -69,6 +69,7 @@
 
   .LikeFeedAddDisplay a {
     text-align: center !important;
+    text-overflow: ellipsis;
     margin: 0;
   }
 
