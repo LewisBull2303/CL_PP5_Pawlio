@@ -38,7 +38,7 @@ function CommentCreateForm(props) {
     setPost((prevPost) => ({
       ...prevPost,
       results: prevPost.results.map((p) =>
-        p.id === post ? { ...p, comments_number: p.comments_number + 1 } : p
+        p.id === post ? { ...p, comments_count: p.comments_count + 1 } : p
       ),
     }));
 
