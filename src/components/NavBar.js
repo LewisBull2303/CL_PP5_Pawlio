@@ -43,10 +43,9 @@ const NavBar = () => {
       <NavDropdown
       renderMenuOnMount={true}
         title={
-          <div className="exp">
-            onClick{e => {
-              e.stopPropagation();
-            }}
+          <div className="exp" onClick={e => {
+            e.stopPropagation();
+          }}>
             <Avatar
               src={currentUser?.profile_image}
               height={40}
