@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-const useClickOutsideToggle = () => {
+const useClickOutsideToggle = (extraRefs = []) => {
   const [expanded, setExpanded] = useState(false);
   const ref = useRef(null); // a variable that will hold a reference to the hamburger icon
   /*
@@ -22,7 +22,7 @@ const useClickOutsideToggle = () => {
     return () => {
       document.removeEventListener('mouseup', handleClickOutside);
     };
-  }, [ref]);
+  }, [ref, extraRefs]);
 
   return { expanded, setExpanded, ref };
 };
