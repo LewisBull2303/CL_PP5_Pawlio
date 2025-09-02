@@ -17,11 +17,26 @@ export const ProfileDataProvider = ({ children }) => {
 
   const currentUser = useCurrentUser();
 
+  // Fetch a single profile and update pageProfile in context
+  const fetchProfile = async (id) => {
+    try {
+      const { data } = await axiosReq.get(`/profiles/${id}/`);
+      setProfileData((prevState) => ({
+        ...prevState,
+        pageProfile: {
+          results: prevState.pageProfile.results.map(profile =>
+            profile.id === id ? data : profile
+          ),
+        },
+      }));
+    } catch (err) {
+      // console.log(err);
+    }
+  };
+
   /*
-    Makes a request to the /followers/ endpoint
-    Sends information about what profile (its id)
-    the user just followed (clicked)
-    Updates profile page and PopularProfiles data
+    Handles following a profile and updates context state.
+    Refetches the profile for instant UI update.
   */
   const handleFollow = async (clickedProfile) => {
     try {
@@ -43,16 +58,16 @@ export const ProfileDataProvider = ({ children }) => {
           ),
         },
       }));
+
+      await fetchProfile(clickedProfile.id); // Refetch for instant update
     } catch (err) {
       // console.log(err);
     }
   };
 
   /*
-    Makes a request to the /followers/ endpoint
-    Sends information about what profile (its id)
-    the user just followed (clicked)
-    Updates PopularProfiles data
+    Handles unfollowing a profile and updates context state.
+    Refetches the profile for instant UI update.
   */
   const handleUnfollow = async (clickedProfile) => {
     try {
@@ -71,6 +86,8 @@ export const ProfileDataProvider = ({ children }) => {
           ),
         },
       }));
+
+      await fetchProfile(clickedProfile.id); // Refetch for instant update
     } catch (err) {
       // console.log(err);
     }
