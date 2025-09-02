@@ -5,10 +5,16 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { Button } from "react-bootstrap";
-import { useSetProfileData } from "../../contexts/ProfileDataContext";
+import { useSetProfileData, useProfileData } from "../../contexts/ProfileDataContext";
 
 const Profile = (props) => {
-  const { profile, imageSize = 40 } = props;
+  const { profile: propProfile, imageSize = 40 } = props;
+  const profileData = useProfileData();
+
+  // Find the latest profile data by id
+  const profile =
+    profileData.pageProfile.results.find(p => p.id === propProfile.id) || propProfile;
+
   const { id, following_id, image, owner } = profile;
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
@@ -31,7 +37,6 @@ const Profile = (props) => {
       </div>
 
       <div className={`${buttonsStyles.FollowButtonsRemove} ml-auto`}>
-        {/* Displays follow/unfollow buttons and do not allow users to follow themselves */}
         {currentUser &&
           !is_owner &&
           (following_id ? (
