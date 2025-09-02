@@ -58,9 +58,7 @@ const Comment = (props) => {
     }, 2500);
   };
 
-console.log("currentUser.username:", currentUser?.username);
-console.log("comment.owner:", owner);
-console.log("is_owner:", currentUser?.username === owner);
+  console.log("Current Comments", comments_number);
 
   return isDeleted ? (
     <FeedbackMsg variant="info" message="Comment has been deleted" />
