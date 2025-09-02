@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Navbar, NavDropdown, Container, Nav } from 'react-bootstrap';
 import logo from '../assets/logo.png';
 import styles from '../styles/NavBar.module.css';
@@ -15,8 +15,9 @@ import { removeTokenTimestamp } from '../utils/utils';
 const NavBar = () => {
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
+  const profileRef = useRef(null);
 
-  const { expanded, setExpanded, ref } = useClickOutsideToggle();
+  const { expanded, setExpanded, ref } = useClickOutsideToggle([profileRef]);
 
   /*
     Handles user logout
@@ -43,9 +44,7 @@ const NavBar = () => {
       <NavDropdown
       renderMenuOnMount={true}
         title={
-          <div className="exp" onClick={e => {
-            e.stopPropagation();
-          }}>
+          <div className="exp" ref={profileRef}>
             <Avatar
               src={currentUser?.profile_image}
               height={40}

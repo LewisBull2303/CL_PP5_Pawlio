@@ -8,9 +8,12 @@ const useClickOutsideToggle = () => {
     Class 'exp' was applied to user avatar & navbar dropdown menu,
     if clicked on either of them the navbar won't collapse
   */
-  useEffect(() => {
+ useEffect(() => {
     const handleClickOutside = (event) => {
-      if (ref.current && !ref.current.contains(event.target)) {
+      // Check if click is outside ALL refs
+      const refsToCheck = [ref, ...extraRefs];
+      const clickedInside = refsToCheck.some(r => r.current && r.current.contains(event.target));
+      if (!clickedInside) {
         setExpanded(false);
       }
     };
