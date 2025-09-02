@@ -21,7 +21,7 @@ function CommentCreateForm(props) {
     Increments the number of comments by 1
   */
   const handleSubmit = async (e) => {
-    console.log("Current Comments", comments_number)
+    console.log("Current Comments", prevPost.results[0].comments_number)
     e.preventDefault();
     try {
       const { data } = await axiosRes.post("/comments/", {
@@ -45,7 +45,7 @@ function CommentCreateForm(props) {
     } catch (err) {
       // console.log(err);
     }
-    console.log("Current Comments", comments_number)
+    console.log("Current Comments", prevPost.results[0].comments_number)
   };
 
   return (
