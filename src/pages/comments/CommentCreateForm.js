@@ -21,32 +21,32 @@ function CommentCreateForm(props) {
     Increments the number of comments by 1
   */
   const handleSubmit = async (e) => {
-    console.log("Current Comments", prevPost.results[0].comments_number)
-    e.preventDefault();
-    try {
-      const { data } = await axiosRes.post("/comments/", {
-        content,
-        post,
-      });
-      setComments((prevComments) => ({
-        ...prevComments,
-        results: [data, ...prevComments.results],
-      }));
-      setPost((prevPost) => ({
-        results: [
-          {
-            ...prevPost.results[0],
-            comments_number: prevPost.results[0].comments_number + 1,
-          },
+  e.preventDefault();
+  try {
+    const { data } = await axiosRes.post("/comments/", {
+      content,
+      post,
+    });
 
-        ],
-      }));
-      setContent("");
-    } catch (err) {
-      // console.log(err);
-    }
-    console.log("Current Comments", prevPost.results[0].comments_number)
-  };
+    // Update comments immediately
+    setComments((prevComments) => ({
+      ...prevComments,
+      results: [data, ...prevComments.results],
+    }));
+
+    // Update post comment count safely
+    setPost((prevPost) => ({
+      ...prevPost,
+      results: prevPost.results.map((p) =>
+        p.id === post ? { ...p, comments_number: p.comments_number + 1 } : p
+      ),
+    }));
+
+    setContent("");
+  } catch (err) {
+    console.error(err);
+  }
+};
 
   return (
     <Form className="mt-2 text-center" onSubmit={handleSubmit}>

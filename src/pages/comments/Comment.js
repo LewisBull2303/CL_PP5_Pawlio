@@ -58,8 +58,6 @@ const Comment = (props) => {
     }, 2500);
   };
 
-  console.log("Current Comments", comments_number);
-
   return isDeleted ? (
     <FeedbackMsg variant="info" message="Comment has been deleted" />
   ) : (
