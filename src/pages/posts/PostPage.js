@@ -18,29 +18,59 @@ import PopularProfiles from "../profiles/PopularProfiles";
 function PostPage() {
   const { id } = useParams();
   const [post, setPost] = useState({ results: [] });
+  const [comments, setComments] = useState({ results: [] });
 
   const currentUser = useCurrentUser();
   const profile_image = currentUser?.profile_image;
-  const [comments, setComments] = useState({ results: [] });
 
-  /*
-    Handles request for posts and their comments
-    Run code every time the post id in the url changes
-  */
+  // Fetch single post
+  const fetchPost = async () => {
+    try {
+      const { data } = await axiosReq.get(`/posts/${id}`);
+      setPost({ results: [data] });
+    } catch (err) {
+      // console.log(err);
+    }
+  };
+
+  // Fetch comments and sync post.comments_number with API result
+  const fetchComments = async () => {
+    try {
+      const { data } = await axiosReq.get(`/comments/?post=${id}`);
+      setComments(data);
+
+      // Use API count if available, otherwise use results length
+      const commentsCount = data.count ?? (data.results ? data.results.length : 0);
+
+      setPost((prevPost) => {
+        if (!prevPost.results?.length) {
+          // If post not loaded yet, keep as-is
+          return prevPost;
+        }
+        return {
+          results: [
+            {
+              ...prevPost.results[0],
+              comments_number: commentsCount,
+            },
+          ],
+        };
+      });
+    } catch (err) {
+      // console.log(err);
+    }
+  };
+
+  // Initial load: fetch post and comments when id changes
   useEffect(() => {
     const handleMount = async () => {
       try {
-        const [{ data: post }, { data: comments }] = await Promise.all([
-          axiosReq.get(`/posts/${id}`),
-          axiosReq.get(`/comments/?post=${id}`),
-        ]);
-        setPost({ results: [post] });
-        setComments(comments);
+        // fetch both in parallel for speed
+        await Promise.all([fetchPost(), fetchComments()]);
       } catch (err) {
-        // console.log(err)
+        // console.log(err);
       }
     };
-
     handleMount();
   }, [id]);
 
@@ -69,12 +99,12 @@ function PostPage() {
                 post={id}
                 setPost={setPost}
                 setComments={setComments}
+                fetchComments={fetchComments} // <-- allow create form to refresh comments and sync count
               />
             ) : comments.results.length ? (
               "Comments"
             ) : null}
             {comments.results.length ? (
-              // InfiniteScroll component handles loading more pages of comments as the user scrolls
               <InfiniteScroll
                 children={comments.results.map((comment) => (
                   <Comment
@@ -82,6 +112,7 @@ function PostPage() {
                     {...comment}
                     setPost={setPost}
                     setComments={setComments}
+                    fetchComments={fetchComments} // <-- allow comment edits/deletes to refresh comments and sync count
                   />
                 ))}
                 dataLength={comments.results.length}
