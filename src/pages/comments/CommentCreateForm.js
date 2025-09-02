@@ -37,6 +37,7 @@ function CommentCreateForm(props) {
             ...prevPost.results[0],
             comments_number: prevPost.results[0].comments_number + 1,
           },
+          console.log("Current Comments", comments_number)
         ],
       }));
       setContent("");
