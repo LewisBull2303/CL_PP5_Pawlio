@@ -44,6 +44,9 @@ const NavBar = () => {
       renderMenuOnMount={true}
         title={
           <div className="exp">
+            onClick{e => {
+              e.stopPropagation();
+            }}
             <Avatar
               src={currentUser?.profile_image}
               height={40}
