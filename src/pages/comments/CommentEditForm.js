@@ -39,7 +39,6 @@ function CommentEditForm(props) {
       }));
       setShowEditForm(false);
       setShowAlert(true);
-      await fetchComments();
     } catch (err) {
       //console.log(err)
     }
