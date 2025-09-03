@@ -10,6 +10,7 @@ import Like from "../../assets/LikeIcon.png";
 import Unlike from "../../assets/unlike.png";
 import { DropdownMenu } from "../../components/DropdownMenu";
 import FeedbackMsg from "../../components/FeedbackMsg";
+import SaveButton from '../../components/SaveButton';
 
 const Post = (props) => {
   const {
@@ -139,6 +140,7 @@ const Post = (props) => {
           <Badge variant="secondary" className={styles.BadgePost}>
             {category}
           </Badge>
+          <SaveButton postId={post.id} isInitiallySaved={post.is_saved}></SaveButton>
         </Card.Text>
         <hr className={appStyles.Line} />
 

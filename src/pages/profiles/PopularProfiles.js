@@ -20,6 +20,7 @@ const PopularProfiles = () => {
           <div className={styles.UsersDisplay}>
             {popularProfiles.results.slice(0, 3).map((profile) => (
               <Profile key={profile.id} profile={profile} />
+              
             ))}
           </div>
         </>
