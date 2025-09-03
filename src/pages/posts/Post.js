@@ -140,7 +140,7 @@ const Post = (props) => {
           <Badge variant="secondary" className={styles.BadgePost}>
             {category}
           </Badge>
-          <SaveButton postId={post.id} isInitiallySaved={post.is_saved}></SaveButton>
+          <SaveButton postId={id} isInitiallySaved={id.is_saved}></SaveButton>
         </Card.Text>
         <hr className={appStyles.Line} />
 
