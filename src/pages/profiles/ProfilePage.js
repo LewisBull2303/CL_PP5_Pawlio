@@ -156,14 +156,11 @@ function ProfilePage() {
   return (
     <Container>
       <Row>
-        <Col
-          className={`${columnStyles.SplitColumns} ${columnStyles.TwoColumns} py-2 p-0 p-lg-2`}
-          lg={4}
-        >
+        <Col className={`${columnStyles.SplitColumns} pt-2 p-0 p-lg-2`} lg={4}>
           <LikeFeedAddPost />
 
           <Container
-            className={`${appStyles.Content} ${columnStyles.CollapsedColumn}`}
+            className={`${appStyles.Content} ${columnStyles.CollapsedColumn} mb-2`}
           >
             <PopularProfiles />
           </Container>
