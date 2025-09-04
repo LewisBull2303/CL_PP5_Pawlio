@@ -26,10 +26,7 @@ const PopularProfiles = () => {
           <p>Top Users</p>
           <div className={styles.UsersDisplay}>
             {popularProfiles.results.slice(0, 3).map((profile) => (
-              <Profile
-                key={profile.id}
-                profile={{ ...profile, owner: truncateUsername(profile.owner) }}
-              />
+              <Profile key={profile.id} profile={profile} truncateOwner />
             ))}
           </div>
         </>

@@ -7,24 +7,21 @@ import Avatar from "../../components/Avatar";
 import { Button } from "react-bootstrap";
 import { useSetProfileData, useProfileData } from "../../contexts/ProfileDataContext";
 
-const Profile = (props) => {
-  const { profile: propProfile, imageSize = 40 } = props;
+const Profile = ({ profile: propProfile, imageSize = 40, truncateOwner = false }) => {
   const profileData = useProfileData();
-
-  // Find the latest profile data by id
   const profile =
     profileData.pageProfile.results.find(p => p.id === propProfile.id) || propProfile;
 
   const { id, following_id, image, owner } = profile;
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
-
   const { handleFollow, handleUnfollow } = useSetProfileData();
 
+  const truncateUsername = (username) =>
+    username.length > 6 ? username.slice(0, 6) + "…" : username;
+
   return (
-    <div
-      className={`my-3 d-flex align-items-center ${styles.ProfilesDisplaySmall}`}
-    >
+    <div className={`my-3 d-flex align-items-center ${styles.ProfilesDisplaySmall}`}>
       <div>
         <Link to={`/profiles/${id}`}>
           <Avatar src={image} height={imageSize} />
@@ -32,10 +29,9 @@ const Profile = (props) => {
       </div>
       <div>
         <Link to={`/profiles/${id}`}>
-          <strong>{owner}</strong>
+          <strong>{truncateOwner ? truncateUsername(owner) : owner}</strong>
         </Link>
       </div>
-
       <div className={`${buttonsStyles.FollowButtonsRemove} ml-auto`}>
         {currentUser &&
           !is_owner &&
