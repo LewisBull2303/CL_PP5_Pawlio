@@ -28,6 +28,7 @@ const Post = (props) => {
     updated_at,
     postPage,
     setPosts,
+    is_saved,
   } = props;
 
   const currentUser = useCurrentUser();
@@ -140,7 +141,7 @@ const Post = (props) => {
           <Badge variant="secondary" className={styles.BadgePost}>
             {category}
           </Badge>
-          <SaveButton postId={id} isInitiallySaved={id.is_saved}></SaveButton>
+          <SaveButton postId={id} isInitiallySaved={is_saved} />
         </Card.Text>
         <hr className={appStyles.Line} />
 
