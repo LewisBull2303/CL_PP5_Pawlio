@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { axiosRes } from "../api/axiosDefaults";
-import styles from "../styles/Button.module.css";
+import btnStyles from '../styles/Button.module.css';
 
 const SaveButton = ({ postId, isInitiallySaved }) => {
   const [isSaved, setIsSaved] = useState(isInitiallySaved);
@@ -31,7 +31,7 @@ const SaveButton = ({ postId, isInitiallySaved }) => {
       onClick={isSaved ? handleUnsave : handleSave}
       style={{ cursor: "pointer", marginLeft: "10px" }}
     >
-      {isSaved ? <i class="fa-solid fa-bookmark" className={`${styles.Button}`}></i> : <i class="fa-solid fa-bookmark" className={`${styles.Button}`}></i>}
+      {isSaved ? <i class="fa-solid fa-bookmark" className={`my-3 ${btnStyles.Button}`}></i> : <i class="fa-solid fa-bookmark" className={`${btnStyles.Button}`}></i>}
     </span>
   );
 };
