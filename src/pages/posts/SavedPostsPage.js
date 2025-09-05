@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { axiosReq } from "../api/axiosDefaults";
-import Post from "./posts/Post";
+import Post from "./Post";
 
 const SavedPostsPage = () => {
   const [savedPosts, setSavedPosts] = useState({ results: [] });
