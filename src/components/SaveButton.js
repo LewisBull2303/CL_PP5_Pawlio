@@ -31,7 +31,7 @@ const SaveButton = ({ postId, isInitiallySaved }) => {
       onClick={isSaved ? handleUnsave : handleSave}
       style={{ cursor: "pointer", marginLeft: "10px" }}
     >
-      {isSaved ? <i class="fa-solid fa-bookmark" className={`${style.Button}`}></i> : <i class="fa-solid fa-bookmark" className={`${style.Button}`}></i>}
+      {isSaved ? <i class="fa-solid fa-bookmark" className={`${styles.Button}`}></i> : <i class="fa-solid fa-bookmark" className={`${styles.Button}`}></i>}
     </span>
   );
 };
