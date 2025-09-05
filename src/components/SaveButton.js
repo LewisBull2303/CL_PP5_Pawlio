@@ -1,11 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { axiosRes } from "../api/axiosDefaults";
 import btnStyles from '../styles/Button.module.css';
 import { Button } from "react-bootstrap";
 
-const SaveButton = ({ postId, isInitiallySaved }) => {
-  const [isSaved, setIsSaved] = useState(isInitiallySaved);
+const SaveButton = ({ postId }) => {
+  const [isSaved, setIsSaved] = useState(false);
   const [saveId, setSaveId] = useState(null);
+
+  // Check if the post is already saved when the component mounts
+  useEffect(() => {
+    const fetchSaveStatus = async () => {
+      try {
+        const { data } = await axiosRes.get("/saves/");
+        const existingSave = data.results.find((save) => save.post === postId);
+        if (existingSave) {
+          setIsSaved(true);
+          setSaveId(existingSave.id);
+        }
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchSaveStatus();
+  }, [postId]);
 
   const handleSave = async () => {
     try {
@@ -13,7 +30,7 @@ const SaveButton = ({ postId, isInitiallySaved }) => {
       setIsSaved(true);
       setSaveId(data.id);
     } catch (err) {
-      // console.log(err);
+      console.log(err);
     }
   };
 
@@ -23,7 +40,7 @@ const SaveButton = ({ postId, isInitiallySaved }) => {
       setIsSaved(false);
       setSaveId(null);
     } catch (err) {
-      // console.log(err);
+      console.log(err);
     }
   };
 
@@ -32,7 +49,15 @@ const SaveButton = ({ postId, isInitiallySaved }) => {
       onClick={isSaved ? handleUnsave : handleSave}
       style={{ cursor: "pointer", marginLeft: "10px" }}
     >
-      {isSaved ? <Button className={`my-3 ${btnStyles.Button}`}><i class="fa-solid fa-bookmark"></i></Button> : <Button className={`my-3 ${btnStyles.Button}`}><i class="fa-solid fa-bookmark"></i></Button>}
+      {isSaved ? (
+        <Button className={`my-3 ${btnStyles.Button}`}>
+          <i className="fa-solid fa-bookmark"></i>
+        </Button>
+      ) : (
+        <Button className={`my-3 ${btnStyles.Button}`}>
+          <i className="fa-regular fa-bookmark"></i>
+        </Button>
+      )}
     </span>
   );
 };
