@@ -30,7 +30,7 @@ const SaveButton = ({ postId, isInitiallySaved }) => {
       onClick={isSaved ? handleUnsave : handleSave}
       style={{ cursor: "pointer", marginLeft: "10px" }}
     >
-      {isSaved ? <i class="fa-solid fa-bookmark"></i> : <i class="fa-solid fa-bookmark"></i>}
+      {isSaved ? "💾 Saved" : "💾 Save"}
     </span>
   );
 };
