@@ -1,39 +1,37 @@
-// components/SaveButton.js
-import React, { useState } from 'react';
-import { Button, OverlayTrigger, Tooltip } from 'react-bootstrap';
-import { axiosReq } from '../api/axiosDefaults';
-import styles from '../styles/SaveButton.module.css';
+import React, { useState } from "react";
+import { axiosRes } from "../api/axiosDefaults";
 
 const SaveButton = ({ postId, isInitiallySaved }) => {
   const [isSaved, setIsSaved] = useState(isInitiallySaved);
-  const [error, setError] = useState(null);
+  const [saveId, setSaveId] = useState(null);
 
   const handleSave = async () => {
     try {
-      await axiosReq.post('/saves/', { post: postId });
+      const { data } = await axiosRes.post("/saves/", { post: postId });
       setIsSaved(true);
+      setSaveId(data.id);
     } catch (err) {
-      setError('Could not save post');
+      // console.log(err);
+    }
+  };
+
+  const handleUnsave = async () => {
+    try {
+      await axiosRes.delete(`/saves/${saveId}/`);
+      setIsSaved(false);
+      setSaveId(null);
+    } catch (err) {
+      // console.log(err);
     }
   };
 
   return (
-    <>
-      <OverlayTrigger
-        placement="top"
-        overlay={<Tooltip>{isSaved ? <i class="fa-solid fa-bookmark"></i> : <i class="fa-solid fa-bookmark"></i>}</Tooltip>}
-      >
-        <Button
-          className={styles.SaveButton}
-          onClick={handleSave}
-          disabled={isSaved}
-          variant={isSaved ? 'success' : 'outline-primary'}
-        >
-          {isSaved ? <i class="fa-solid fa-bookmark"></i> : <i class="fa-solid fa-bookmark"></i>}
-        </Button>
-      </OverlayTrigger>
-      {error && <div className="text-danger mt-2">{error}</div>}
-    </>
+    <span
+      onClick={isSaved ? handleUnsave : handleSave}
+      style={{ cursor: "pointer", marginLeft: "10px" }}
+    >
+      {isSaved ? "💾 Saved" : "💾 Save"}
+    </span>
   );
 };
 
