@@ -185,7 +185,7 @@ const Post = (props) => {
                   width="25"
                 />
               </span>
-            ) : null // user must be logged in to the app to view the content
+            ) : null // user must be logged in to the app to view the description
           }
           <span className="ml-1">{likes_count}</span>
 

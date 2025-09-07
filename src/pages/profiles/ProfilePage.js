@@ -73,7 +73,7 @@ function ProfilePage() {
 
         <Col lg={6}>
           <h3 className="m-3">{profile?.owner}</h3>
-          <Row className="justify-content-around">
+          <Row className="justify-description-around">
             <Col xs={3} className="my-3">
               <div>Followers</div>
               <div>{profile?.followers_count}</div>
@@ -115,10 +115,10 @@ function ProfilePage() {
             ))}
         </Col>
 
-        {profile?.content && (
+        {profile?.description && (
           <Col className="p-3">
             <hr className={appStyles.Line} />
-            {profile?.content}
+            {profile?.description}
           </Col>
         )}
       </Row>
@@ -160,14 +160,14 @@ function ProfilePage() {
           <LikeFeedAddPost />
 
           <Container
-            className={`${appStyles.Content} ${columnStyles.CollapsedColumn} mb-2`}
+            className={`${appStyles.description} ${columnStyles.CollapsedColumn} mb-2`}
           >
             <PopularProfiles />
           </Container>
         </Col>
 
         <Col className="py-1 p-0 p-lg-2" lg={8}>
-          <Container className={appStyles.Content}>
+          <Container className={appStyles.description}>
             {hasLoaded ? (
               <>
                 {mainProfile}

@@ -21,11 +21,11 @@ function PostCreateForm() {
   const [postData, setPostData] = useState({
     title: '',
     category: '',
-    content: '',
+    description: '',
     image: '',
   });
 
-  const { title, category, content, image } = postData;
+  const { title, category, description, image } = postData;
   const imageInput = useRef(null);
   const history = useHistory();
 
@@ -62,7 +62,7 @@ function PostCreateForm() {
 
     formData.append('title', title);
     formData.append('category', category);
-    formData.append('content', content);
+    formData.append('description', description);
     formData.append('image', imageInput.current.files[0]);
 
     try {
@@ -139,13 +139,13 @@ function PostCreateForm() {
         <Form.Control
           as="textarea"
           rows={6}
-          name="content"
+          name="description"
           className={appStyles.Input}
-          value={content}
+          value={description}
           onChange={handleChange}
           aria-label="post description"
         />
-        {errors.content?.map((message, idx) => (
+        {errors.description?.map((message, idx) => (
           <Alert variant="warning" className={appStyles.Alert} key={idx}>
             {message}
           </Alert>
@@ -174,11 +174,11 @@ function PostCreateForm() {
     <Form onSubmit={handleSubmit}>
       <Row>
         <Col md={7} lg={8} className="d-none d-md-block p-0 p-md-2">
-          <Container className={appStyles.Content}>{textFields}</Container>
+          <Container className={appStyles.description}>{textFields}</Container>
         </Col>
         <Col className="pt-2 pb-4 p-0 p-md-2" md={5} lg={4}>
           <Container
-            className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}
+            className={`${appStyles.description} ${styles.Container} d-flex flex-column justify-description-center`}
           >
             <Form.Group className="text-center">
               {image ? (
@@ -202,7 +202,7 @@ function PostCreateForm() {
                 </>
               ) : (
                 <Form.Label
-                  className={`${styles.UploadPicture} d-flex justify-content-center`}
+                  className={`${styles.UploadPicture} d-flex justify-description-center`}
                   htmlFor="image-upload"
                 >
                   <Asset

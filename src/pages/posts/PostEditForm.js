@@ -19,11 +19,11 @@ function PostEditForm() {
   const [postData, setPostData] = useState({
     title: "",
     category: "",
-    content: "",
+    description: "",
     image: "",
   });
 
-  const { title, category, content, image } = postData;
+  const { title, category, description, image } = postData;
 
   const imageInput = useRef(null);
   const history = useHistory();
@@ -39,10 +39,10 @@ function PostEditForm() {
     const handleMount = async () => {
       try {
         const { data } = await axiosReq.get(`/posts/${id}/`);
-        const { title, category, content, image, is_owner } = data;
+        const { title, category, description, image, is_owner } = data;
 
         is_owner
-          ? setPostData({ title, category, content, image })
+          ? setPostData({ title, category, description, image })
           : history.push("/");
       } catch (err) {
         //console.log(err)
@@ -85,7 +85,7 @@ function PostEditForm() {
 
     formData.append("title", title);
     formData.append("category", category);
-    formData.append("content", content);
+    formData.append("description", description);
 
     if (imageInput?.current?.files[0]) {
       formData.append("image", imageInput.current.files[0]);
@@ -160,11 +160,11 @@ function PostEditForm() {
         <Form.Control
           as="textarea"
           rows={6}
-          name="content"
+          name="description"
           className={appStyles.Input}
-          value={content}
+          value={description}
           onChange={handleChange}
-          aria-label="post content"
+          aria-label="post description"
         />
       </Form.Group>
 
@@ -190,11 +190,11 @@ function PostEditForm() {
     <Form onSubmit={handleSubmit}>
       <Row>
         <Col md={7} lg={8} className="d-none d-md-block p-0 p-md-2">
-          <Container className={appStyles.Content}>{textFields}</Container>
+          <Container className={appStyles.description}>{textFields}</Container>
         </Col>
         <Col className="py-2 pb-4 p-0 p-md-2" md={5} lg={4}>
           <Container
-            className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}
+            className={`${appStyles.description} ${styles.Container} d-flex flex-column justify-description-center`}
           >
             <Form.Group className="text-center">
               <figure>
