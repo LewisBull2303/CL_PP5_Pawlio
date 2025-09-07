@@ -62,6 +62,15 @@ function App() {
               />
             )}
           />
+          <Route
+            exact path="/my-saves"
+            render={() => (
+              <MainPostsPage
+                message="No results found. Save a post to see your saved posts!"
+                filter={`saves__owner__username=${currentUser?.username}&ordering=-likes__created_at&`}
+              />
+            )}
+          />
           <Route path="/saved" element={<SavedPostsPage />} />
 
           <Route exact path="/posts/create" render={() => <PostCreateForm />} />
