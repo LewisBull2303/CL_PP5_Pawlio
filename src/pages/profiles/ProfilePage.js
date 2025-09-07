@@ -160,14 +160,14 @@ function ProfilePage() {
           <LikeFeedAddPost />
 
           <Container
-            className={`${appStyles.description} ${columnStyles.CollapsedColumn} mb-2`}
+            className={`${appStyles.Content} ${columnStyles.CollapsedColumn} mb-2`}
           >
             <PopularProfiles />
           </Container>
         </Col>
 
         <Col className="py-1 p-0 p-lg-2" lg={8}>
-          <Container className={appStyles.description}>
+          <Container className={appStyles.Content}>
             {hasLoaded ? (
               <>
                 {mainProfile}

@@ -84,14 +84,14 @@ function PostPage() {
           <LikeFeedAddPost />
 
           <Container
-            className={`${appStyles.description} ${columnStyles.CollapsedColumn}`}
+            className={`${appStyles.Content} ${columnStyles.CollapsedColumn}`}
           >
             <PopularProfiles />
           </Container>
         </Col>
         <Col className="py-1 p-0 p-lg-2" lg={8}>
           <Post {...post.results[0]} setPosts={setPost} postPage />
-          <Container className={`${appStyles.description} pb-3 mb-3`}>
+          <Container className={`${appStyles.Content} pb-3 mb-3`}>
             {currentUser ? (
               <CommentCreateForm
                 profile_id={currentUser.profile_id}
