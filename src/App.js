@@ -15,7 +15,6 @@ import ProfilePage from "./pages/profiles/ProfilePage";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import PageNotFound from "./components/PageNotFound";
-import SavedPostsPage from "./pages/posts/SavedPostsPage";
 
 function App() {
   const currentUser = useCurrentUser();
