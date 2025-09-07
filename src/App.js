@@ -66,7 +66,7 @@ function App() {
             render={() => (
               <MainPostsPage
                 message="No results found. Save a post to see your saved posts!"
-                filter={`saves__owner__username=${currentUser?.username}&ordering=-likes__created_at&`}
+                filter={`saves__owner__username=${currentUser?.username}&ordering=-saved__created_at&`}
               />
             )}
           />
