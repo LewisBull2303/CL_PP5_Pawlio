@@ -71,7 +71,6 @@ function App() {
               />
             )}
           />
-          <Route path="/saved" element={<SavedPostsPage />} />
 
           <Route exact path="/posts/create" render={() => <PostCreateForm />} />
           <Route exact path="/posts/:id" render={() => <PostPage />} />
