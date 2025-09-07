@@ -29,7 +29,7 @@ const LikeFeedAddPost = () => {
         <p className={styles.Link}>Feed</p>
       </Link>
       <Link to="/my-saves">
-        <i className="fa-solid fa-rss fa-fw"></i>
+        <i className="fa-regular fa-bookmark fa-fw"></i>
         <p className={styles.Link}>Saved</p>
       </Link>
     </Container>
