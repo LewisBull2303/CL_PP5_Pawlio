@@ -20,7 +20,7 @@ const DropdownDots = React.forwardRef(({ onClick }, ref) => (
 */
 export const DropdownMenu = ({ handleEdit, handleDelete }) => {
   return (
-    <Dropdown className="ml-auto" drop="left">
+    <Dropdown className="ml-auto" drop="down">
       <Dropdown.Toggle as={DropdownDots} />
 
       <Dropdown.Menu
