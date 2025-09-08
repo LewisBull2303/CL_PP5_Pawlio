@@ -42,9 +42,9 @@
 @media all and (max-width: 768px) {
   /* Stack columns and center content on smaller screens */
   .CollapsedColumn {
-    display: inline-flex;
+    display: block;
     width: 100%;
-    justify-content: space-around;
+    margin-bottom: 10px;
   }
 
   .CollapsedColumn:nth-child(2) {
@@ -52,13 +52,12 @@
   }
 
   .UsersDisplay {
-    display: flex;
+    display: block;
     text-overflow: ellipsis;
-    justify-content: space-around;
   }
 
   .CategoriesColumn {
-    display: inline-table;
+    display: block;
   }
 }
 
@@ -71,7 +70,6 @@
   .LikeFeedAddDisplay a {
     text-align: center !important;
     margin: 0;
-    flex-direction: column;
   }
 
   .LikeFeedAddDisplay img {
