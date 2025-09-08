@@ -28,4 +28,9 @@
     width: 150px;
     height: 150px;
   }
+
+  .statsCol{
+    display: flex;
+    flex-direction: column;
+  }
 }
