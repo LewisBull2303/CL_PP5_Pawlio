@@ -71,6 +71,7 @@
   .LikeFeedAddDisplay a {
     text-align: center !important;
     margin: 0;
+    flex-direction: column;
   }
 
   .LikeFeedAddDisplay img {
