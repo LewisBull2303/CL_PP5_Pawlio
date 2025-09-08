@@ -6,6 +6,15 @@
   margin: 4px;
 }
 
+.statsRow {
+  justify-content: space-around;
+}
+
+.statsCol{
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
 /* On smaller screens, increase image size */
 @media screen and (max-width: 991px) {
   .ProfileImage {
