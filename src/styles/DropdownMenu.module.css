@@ -9,3 +9,12 @@
 .DropdownItem:active {
   background-color: var(--grey) !important;
 }
+
+@media screen and (max-width: 768px) {
+  /* On smaller screens, dropdown items take full width */
+  .DropdownItem {
+    max-width: 100%;
+    flex-direction: column;
+  }
+  
+}
