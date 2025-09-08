@@ -73,7 +73,7 @@ function ProfilePage() {
 
         <Col lg={6}>
           <h3 className="m-3">{profile?.owner}</h3>
-          <Row className="justify-description-around">
+          <Row className="justify-content-around">
             <Col xs={3} className="my-3">
               <div>Followers</div>
               <div>{profile?.followers_count}</div>
