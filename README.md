@@ -91,7 +91,7 @@ The key functions of the platform are:
 
 ### User Profile Page
 
-19. As a user, I can dd my profile picture so that other users can easily identify me
+19. As a user, I can add a profile picture so that other users can easily identify me
 20. As a User, I can view my users profile pictures so that I can identify other users
 21. As a user, I can update my picture and bio on my profile so that other users can see up to date information about me
 22. As a user, I can change the password to my account so that I can keep it secure
@@ -1243,6 +1243,7 @@ First and foremost, I would like to give a special thank you to my wonderful Fia
 Special thank you also to Mo Shami, My mentors, whose help and guidance has been truly invaluable to me.
 
 The live link to the repository is here : https://github.com/LewisBull2303/CL_PP5_Pawlio
+
 
 
 
