@@ -103,7 +103,7 @@ The key functions of the platform are:
 25. As a user, I can follow and unfollow other users so that I can get specific user' posts in my feed
 26. As a user, I can see a list of the most followed profiles
 
-### Forth Sprint
+### Fourth Sprint
 
 ### Main Page
 
@@ -1243,4 +1243,5 @@ First and foremost, I would like to give a special thank you to my wonderful Fia
 Special thank you also to Mo Shami, My mentors, whose help and guidance has been truly invaluable to me.
 
 The live link to the repository is here : https://github.com/LewisBull2303/CL_PP5_Pawlio
+
 
