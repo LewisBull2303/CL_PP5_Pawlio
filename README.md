@@ -101,7 +101,7 @@ The key functions of the platform are:
 23. As a user, I can view all the posts by a specific user so that I can see their latest activity
 24. As a user, I can view other users profiles with their bios, the number of posts, followers and profiles they follow
 25. As a user, I can follow and unfollow other users so that I can get specific user' posts in my feed
-26. As a user, I can see a list of the most followed profiles
+26. As a user, I can see a list of the most followed profiles, so that I can see which profiles are popular.
 
 ### Fourth Sprint
 
@@ -1243,6 +1243,7 @@ First and foremost, I would like to give a special thank you to my wonderful Fia
 Special thank you also to Mo Shami, My mentors, whose help and guidance has been truly invaluable to me.
 
 The live link to the repository is here : https://github.com/LewisBull2303/CL_PP5_Pawlio
+
 
 
 
