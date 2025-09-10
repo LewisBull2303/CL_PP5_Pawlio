@@ -1232,7 +1232,7 @@ The default Profile picture and post image was taken from the [Moments](https://
 
 ### Code
 
-This project was inspired by the [Moments](https://learn.codeinstitute.net/dashboard) social media platform which was a final walk-through project with Code Institute. I have adjusted the project and added additonal features, such as filtering of posts based on their category. The Pawlio application can be expanded on and include the potential improvements mentioned in the 'Future features / improvements' section.
+This project was inspired by the [Moments](https://learn.codeinstitute.net/dashboard) social media platform which was a final walk-through project with Code Institute. I have adjusted the project and added additonal features, such as filtering of posts based on their category and Saving posts privately. The Pawlio application can be expanded on and include the potential improvements mentioned in the 'Future features / improvements' section.
 
 Thank you to Aleksandra for help with the file set up and styles
 
@@ -1243,6 +1243,7 @@ First and foremost, I would like to give a special thank you to my wonderful Fia
 Special thank you also to Mo Shami, My mentors, whose help and guidance has been truly invaluable to me.
 
 The live link to the repository is here : https://github.com/LewisBull2303/CL_PP5_Pawlio
+
 
 
 
