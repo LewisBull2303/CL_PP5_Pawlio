@@ -53,6 +53,8 @@ The key functions of the platform are:
 
 ## User Stories
 
+### First Sprint
+
 ### Authentication
 
 1. As a new user, I can create a new account to be able to access the app
@@ -66,6 +68,8 @@ The key functions of the platform are:
 6. As a user, I can view other peoples posts so that I can get inspired by their images
 7. As a user, I can view the details of a post so I can see the full description and other users comments
 8. As a user I can like a post so that I can show my interest
+
+### Second Sprint
 
 ### Navigation
 
@@ -83,6 +87,8 @@ The key functions of the platform are:
 17. As a user, I can delete my comment from the post
 18. As a user, I can edit my post title and description so that I can make corrections or update my post after it was created
 
+### Third Sprint
+
 ### User Profile Page
 
 19. As a user, I can dd my profile picture so that other users can easily identify me
@@ -96,6 +102,8 @@ The key functions of the platform are:
 24. As a user, I can view other users profiles with their bios, the number of posts, followers and profiles they follow
 25. As a user, I can follow and unfollow other users so that I can get specific user' posts in my feed
 26. As a user, I can see a list of the most followed profiles
+
+### Forth Sprint
 
 ### Main Page
 
@@ -1235,3 +1243,4 @@ First and foremost, I would like to give a special thank you to my wonderful Fia
 Special thank you also to Mo Shami, My mentors, whose help and guidance has been truly invaluable to me.
 
 The live link to the repository is here : https://github.com/LewisBull2303/CL_PP5_Pawlio
+
