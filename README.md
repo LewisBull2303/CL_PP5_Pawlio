@@ -79,7 +79,7 @@ The key functions of the platform are:
 
 ### The Post Page
 
-12. As a user, I can view the details of a single post so that I can read other users comments and know what they think about
+12. As a user, I can view the details of a single post so that I can read other users comments and know what they think about it
 13. As a user, I can view a category for the post so that I know what the image relates to
 14. As a user, I can add comments to a post so that I can share my thoughts about a post
 15. As a user, I can see when comments were created, so I know how old a comment is
@@ -1243,6 +1243,7 @@ First and foremost, I would like to give a special thank you to my wonderful Fia
 Special thank you also to Mo Shami, My mentors, whose help and guidance has been truly invaluable to me.
 
 The live link to the repository is here : https://github.com/LewisBull2303/CL_PP5_Pawlio
+
 
 
 
