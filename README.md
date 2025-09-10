@@ -107,7 +107,7 @@ The key functions of the platform are:
 
 ### Main Page
 
-27. As a user, I can view posts ordered by most recently added so that I am up to date with the newest content J
+27. As a user, I can view posts ordered by most recently added so that I am up to date with the newest content
 28. As a user, I can keep scrolling through the posts so that they are loaded automatically and I don't have to select the next page
 29. As a user, I can see the posts I liked so that I can find the posts I enjoy the most
 30. As a user, I can view posts from users I followed, so I can follow their activity
@@ -1243,5 +1243,6 @@ First and foremost, I would like to give a special thank you to my wonderful Fia
 Special thank you also to Mo Shami, My mentors, whose help and guidance has been truly invaluable to me.
 
 The live link to the repository is here : https://github.com/LewisBull2303/CL_PP5_Pawlio
+
 
 
