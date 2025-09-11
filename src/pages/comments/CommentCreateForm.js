@@ -7,8 +7,9 @@ import { axiosRes } from "../../api/axiosDefaults";
 import FeedbackMsg from "../../components/FeedbackMsg";
 
 function CommentCreateForm(props) {
-  const { post, setPost, setComments, profileImage, profile_id, setShowAlert } = props;
+  const { post, setPost, setComments, profileImage, profile_id, } = props;
   const [description, setdescription] = useState("");
+  const [showAlert, setShowAlert] = useState(false);
 
   /* 
     Handles changes to the create comment input field
