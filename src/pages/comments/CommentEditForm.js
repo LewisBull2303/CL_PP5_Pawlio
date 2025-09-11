@@ -4,14 +4,14 @@ import { axiosRes } from "../../api/axiosDefaults";
 import styles from "../../styles/CommentCreateEditForm.module.css";
 
 function CommentEditForm(props) {
-  const { id, content, setShowEditForm, setComments, setShowAlert } = props;
-  const [formContent, setFormContent] = useState(content);
+  const { id, description, setShowEditForm, setComments, setShowAlert } = props;
+  const [formdescription, setFormdescription] = useState(description);
 
   /* 
     Handles changes to form input
   */
   const handleChange = (e) => {
-    setFormContent(e.target.value);
+    setFormdescription(e.target.value);
   };
 
   /* 
@@ -23,7 +23,7 @@ function CommentEditForm(props) {
     e.preventDefault();
     try {
       await axiosRes.put(`/comments/${id}/`, {
-        content: formContent.trim(),
+        description: formdescription.trim(),
       });
       setComments((prevComments) => ({
         ...prevComments,
@@ -31,7 +31,7 @@ function CommentEditForm(props) {
           return comment.id === id
             ? {
                 ...comment,
-                content: formContent.trim(),
+                description: formdescription.trim(),
                 updated_on: "now",
               }
             : comment;
@@ -50,7 +50,7 @@ function CommentEditForm(props) {
         <Form.Control
           className={styles.Form}
           as="textarea"
-          value={formContent}
+          value={formdescription}
           onChange={handleChange}
           rows={2}
         />
@@ -59,7 +59,7 @@ function CommentEditForm(props) {
       <div className="text-right">
         <Button
           className={styles.CommentsButton}
-          disabled={!content.trim()}
+          disabled={!description.trim()}
           onMouseDown={(e) => e.preventDefault()}
           type="submit"
         >

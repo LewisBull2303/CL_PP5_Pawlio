@@ -7,13 +7,13 @@ import { axiosRes } from "../../api/axiosDefaults";
 
 function CommentCreateForm(props) {
   const { post, setPost, setComments, profileImage, profile_id } = props;
-  const [content, setContent] = useState("");
+  const [description, setdescription] = useState("");
 
   /* 
     Handles changes to the create comment input field
   */
   const handleChange = (e) => {
-    setContent(e.target.value);
+    setdescription(e.target.value);
   };
 
   /* 
@@ -24,7 +24,7 @@ function CommentCreateForm(props) {
   e.preventDefault();
   try {
     const { data } = await axiosRes.post("/comments/", {
-      content,
+      description,
       post,
     });
 
@@ -44,7 +44,7 @@ function CommentCreateForm(props) {
   ],
 }));
 
-    setContent("");
+    setdescription("");
   } catch (err) {
     console.error(err);
   }
@@ -64,7 +64,7 @@ function CommentCreateForm(props) {
             placeholder="share what you think..."
             aria-label="comment input box"
             as="textarea"
-            value={content}
+            value={description}
             onChange={handleChange}
             rows={2}
           />
