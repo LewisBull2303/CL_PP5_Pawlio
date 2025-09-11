@@ -75,16 +75,16 @@ function ProfilePage() {
           <h3 className={`m-3 ${styles.ProfileUsername}`}>{profile?.owner}</h3>
           <Row className={styles.statsRow}>
             <Col xs={3} className={styles.statCol}>
-              <div>Followers</div>
-              <div>{profile?.followers_count}</div>
+               <div className={styles.ProfileStatText}>Followers</div>
+              <div className={styles.ProfileStatText}>{profile?.followers_count}</div>
             </Col>
             <Col xs={3} className={styles.statCol}>
-              <div>Following</div>
-              <div>{profile?.following_count}</div>
+              <div className={styles.ProfileStatText}>Following</div>
+              <div className={styles.ProfileStatText}>{profile?.following_count}</div>
             </Col>
             <Col xs={3} className={styles.statCol}>
-              <div>Posts</div>
-              <div>{profile?.posts_count}</div>
+              <div className={styles.ProfileStatText}>Posts</div>
+              <div className={styles.ProfileStatText}>{profile?.posts_count}</div>
             </Col>
           </Row>
         </Col>
