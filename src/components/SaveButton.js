@@ -3,11 +3,10 @@ import { axiosRes } from "../api/axiosDefaults";
 import btnStyles from '../styles/Button.module.css';
 import { Button } from "react-bootstrap";
 
-const SaveButton = ({ postId }) => {
+const SaveButton = ({ postId, setShowAlert, setAlertMessage, setAlertVariant }) => {
   const [isSaved, setIsSaved] = useState(false);
   const [saveId, setSaveId] = useState(null);
 
-  // Check if the post is already saved when the component mounts
   useEffect(() => {
     const fetchSaveStatus = async () => {
       try {
@@ -29,6 +28,9 @@ const SaveButton = ({ postId }) => {
       const { data } = await axiosRes.post("/saves/", { post: postId });
       setIsSaved(true);
       setSaveId(data.id);
+      setAlertMessage("Post saved!");
+      setAlertVariant("success");
+      setShowAlert(true);
     } catch (err) {
       console.log(err);
     }
@@ -39,6 +41,9 @@ const SaveButton = ({ postId }) => {
       await axiosRes.delete(`/saves/${saveId}/`);
       setIsSaved(false);
       setSaveId(null);
+      setAlertMessage("Post unsaved");
+      setAlertVariant("warning");
+      setShowAlert(true);
     } catch (err) {
       console.log(err);
     }
