@@ -34,7 +34,7 @@ const SaveButton = ({ postId }) => {
       setSaveId(data.id);
       setAlertMessage("Post has been saved");
       setShowAlert(true);
-      setTimeout(() => setShowAlert(false), 2000);
+      setTimeout(() => setShowAlert(false), 4000);
     } catch (err) {
       console.log(err);
     }
@@ -47,7 +47,7 @@ const SaveButton = ({ postId }) => {
       setSaveId(null);
       setAlertMessage("Post has been unsaved");
       setShowAlert(true);
-      setTimeout(() => setShowAlert(false), 2000);
+      setTimeout(() => setShowAlert(false), 4000);
     } catch (err) {
       console.log(err);
     }
