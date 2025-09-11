@@ -7,57 +7,58 @@ import { axiosRes } from "../../api/axiosDefaults";
 import FeedbackMsg from "../../components/FeedbackMsg";
 
 function CommentCreateForm(props) {
-  const { post, setPost, setComments, profileImage, profile_id, } = props;
-  const [description, setdescription] = useState("");
+  const { post, setPost, setComments, profileImage, profile_id } = props;
+  const [description, setDescription] = useState("");
   const [showAlert, setShowAlert] = useState(false);
 
-  /* 
-    Handles changes to the create comment input field
-  */
+  // Handles changes to the create comment input field
   const handleChange = (e) => {
-    setdescription(e.target.value);
+    setDescription(e.target.value);
   };
 
-  /* 
-    Handles the submission of the comment create input field
-    Increments the number of comments by 1
-  */
+  // Handles the submission of the comment create input field
   const handleSubmit = async (e) => {
-  e.preventDefault();
-  try {
-    const { data } = await axiosRes.post("/comments/", {
-      description,
-      post,
-    });
-    {showAlert && (
-            <FeedbackMsg variant="info" message="Comment Cannot be over 200 Characters" />
-      )}
+    e.preventDefault();
 
+    if (description.length > 200) {
+      setShowAlert(true);
+      return;
+    }
 
-    // Update comments immediately
-    setComments((prevComments) => ({
-      ...prevComments,
-      results: [data, ...prevComments.results],
-    }));
+    try {
+      const { data } = await axiosRes.post("/comments/", {
+        description,
+        post,
+      });
 
-    // Update post comment count safely
-    setPost((prevPost) => ({
-  results: [
-    {
-      ...prevPost.results[0],
-      comments_count: prevPost.results[0].comments_count + 1,
-    },
-  ],
-}));
+      // Update comments immediately
+      setComments((prevComments) => ({
+        ...prevComments,
+        results: [data, ...prevComments.results],
+      }));
 
-    setdescription("");
-  } catch (err) {
-    console.error(err);
-  }
-};
+      // Update post comment count safely
+      setPost((prevPost) => ({
+        results: [
+          {
+            ...prevPost.results[0],
+            comments_count: prevPost.results[0].comments_count + 1,
+          },
+        ],
+      }));
+
+      setDescription("");
+      setShowAlert(false);
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   return (
     <Form className="mt-2 text-center" onSubmit={handleSubmit}>
+      {showAlert && (
+        <FeedbackMsg variant="info" message="Comment cannot be over 200 characters" />
+      )}
       <Form.Group>
         <InputGroup>
           <p className="my-2">
@@ -67,7 +68,7 @@ function CommentCreateForm(props) {
           </p>
           <Form.Control
             className={styles.Form}
-            placeholder="share what you think..."
+            placeholder="Share what you think..."
             aria-label="comment input box"
             as="textarea"
             value={description}
