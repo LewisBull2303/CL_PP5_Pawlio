@@ -51,6 +51,24 @@ The key functions of the platform are:
  - CRUD functionality for posts, comments, likes followers and the profile information
  - Post filtering by likes and followed users
 
+## User Goals
+- To easily and conveniently see other peoples pets.
+- To post about my own pets.
+- To engage with other users on the site.
+- To build my own pet loving profile.
+
+### Site Owner Goals
+- Create a strong community around pet lovers.
+- Establish Pawlio as a leading social media.
+- Achieve profitability and sustain long-term growth.
+- Retain users as the site grows.
+
+## User Experience
+
+## Target Audience
+
+The main target audience for Pawlio is pet lovers and animal enthusiasts who love to share and celebrate the lives of their pets or other animals. This site caters to all ages and is inclusive in its userbase. It also is targetted towards social media lovers who enjoy posting about their lives with their pets online.
+
 ## User Stories
 
 ### First Sprint
@@ -1304,6 +1322,7 @@ First and foremost, I would like to give a special thank you to my wonderful Fia
 Special thank you also to Mo Shami, My mentors, whose help and guidance has been truly invaluable to me.
 
 The live link to the repository is here : https://github.com/LewisBull2303/CL_PP5_Pawlio
+
 
 
 
