@@ -542,12 +542,14 @@ The API for this application was built with the Django REST Framework. The repos
 
 ### Save Button
 - A button which allows the user to privately save a posts which other users cannot see
+- The user can then access a page which displays all of the users saved posts
 
 <details>
  <summary>Images</summary>
 
 <img width="552" height="269" alt="image" src="https://github.com/user-attachments/assets/4b627feb-3f98-41ab-8673-3e18b6b35265" />
 <img width="621" height="285" alt="image" src="https://github.com/user-attachments/assets/d5dc19ca-f3ea-4076-ab40-44d925941839" />
+<img width="509" height="328" alt="image" src="https://github.com/user-attachments/assets/3fd3d832-dd72-47c0-8a66-d459d626e7d9" />
 
 </details>
 
@@ -1286,6 +1288,7 @@ First and foremost, I would like to give a special thank you to my wonderful Fia
 Special thank you also to Mo Shami, My mentors, whose help and guidance has been truly invaluable to me.
 
 The live link to the repository is here : https://github.com/LewisBull2303/CL_PP5_Pawlio
+
 
 
 
