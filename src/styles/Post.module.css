@@ -26,6 +26,10 @@
   grid-row: 1/2;
   text-align: left;
   margin-left: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 /* Post updated date, second column, second row with smaller font */
@@ -53,4 +57,12 @@
   padding: 5px 8px;
   margin: 0 4px;
   font-size: inherit;
+}
+
+/* Truncate to 5 characters on small screens */
+@media (max-width: 600px) {
+  .Username {
+    display: inline-block;
+    max-width: 5ch; /* Limit to 5 characters wide */
+  }
 }
