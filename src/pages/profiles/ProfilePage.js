@@ -72,7 +72,7 @@ function ProfilePage() {
         </Col>
 
         <Col lg={6}>
-          <h3 className="m-3">{profile?.owner}</h3>
+          <h3 className={`m-3 ${styles.ProfileUsername}`}>{profile?.owner}</h3>
           <Row className={styles.statsRow}>
             <Col xs={3} className={styles.statCol}>
               <div>Followers</div>
