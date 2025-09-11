@@ -95,7 +95,7 @@ const Comment = (props) => {
                 setShowAlert={setShowAlert}
               />
             ) : (
-              <p className="pr-2 pt-2">{description}</p>
+              <p className={`pr-2 pt-2 ${styles.CommentText}`}>{description}</p>
             )}
           </div>
         </Media.Body>
