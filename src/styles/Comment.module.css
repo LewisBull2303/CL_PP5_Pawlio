@@ -1,18 +1,21 @@
 /* Styling for the comment container box with rounded borders and padding */
 .CommentBox {
-  color: var(--dark-grey);
-  border: 1px solid var(--grey);
-  border-radius: 35px;
-  padding: 5px 10px 5px 20px;
-  max-width: 100%;
+  background-color: var(--off-white);
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
   word-wrap: break-word;
+  word-break: break-word;
   overflow-wrap: break-word;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .CommentText {
-  white-space: normal;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+  font-size: 1rem;
+  margin-top: 8px;
+  word-break: break-word;
+  max-width: 100%;
 }
 
 /* Styling for the comment owner’s name: bold and dark grey */
@@ -35,4 +38,20 @@
   z-index: 999;
   color: black;
   float: right;
+}
+
+@media (max-width: 600px) {
+  .CommentBox {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .CommentText {
+    font-size: 0.9rem;
+  }
+
+  .OwnerName,
+  .Date {
+    font-size: 0.8rem;
+  }
 }
