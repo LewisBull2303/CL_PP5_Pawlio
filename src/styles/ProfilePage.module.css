@@ -29,6 +29,10 @@
     height: 150px;
   }
 
+  .ProfileUsername {
+    font-size: 1.2rem;
+  }
+
   .statsCol{
     display: flex;
     flex-direction: column;
