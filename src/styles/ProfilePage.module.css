@@ -6,6 +6,10 @@
   margin: 4px;
 }
 
+.ProfileStatText {
+  font-size: 1rem;
+}
+
 .statsRow {
   justify-content: space-around;
 }
@@ -27,6 +31,10 @@
   .ProfileImage {
     width: 150px;
     height: 150px;
+  }
+
+  .ProfileStatText {
+    font-size: 0.8rem;
   }
 
   .ProfileUsername {
