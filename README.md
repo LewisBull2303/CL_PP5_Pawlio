@@ -1195,6 +1195,19 @@ Lighthouse was used to test the performance, accessibility, best practice and SE
 
 </details>
 
+36. Save Button
+This is not a user story but has still been manually tested to ensure that all features work correctly
+
+|Test|Expected Result|Actual Result|
+|---|---|---|
+|In the home page or the posts page, the user can click on the save button and the post will be saved in a seperate page|Saves the post and displays a feedback message saying the post was saved|Works as expected|
+
+<details>
+ <summary>Images</summary>
+
+
+
+</details>
 
 ## Performing Tests on Different Devices
 
@@ -1288,6 +1301,7 @@ First and foremost, I would like to give a special thank you to my wonderful Fia
 Special thank you also to Mo Shami, My mentors, whose help and guidance has been truly invaluable to me.
 
 The live link to the repository is here : https://github.com/LewisBull2303/CL_PP5_Pawlio
+
 
 
 
