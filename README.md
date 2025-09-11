@@ -10,6 +10,8 @@ Developer: Lewis Bull
 
 - [About](#About)
 - [Project Goals](#project-goals)
+- [User Goals](#user-goals)
+- [User Experience](#user-experience)
 - [User Stories](#user-stories)
 - [Design](#design)
   - [Fonts](#fonts)
@@ -28,7 +30,7 @@ Developer: Lewis Bull
   - [Performing tests on Different devices](#performing-tests-on-different-devices)
   - [Browser Compatibility](#browser-compatibility)
 - [Bugs](#bugs)
-- [Config](#Config)
+- [Deployment](#Deployment)
 - [Credits](#credits)
 
 
@@ -1322,6 +1324,7 @@ First and foremost, I would like to give a special thank you to my wonderful Fia
 Special thank you also to Mo Shami, My mentors, whose help and guidance has been truly invaluable to me.
 
 The live link to the repository is here : https://github.com/LewisBull2303/CL_PP5_Pawlio
+
 
 
 
