@@ -4,6 +4,15 @@
   border: 1px solid var(--grey);
   border-radius: 35px;
   padding: 5px 10px 5px 20px;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.CommentText {
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Styling for the comment owner’s name: bold and dark grey */
