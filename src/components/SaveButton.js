@@ -2,11 +2,15 @@ import React, { useState, useEffect } from "react";
 import { axiosRes } from "../api/axiosDefaults";
 import btnStyles from '../styles/Button.module.css';
 import { Button } from "react-bootstrap";
+import FeedbackMsg from "./FeedbackMsg";
 
-const SaveButton = ({ postId, setShowAlert, setAlertMessage, setAlertVariant }) => {
+const SaveButton = ({ postId }) => {
   const [isSaved, setIsSaved] = useState(false);
   const [saveId, setSaveId] = useState(null);
+  const [showAlert, setShowAlert] = useState(false);
+  const [alertMessage, setAlertMessage] = useState("");
 
+  // Check if the post is already saved when the component mounts
   useEffect(() => {
     const fetchSaveStatus = async () => {
       try {
@@ -28,9 +32,9 @@ const SaveButton = ({ postId, setShowAlert, setAlertMessage, setAlertVariant }) 
       const { data } = await axiosRes.post("/saves/", { post: postId });
       setIsSaved(true);
       setSaveId(data.id);
-      setAlertMessage("Post saved!");
-      setAlertVariant("success");
+      setAlertMessage("Post has been saved");
       setShowAlert(true);
+      setTimeout(() => setShowAlert(false), 2000);
     } catch (err) {
       console.log(err);
     }
@@ -41,29 +45,33 @@ const SaveButton = ({ postId, setShowAlert, setAlertMessage, setAlertVariant }) 
       await axiosRes.delete(`/saves/${saveId}/`);
       setIsSaved(false);
       setSaveId(null);
-      setAlertMessage("Post unsaved");
-      setAlertVariant("warning");
+      setAlertMessage("Post has been unsaved");
       setShowAlert(true);
+      setTimeout(() => setShowAlert(false), 2000);
     } catch (err) {
       console.log(err);
     }
   };
 
   return (
-    <span
-      onClick={isSaved ? handleUnsave : handleSave}
-      style={{ cursor: "pointer", marginLeft: "10px" }}
-    >
-      {isSaved ? (
-        <Button className={`my-3 ${btnStyles.Button}`}>
-          <i className="fa-solid fa-bookmark"></i>
-        </Button>
-      ) : (
-        <Button className={`my-3 ${btnStyles.Button}`}>
-          <i className="fa-regular fa-bookmark"></i>
-        </Button>
-      )}
-    </span>
+    <>
+      {showAlert && <FeedbackMsg variant="info" message={alertMessage} />}
+
+      <span
+        onClick={isSaved ? handleUnsave : handleSave}
+        style={{ cursor: "pointer", marginLeft: "10px" }}
+      >
+        {isSaved ? (
+          <Button className={`my-3 ${btnStyles.Button}`}>
+            <i className="fa-solid fa-bookmark"></i>
+          </Button>
+        ) : (
+          <Button className={`my-3 ${btnStyles.Button}`}>
+            <i className="fa-regular fa-bookmark"></i>
+          </Button>
+        )}
+      </span>
+    </>
   );
 };
 
