@@ -656,6 +656,7 @@ ESLint was used to validate all of the JS code:
 <img width="705" height="132" alt="image" src="https://github.com/user-attachments/assets/ed0588e4-845a-4495-860f-5f6261bd26ea" />
 <img width="714" height="148" alt="image" src="https://github.com/user-attachments/assets/18c58959-eaf0-430f-adba-4e0b1a9cc028" />
 <img width="580" height="37" alt="image" src="https://github.com/user-attachments/assets/b8b5b443-0138-4a46-9a69-9ab1f55c5881" />
+<img width="605" height="105" alt="image" src="https://github.com/user-attachments/assets/7708119d-0df7-4f74-a0c3-c803a46b5020" />
 
 </details>
 
@@ -1324,6 +1325,7 @@ First and foremost, I would like to give a special thank you to my wonderful Fia
 Special thank you also to Mo Shami, My mentors, whose help and guidance has been truly invaluable to me.
 
 The live link to the repository is here : https://github.com/LewisBull2303/CL_PP5_Pawlio
+
 
 
 
