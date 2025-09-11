@@ -4,9 +4,10 @@ import { Button, Form, InputGroup } from "react-bootstrap";
 import styles from "../../styles/CommentCreateEditForm.module.css";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
+import FeedbackMsg from "../../components/FeedbackMsg";
 
 function CommentCreateForm(props) {
-  const { post, setPost, setComments, profileImage, profile_id } = props;
+  const { post, setPost, setComments, profileImage, profile_id, setShowAlert } = props;
   const [description, setdescription] = useState("");
 
   /* 
@@ -27,6 +28,10 @@ function CommentCreateForm(props) {
       description,
       post,
     });
+    {showAlert && (
+            <FeedbackMsg variant="info" message="Comment Cannot be over 200 Characters" />
+      )}
+
 
     // Update comments immediately
     setComments((prevComments) => ({
